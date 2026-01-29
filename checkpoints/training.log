@@ -1,0 +1,2167 @@
+2026-01-27 12:32:01 | INFO | ============================================================
+2026-01-27 12:32:01 | INFO | MathTransformer Training
+2026-01-27 12:32:01 | INFO | ============================================================
+2026-01-27 12:32:01 | INFO | Arguments: {'train_data': 'data/train.jsonl', 'val_data': 'data/val.jsonl', 'config': 'small', 'max_seq_len': 256, 'epochs': 2, 'batch_size': 32, 'lr': 0.0003, 'weight_decay': 0.1, 'warmup_steps': 1000, 'grad_accum_steps': 4, 'max_grad_norm': 1.0, 'device': 'cuda', 'no_amp': False, 'num_workers': 4, 'checkpoint_dir': 'checkpoints', 'log_interval': 100, 'wandb': False, 'wandb_project': 'math-transformer', 'debug': True, 'resume': None}
+2026-01-27 12:32:03 | INFO | GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+2026-01-27 12:32:03 | INFO | GPU Memory: 8.2 GB
+2026-01-27 12:32:03 | INFO | 
+Model Configuration:
+2026-01-27 12:32:03 | INFO |   d_model: 256
+2026-01-27 12:32:03 | INFO |   n_heads: 8
+2026-01-27 12:32:03 | INFO |   n_layers: 6
+2026-01-27 12:32:03 | INFO |   d_ff: 1024
+2026-01-27 12:32:03 | INFO |   max_seq_len: 256
+2026-01-27 12:32:03 | INFO | 
+Model Parameters: 4,832,256
+2026-01-27 12:32:03 | INFO | 
+Loading data...
+2026-01-27 12:32:03 | ERROR | Training data not found: data/train.jsonl
+2026-01-27 12:32:03 | INFO | Please run data_generator.py first to create training data
+2026-01-27 12:32:03 | INFO | Example: python data_generator.py --output_dir data --num_train 100000
+2026-01-27 12:32:03 | INFO | 
+Debug mode: Creating dummy data...
+2026-01-27 12:32:03 | INFO |   Training examples: 1,000
+2026-01-27 12:32:03 | INFO |   Validation examples: 100
+2026-01-27 12:32:03 | INFO | 
+Training Configuration:
+2026-01-27 12:32:03 | INFO |   Batch size: 32
+2026-01-27 12:32:03 | INFO |   Gradient accumulation: 4
+2026-01-27 12:32:03 | INFO |   Effective batch size: 128
+2026-01-27 12:32:03 | INFO |   Learning rate: 0.0003
+2026-01-27 12:32:03 | INFO |   Mixed precision: True
+2026-01-27 12:32:03 | INFO |   Epochs: 2
+2026-01-27 12:32:04 | INFO | Training on device: cuda
+2026-01-27 12:32:04 | INFO | Model parameters: 4,832,256
+2026-01-27 12:32:04 | INFO | 
+==================================================
+2026-01-27 12:32:04 | INFO | Epoch 1/2
+2026-01-27 12:32:04 | INFO | ==================================================
+2026-01-27 12:32:05 | INFO | Train Loss: 5.0874
+2026-01-27 12:32:05 | INFO | Val Loss: 5.1666 | Val Accuracy: 0.0503 | Val Perplexity: 175.32
+2026-01-27 12:32:05 | INFO | Saved best model (val_loss: 5.1666)
+2026-01-27 12:32:05 | INFO | 
+==================================================
+2026-01-27 12:32:05 | INFO | Epoch 2/2
+2026-01-27 12:32:05 | INFO | ==================================================
+2026-01-27 12:32:05 | INFO | Train Loss: 5.0522
+2026-01-27 12:32:05 | INFO | Val Loss: 5.0984 | Val Accuracy: 0.0503 | Val Perplexity: 163.76
+2026-01-27 12:32:05 | INFO | Saved best model (val_loss: 5.0984)
+2026-01-27 12:32:05 | INFO | 
+============================================================
+2026-01-27 12:32:05 | INFO | Training Complete!
+2026-01-27 12:32:05 | INFO | ============================================================
+2026-01-27 12:32:05 | INFO | Final train loss: 5.0522
+2026-01-27 12:32:05 | INFO | Best val loss: 5.0984
+2026-01-27 12:32:05 | INFO | Best val accuracy: 0.0503
+2026-01-27 12:32:05 | INFO | Checkpoints saved to: checkpoints
+2026-01-27 12:32:51 | INFO | ============================================================
+2026-01-27 12:32:51 | INFO | MathTransformer Training
+2026-01-27 12:32:51 | INFO | ============================================================
+2026-01-27 12:32:51 | INFO | Arguments: {'train_data': 'data/train_add_2digit.jsonl', 'val_data': 'data/val.jsonl', 'config': 'tiny', 'max_seq_len': 256, 'epochs': 10, 'batch_size': 32, 'lr': 0.0003, 'weight_decay': 0.1, 'warmup_steps': 1000, 'grad_accum_steps': 4, 'max_grad_norm': 1.0, 'device': 'cuda', 'no_amp': False, 'num_workers': 4, 'checkpoint_dir': 'checkpoints', 'log_interval': 100, 'wandb': False, 'wandb_project': 'math-transformer', 'debug': False, 'resume': None}
+2026-01-27 12:32:53 | INFO | GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+2026-01-27 12:32:53 | INFO | GPU Memory: 8.2 GB
+2026-01-27 12:32:53 | INFO | 
+Model Configuration:
+2026-01-27 12:32:53 | INFO |   d_model: 128
+2026-01-27 12:32:53 | INFO |   n_heads: 4
+2026-01-27 12:32:53 | INFO |   n_layers: 4
+2026-01-27 12:32:53 | INFO |   d_ff: 512
+2026-01-27 12:32:53 | INFO |   max_seq_len: 256
+2026-01-27 12:32:53 | INFO | 
+Model Parameters: 840,448
+2026-01-27 12:32:53 | INFO | 
+Loading data...
+2026-01-27 12:32:53 | INFO |   Training examples: 4,908
+2026-01-27 12:32:53 | INFO |   Validation examples: 100
+2026-01-27 12:32:53 | INFO | 
+Training Configuration:
+2026-01-27 12:32:53 | INFO |   Batch size: 32
+2026-01-27 12:32:53 | INFO |   Gradient accumulation: 4
+2026-01-27 12:32:53 | INFO |   Effective batch size: 128
+2026-01-27 12:32:53 | INFO |   Learning rate: 0.0003
+2026-01-27 12:32:53 | INFO |   Mixed precision: True
+2026-01-27 12:32:53 | INFO |   Epochs: 10
+2026-01-27 12:32:53 | INFO | Training on device: cuda
+2026-01-27 12:32:53 | INFO | Model parameters: 840,448
+2026-01-27 12:32:53 | INFO | 
+==================================================
+2026-01-27 12:32:53 | INFO | Epoch 1/10
+2026-01-27 12:32:53 | INFO | ==================================================
+2026-01-27 12:33:04 | INFO | ============================================================
+2026-01-27 12:33:04 | INFO | MathTransformer Training
+2026-01-27 12:33:04 | INFO | ============================================================
+2026-01-27 12:33:04 | INFO | Arguments: {'train_data': 'data/train_add_2digit.jsonl', 'val_data': 'data/val.jsonl', 'config': 'tiny', 'max_seq_len': 256, 'epochs': 10, 'batch_size': 32, 'lr': 0.0003, 'weight_decay': 0.1, 'warmup_steps': 1000, 'grad_accum_steps': 4, 'max_grad_norm': 1.0, 'device': 'cuda', 'no_amp': False, 'num_workers': 4, 'checkpoint_dir': 'checkpoints', 'log_interval': 100, 'wandb': False, 'wandb_project': 'math-transformer', 'debug': False, 'resume': None}
+2026-01-27 12:33:05 | INFO | GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+2026-01-27 12:33:05 | INFO | GPU Memory: 8.2 GB
+2026-01-27 12:33:05 | INFO | 
+Model Configuration:
+2026-01-27 12:33:05 | INFO |   d_model: 128
+2026-01-27 12:33:05 | INFO |   n_heads: 4
+2026-01-27 12:33:05 | INFO |   n_layers: 4
+2026-01-27 12:33:05 | INFO |   d_ff: 512
+2026-01-27 12:33:05 | INFO |   max_seq_len: 256
+2026-01-27 12:33:05 | INFO | 
+Model Parameters: 840,448
+2026-01-27 12:33:05 | INFO | 
+Loading data...
+2026-01-27 12:33:05 | INFO |   Training examples: 4,908
+2026-01-27 12:33:05 | INFO |   Validation examples: 100
+2026-01-27 12:33:05 | INFO | 
+Training Configuration:
+2026-01-27 12:33:05 | INFO |   Batch size: 32
+2026-01-27 12:33:05 | INFO |   Gradient accumulation: 4
+2026-01-27 12:33:05 | INFO |   Effective batch size: 128
+2026-01-27 12:33:05 | INFO |   Learning rate: 0.0003
+2026-01-27 12:33:05 | INFO |   Mixed precision: True
+2026-01-27 12:33:05 | INFO |   Epochs: 10
+2026-01-27 12:33:05 | INFO | Training on device: cuda
+2026-01-27 12:33:05 | INFO | Model parameters: 840,448
+2026-01-27 12:33:05 | INFO | 
+==================================================
+2026-01-27 12:33:05 | INFO | Epoch 1/10
+2026-01-27 12:33:05 | INFO | ==================================================
+2026-01-27 12:33:11 | INFO | ============================================================
+2026-01-27 12:33:11 | INFO | MathTransformer Training
+2026-01-27 12:33:11 | INFO | ============================================================
+2026-01-27 12:33:11 | INFO | Arguments: {'train_data': 'data/train_add_2digit.jsonl', 'val_data': 'data/val_add_2digit.jsonl', 'config': 'tiny', 'max_seq_len': 256, 'epochs': 10, 'batch_size': 32, 'lr': 0.0003, 'weight_decay': 0.1, 'warmup_steps': 1000, 'grad_accum_steps': 4, 'max_grad_norm': 1.0, 'device': 'cuda', 'no_amp': False, 'num_workers': 4, 'checkpoint_dir': 'checkpoints', 'log_interval': 100, 'wandb': False, 'wandb_project': 'math-transformer', 'debug': False, 'resume': None}
+2026-01-27 12:33:11 | INFO | GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+2026-01-27 12:33:11 | INFO | GPU Memory: 8.2 GB
+2026-01-27 12:33:11 | INFO | 
+Model Configuration:
+2026-01-27 12:33:11 | INFO |   d_model: 128
+2026-01-27 12:33:11 | INFO |   n_heads: 4
+2026-01-27 12:33:11 | INFO |   n_layers: 4
+2026-01-27 12:33:11 | INFO |   d_ff: 512
+2026-01-27 12:33:11 | INFO |   max_seq_len: 256
+2026-01-27 12:33:11 | INFO | 
+Model Parameters: 840,448
+2026-01-27 12:33:11 | INFO | 
+Loading data...
+2026-01-27 12:33:11 | INFO |   Training examples: 4,908
+2026-01-27 12:33:11 | INFO |   Validation examples: 1,000
+2026-01-27 12:33:11 | INFO | 
+Training Configuration:
+2026-01-27 12:33:11 | INFO |   Batch size: 32
+2026-01-27 12:33:11 | INFO |   Gradient accumulation: 4
+2026-01-27 12:33:11 | INFO |   Effective batch size: 128
+2026-01-27 12:33:11 | INFO |   Learning rate: 0.0003
+2026-01-27 12:33:11 | INFO |   Mixed precision: True
+2026-01-27 12:33:11 | INFO |   Epochs: 10
+2026-01-27 12:33:11 | INFO | Training on device: cuda
+2026-01-27 12:33:11 | INFO | Model parameters: 840,448
+2026-01-27 12:33:12 | INFO | 
+==================================================
+2026-01-27 12:33:12 | INFO | Epoch 1/10
+2026-01-27 12:33:12 | INFO | ==================================================
+2026-01-27 12:35:37 | INFO | ============================================================
+2026-01-27 12:35:37 | INFO | MathTransformer Training
+2026-01-27 12:35:37 | INFO | ============================================================
+2026-01-27 12:35:37 | INFO | Arguments: {'train_data': 'data/train_add_2digit.jsonl', 'val_data': 'data/val_add_2digit.jsonl', 'config': 'tiny', 'max_seq_len': 256, 'epochs': 10, 'batch_size': 32, 'lr': 0.0003, 'weight_decay': 0.1, 'warmup_steps': 1000, 'grad_accum_steps': 4, 'max_grad_norm': 1.0, 'device': 'cuda', 'no_amp': False, 'num_workers': 4, 'checkpoint_dir': 'checkpoints', 'log_interval': 100, 'wandb': False, 'wandb_project': 'math-transformer', 'debug': False, 'resume': None}
+2026-01-27 12:35:39 | INFO | GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+2026-01-27 12:35:39 | INFO | GPU Memory: 8.2 GB
+2026-01-27 12:35:39 | INFO | 
+Model Configuration:
+2026-01-27 12:35:39 | INFO |   d_model: 128
+2026-01-27 12:35:39 | INFO |   n_heads: 4
+2026-01-27 12:35:39 | INFO |   n_layers: 4
+2026-01-27 12:35:39 | INFO |   d_ff: 512
+2026-01-27 12:35:39 | INFO |   max_seq_len: 256
+2026-01-27 12:35:39 | INFO | 
+Model Parameters: 840,448
+2026-01-27 12:35:39 | INFO | 
+Loading data...
+2026-01-27 12:35:39 | INFO |   Training examples: 4,908
+2026-01-27 12:35:39 | INFO |   Validation examples: 1,000
+2026-01-27 12:35:39 | INFO | 
+Training Configuration:
+2026-01-27 12:35:39 | INFO |   Batch size: 32
+2026-01-27 12:35:39 | INFO |   Gradient accumulation: 4
+2026-01-27 12:35:39 | INFO |   Effective batch size: 128
+2026-01-27 12:35:39 | INFO |   Learning rate: 0.0003
+2026-01-27 12:35:39 | INFO |   Mixed precision: True
+2026-01-27 12:35:39 | INFO |   Epochs: 10
+2026-01-27 12:35:39 | INFO | Training on device: cuda
+2026-01-27 12:35:39 | INFO | Model parameters: 840,448
+2026-01-27 12:35:39 | INFO | 
+==================================================
+2026-01-27 12:35:39 | INFO | Epoch 1/10
+2026-01-27 12:35:39 | INFO | ==================================================
+2026-01-27 12:39:21 | INFO | ============================================================
+2026-01-27 12:39:21 | INFO | MathTransformer Training
+2026-01-27 12:39:21 | INFO | ============================================================
+2026-01-27 12:39:21 | INFO | Arguments: {'train_data': 'data/train_add_2digit.jsonl', 'val_data': 'data/val_add_2digit.jsonl', 'config': 'tiny', 'max_seq_len': 256, 'epochs': 10, 'batch_size': 32, 'lr': 0.0003, 'weight_decay': 0.1, 'warmup_steps': 1000, 'grad_accum_steps': 4, 'max_grad_norm': 1.0, 'device': 'cuda', 'no_amp': False, 'num_workers': 4, 'checkpoint_dir': 'checkpoints', 'log_interval': 100, 'wandb': False, 'wandb_project': 'math-transformer', 'debug': False, 'resume': None}
+2026-01-27 12:39:23 | INFO | GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+2026-01-27 12:39:23 | INFO | GPU Memory: 8.2 GB
+2026-01-27 12:39:23 | INFO | 
+Model Configuration:
+2026-01-27 12:39:23 | INFO |   d_model: 128
+2026-01-27 12:39:23 | INFO |   n_heads: 4
+2026-01-27 12:39:23 | INFO |   n_layers: 4
+2026-01-27 12:39:23 | INFO |   d_ff: 512
+2026-01-27 12:39:23 | INFO |   max_seq_len: 256
+2026-01-27 12:39:23 | INFO | 
+Model Parameters: 840,448
+2026-01-27 12:39:23 | INFO | 
+Loading data...
+2026-01-27 12:39:23 | INFO |   Training examples: 4,908
+2026-01-27 12:39:23 | INFO |   Validation examples: 1,000
+2026-01-27 12:39:23 | INFO | 
+Training Configuration:
+2026-01-27 12:39:23 | INFO |   Batch size: 32
+2026-01-27 12:39:23 | INFO |   Gradient accumulation: 4
+2026-01-27 12:39:23 | INFO |   Effective batch size: 128
+2026-01-27 12:39:23 | INFO |   Learning rate: 0.0003
+2026-01-27 12:39:23 | INFO |   Mixed precision: True
+2026-01-27 12:39:23 | INFO |   Epochs: 10
+2026-01-27 12:39:23 | INFO | Training on device: cuda
+2026-01-27 12:39:23 | INFO | Model parameters: 840,448
+2026-01-27 12:39:23 | INFO | 
+==================================================
+2026-01-27 12:39:23 | INFO | Epoch 1/10
+2026-01-27 12:39:23 | INFO | ==================================================
+2026-01-27 12:39:24 | INFO | Epoch 1 | Step 100/154 | Loss: 4.6506 | LR: 7.50e-06
+2026-01-27 12:39:25 | INFO | Train Loss: 4.6274
+2026-01-27 12:39:25 | INFO | Val Loss: 4.5411 | Val Accuracy: 0.0102 | Val Perplexity: 93.79
+2026-01-27 12:39:25 | INFO | Saved best model (val_loss: 4.5411)
+2026-01-27 12:39:25 | INFO | 
+==================================================
+2026-01-27 12:39:25 | INFO | Epoch 2/10
+2026-01-27 12:39:25 | INFO | ==================================================
+2026-01-27 12:39:25 | INFO | Epoch 2 | Step 100/154 | Loss: 4.4555 | LR: 1.89e-05
+2026-01-27 12:39:26 | INFO | Train Loss: 4.3870
+2026-01-27 12:39:26 | INFO | Val Loss: 4.1420 | Val Accuracy: 0.0102 | Val Perplexity: 62.93
+2026-01-27 12:39:26 | INFO | Saved best model (val_loss: 4.1420)
+2026-01-27 12:39:26 | INFO | 
+==================================================
+2026-01-27 12:39:26 | INFO | Epoch 3/10
+2026-01-27 12:39:26 | INFO | ==================================================
+2026-01-27 12:39:27 | INFO | Epoch 3 | Step 100/154 | Loss: 4.0292 | LR: 3.03e-05
+2026-01-27 12:39:27 | INFO | Train Loss: 3.9531
+2026-01-27 12:39:27 | INFO | Val Loss: 3.7157 | Val Accuracy: 0.1264 | Val Perplexity: 41.09
+2026-01-27 12:39:27 | INFO | Saved best model (val_loss: 3.7157)
+2026-01-27 12:39:27 | INFO | 
+==================================================
+2026-01-27 12:39:27 | INFO | Epoch 4/10
+2026-01-27 12:39:27 | INFO | ==================================================
+2026-01-27 12:39:28 | INFO | Epoch 4 | Step 100/154 | Loss: 3.6429 | LR: 4.17e-05
+2026-01-27 12:39:28 | INFO | Train Loss: 3.5812
+2026-01-27 12:39:28 | INFO | Val Loss: 3.3676 | Val Accuracy: 0.3053 | Val Perplexity: 29.01
+2026-01-27 12:39:28 | INFO | Saved best model (val_loss: 3.3676)
+2026-01-27 12:39:28 | INFO | 
+==================================================
+2026-01-27 12:39:28 | INFO | Epoch 5/10
+2026-01-27 12:39:28 | INFO | ==================================================
+2026-01-27 12:39:29 | INFO | Epoch 5 | Step 100/154 | Loss: 3.2963 | LR: 5.31e-05
+2026-01-27 12:39:29 | INFO | Train Loss: 3.2345
+2026-01-27 12:39:29 | INFO | Val Loss: 3.0059 | Val Accuracy: 0.4078 | Val Perplexity: 20.20
+2026-01-27 12:39:29 | INFO | Saved best model (val_loss: 3.0059)
+2026-01-27 12:39:29 | INFO | 
+==================================================
+2026-01-27 12:39:29 | INFO | Epoch 6/10
+2026-01-27 12:39:29 | INFO | ==================================================
+2026-01-27 12:39:30 | INFO | Epoch 6 | Step 100/154 | Loss: 2.9451 | LR: 6.45e-05
+2026-01-27 12:39:30 | INFO | Train Loss: 2.8841
+2026-01-27 12:39:30 | INFO | Val Loss: 2.6557 | Val Accuracy: 0.4496 | Val Perplexity: 14.23
+2026-01-27 12:39:30 | INFO | Saved best model (val_loss: 2.6557)
+2026-01-27 12:39:30 | INFO | 
+==================================================
+2026-01-27 12:39:30 | INFO | Epoch 7/10
+2026-01-27 12:39:30 | INFO | ==================================================
+2026-01-27 12:39:31 | INFO | Epoch 7 | Step 100/154 | Loss: 2.6219 | LR: 7.59e-05
+2026-01-27 12:39:31 | INFO | Train Loss: 2.5734
+2026-01-27 12:39:31 | INFO | Val Loss: 2.3663 | Val Accuracy: 0.4701 | Val Perplexity: 10.66
+2026-01-27 12:39:31 | INFO | Saved best model (val_loss: 2.3663)
+2026-01-27 12:39:31 | INFO | 
+==================================================
+2026-01-27 12:39:31 | INFO | Epoch 8/10
+2026-01-27 12:39:31 | INFO | ==================================================
+2026-01-27 12:39:32 | INFO | Epoch 8 | Step 100/154 | Loss: 2.3360 | LR: 8.73e-05
+2026-01-27 12:39:32 | INFO | Train Loss: 2.2774
+2026-01-27 12:39:32 | INFO | Val Loss: 2.0047 | Val Accuracy: 0.6280 | Val Perplexity: 7.42
+2026-01-27 12:39:32 | INFO | Saved best model (val_loss: 2.0047)
+2026-01-27 12:39:32 | INFO | 
+==================================================
+2026-01-27 12:39:32 | INFO | Epoch 9/10
+2026-01-27 12:39:32 | INFO | ==================================================
+2026-01-27 12:39:33 | INFO | Epoch 9 | Step 100/154 | Loss: 2.0053 | LR: 9.87e-05
+2026-01-27 12:39:33 | INFO | Train Loss: 1.9506
+2026-01-27 12:39:34 | INFO | Val Loss: 1.6912 | Val Accuracy: 0.6509 | Val Perplexity: 5.43
+2026-01-27 12:39:34 | INFO | Saved best model (val_loss: 1.6912)
+2026-01-27 12:39:34 | INFO | 
+==================================================
+2026-01-27 12:39:34 | INFO | Epoch 10/10
+2026-01-27 12:39:34 | INFO | ==================================================
+2026-01-27 12:39:34 | INFO | Epoch 10 | Step 100/154 | Loss: 1.7111 | LR: 1.10e-04
+2026-01-27 12:39:34 | INFO | Train Loss: 1.6621
+2026-01-27 12:39:35 | INFO | Val Loss: 1.4003 | Val Accuracy: 0.6681 | Val Perplexity: 4.06
+2026-01-27 12:39:35 | INFO | Saved best model (val_loss: 1.4003)
+2026-01-27 12:39:35 | INFO | 
+============================================================
+2026-01-27 12:39:35 | INFO | Training Complete!
+2026-01-27 12:39:35 | INFO | ============================================================
+2026-01-27 12:39:35 | INFO | Final train loss: 1.6621
+2026-01-27 12:39:35 | INFO | Best val loss: 1.4003
+2026-01-27 12:39:35 | INFO | Best val accuracy: 0.6681
+2026-01-27 12:39:35 | INFO | Checkpoints saved to: checkpoints
+2026-01-27 12:40:37 | INFO | ============================================================
+2026-01-27 12:40:37 | INFO | MathTransformer Training
+2026-01-27 12:40:37 | INFO | ============================================================
+2026-01-27 12:40:37 | INFO | Arguments: {'train_data': 'data/train_add_2digit.jsonl', 'val_data': 'data/val_add_2digit.jsonl', 'config': 'tiny', 'max_seq_len': 256, 'epochs': 50, 'batch_size': 32, 'lr': 0.0003, 'weight_decay': 0.1, 'warmup_steps': 1000, 'grad_accum_steps': 4, 'max_grad_norm': 1.0, 'device': 'cuda', 'no_amp': False, 'num_workers': 4, 'checkpoint_dir': 'checkpoints', 'log_interval': 100, 'wandb': False, 'wandb_project': 'math-transformer', 'debug': False, 'resume': None}
+2026-01-27 12:40:39 | INFO | GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+2026-01-27 12:40:39 | INFO | GPU Memory: 8.2 GB
+2026-01-27 12:40:39 | INFO | 
+Model Configuration:
+2026-01-27 12:40:39 | INFO |   d_model: 128
+2026-01-27 12:40:39 | INFO |   n_heads: 4
+2026-01-27 12:40:39 | INFO |   n_layers: 4
+2026-01-27 12:40:39 | INFO |   d_ff: 512
+2026-01-27 12:40:39 | INFO |   max_seq_len: 256
+2026-01-27 12:40:39 | INFO | 
+Model Parameters: 840,448
+2026-01-27 12:40:39 | INFO | 
+Loading data...
+2026-01-27 12:40:39 | INFO |   Training examples: 4,908
+2026-01-27 12:40:39 | INFO |   Validation examples: 1,000
+2026-01-27 12:40:39 | INFO | 
+Training Configuration:
+2026-01-27 12:40:39 | INFO |   Batch size: 32
+2026-01-27 12:40:39 | INFO |   Gradient accumulation: 4
+2026-01-27 12:40:39 | INFO |   Effective batch size: 128
+2026-01-27 12:40:39 | INFO |   Learning rate: 0.0003
+2026-01-27 12:40:39 | INFO |   Mixed precision: True
+2026-01-27 12:40:39 | INFO |   Epochs: 50
+2026-01-27 12:40:39 | INFO | Training on device: cuda
+2026-01-27 12:40:39 | INFO | Model parameters: 840,448
+2026-01-27 12:40:40 | INFO | 
+==================================================
+2026-01-27 12:40:40 | INFO | Epoch 1/50
+2026-01-27 12:40:40 | INFO | ==================================================
+2026-01-27 12:40:40 | INFO | Epoch 1 | Step 100/154 | Loss: 4.7067 | LR: 7.50e-06
+2026-01-27 12:40:41 | INFO | Train Loss: 4.6842
+2026-01-27 12:40:41 | INFO | Val Loss: 4.6006 | Val Accuracy: 0.0102 | Val Perplexity: 99.54
+2026-01-27 12:40:41 | INFO | Saved best model (val_loss: 4.6006)
+2026-01-27 12:40:41 | INFO | 
+==================================================
+2026-01-27 12:40:41 | INFO | Epoch 2/50
+2026-01-27 12:40:41 | INFO | ==================================================
+2026-01-27 12:40:41 | INFO | Epoch 2 | Step 100/154 | Loss: 4.5068 | LR: 1.89e-05
+2026-01-27 12:40:42 | INFO | Train Loss: 4.4369
+2026-01-27 12:40:42 | INFO | Val Loss: 4.1807 | Val Accuracy: 0.0102 | Val Perplexity: 65.41
+2026-01-27 12:40:42 | INFO | Saved best model (val_loss: 4.1807)
+2026-01-27 12:40:42 | INFO | 
+==================================================
+2026-01-27 12:40:42 | INFO | Epoch 3/50
+2026-01-27 12:40:42 | INFO | ==================================================
+2026-01-27 12:40:43 | INFO | Epoch 3 | Step 100/154 | Loss: 4.0554 | LR: 3.03e-05
+2026-01-27 12:40:43 | INFO | Train Loss: 3.9748
+2026-01-27 12:40:43 | INFO | Val Loss: 3.7249 | Val Accuracy: 0.1968 | Val Perplexity: 41.47
+2026-01-27 12:40:43 | INFO | Saved best model (val_loss: 3.7249)
+2026-01-27 12:40:43 | INFO | 
+==================================================
+2026-01-27 12:40:43 | INFO | Epoch 4/50
+2026-01-27 12:40:43 | INFO | ==================================================
+2026-01-27 12:40:44 | INFO | Epoch 4 | Step 100/154 | Loss: 3.6424 | LR: 4.17e-05
+2026-01-27 12:40:44 | INFO | Train Loss: 3.5789
+2026-01-27 12:40:44 | INFO | Val Loss: 3.3636 | Val Accuracy: 0.2755 | Val Perplexity: 28.89
+2026-01-27 12:40:44 | INFO | Saved best model (val_loss: 3.3636)
+2026-01-27 12:40:44 | INFO | 
+==================================================
+2026-01-27 12:40:44 | INFO | Epoch 5/50
+2026-01-27 12:40:44 | INFO | ==================================================
+2026-01-27 12:40:45 | INFO | Epoch 5 | Step 100/154 | Loss: 3.2918 | LR: 5.31e-05
+2026-01-27 12:40:45 | INFO | Train Loss: 3.2279
+2026-01-27 12:40:45 | INFO | Val Loss: 2.9946 | Val Accuracy: 0.3937 | Val Perplexity: 19.98
+2026-01-27 12:40:45 | INFO | Saved best model (val_loss: 2.9946)
+2026-01-27 12:40:45 | INFO | 
+==================================================
+2026-01-27 12:40:45 | INFO | Epoch 6/50
+2026-01-27 12:40:45 | INFO | ==================================================
+2026-01-27 12:40:46 | INFO | Epoch 6 | Step 100/154 | Loss: 2.9350 | LR: 6.45e-05
+2026-01-27 12:40:46 | INFO | Train Loss: 2.8755
+2026-01-27 12:40:46 | INFO | Val Loss: 2.6482 | Val Accuracy: 0.4642 | Val Perplexity: 14.13
+2026-01-27 12:40:46 | INFO | Saved best model (val_loss: 2.6482)
+2026-01-27 12:40:46 | INFO | 
+==================================================
+2026-01-27 12:40:46 | INFO | Epoch 7/50
+2026-01-27 12:40:46 | INFO | ==================================================
+2026-01-27 12:40:47 | INFO | Epoch 7 | Step 100/154 | Loss: 2.6144 | LR: 7.59e-05
+2026-01-27 12:40:47 | INFO | Train Loss: 2.5640
+2026-01-27 12:40:47 | INFO | Val Loss: 2.3435 | Val Accuracy: 0.4811 | Val Perplexity: 10.42
+2026-01-27 12:40:47 | INFO | Saved best model (val_loss: 2.3435)
+2026-01-27 12:40:47 | INFO | 
+==================================================
+2026-01-27 12:40:47 | INFO | Epoch 8/50
+2026-01-27 12:40:47 | INFO | ==================================================
+2026-01-27 12:40:48 | INFO | Epoch 8 | Step 100/154 | Loss: 2.3048 | LR: 8.73e-05
+2026-01-27 12:40:48 | INFO | Train Loss: 2.2422
+2026-01-27 12:40:48 | INFO | Val Loss: 1.9793 | Val Accuracy: 0.6050 | Val Perplexity: 7.24
+2026-01-27 12:40:48 | INFO | Saved best model (val_loss: 1.9793)
+2026-01-27 12:40:48 | INFO | 
+==================================================
+2026-01-27 12:40:48 | INFO | Epoch 9/50
+2026-01-27 12:40:48 | INFO | ==================================================
+2026-01-27 12:40:49 | INFO | Epoch 9 | Step 100/154 | Loss: 1.9752 | LR: 9.87e-05
+2026-01-27 12:40:49 | INFO | Train Loss: 1.9227
+2026-01-27 12:40:50 | INFO | Val Loss: 1.6884 | Val Accuracy: 0.6543 | Val Perplexity: 5.41
+2026-01-27 12:40:50 | INFO | Saved best model (val_loss: 1.6884)
+2026-01-27 12:40:50 | INFO | 
+==================================================
+2026-01-27 12:40:50 | INFO | Epoch 10/50
+2026-01-27 12:40:50 | INFO | ==================================================
+2026-01-27 12:40:50 | INFO | Epoch 10 | Step 100/154 | Loss: 1.6939 | LR: 1.10e-04
+2026-01-27 12:40:50 | INFO | Train Loss: 1.6459
+2026-01-27 12:40:51 | INFO | Val Loss: 1.4138 | Val Accuracy: 0.6759 | Val Perplexity: 4.11
+2026-01-27 12:40:51 | INFO | Saved best model (val_loss: 1.4138)
+2026-01-27 12:40:51 | INFO | 
+==================================================
+2026-01-27 12:40:51 | INFO | Epoch 11/50
+2026-01-27 12:40:51 | INFO | ==================================================
+2026-01-27 12:40:51 | INFO | Epoch 11 | Step 100/154 | Loss: 1.4321 | LR: 1.21e-04
+2026-01-27 12:40:52 | INFO | Train Loss: 1.3914
+2026-01-27 12:40:52 | INFO | Val Loss: 1.1757 | Val Accuracy: 0.7118 | Val Perplexity: 3.24
+2026-01-27 12:40:52 | INFO | Saved best model (val_loss: 1.1757)
+2026-01-27 12:40:52 | INFO | 
+==================================================
+2026-01-27 12:40:52 | INFO | Epoch 12/50
+2026-01-27 12:40:52 | INFO | ==================================================
+2026-01-27 12:40:52 | INFO | Epoch 12 | Step 100/154 | Loss: 1.2047 | LR: 1.33e-04
+2026-01-27 12:40:53 | INFO | Train Loss: 1.1694
+2026-01-27 12:40:53 | INFO | Val Loss: 0.9939 | Val Accuracy: 0.7272 | Val Perplexity: 2.70
+2026-01-27 12:40:53 | INFO | Saved best model (val_loss: 0.9939)
+2026-01-27 12:40:53 | INFO | 
+==================================================
+2026-01-27 12:40:53 | INFO | Epoch 13/50
+2026-01-27 12:40:53 | INFO | ==================================================
+2026-01-27 12:40:53 | INFO | Epoch 13 | Step 100/154 | Loss: 1.0212 | LR: 1.44e-04
+2026-01-27 12:40:54 | INFO | Train Loss: 0.9928
+2026-01-27 12:40:54 | INFO | Val Loss: 0.8494 | Val Accuracy: 0.7512 | Val Perplexity: 2.34
+2026-01-27 12:40:54 | INFO | Saved best model (val_loss: 0.8494)
+2026-01-27 12:40:54 | INFO | 
+==================================================
+2026-01-27 12:40:54 | INFO | Epoch 14/50
+2026-01-27 12:40:54 | INFO | ==================================================
+2026-01-27 12:40:55 | INFO | Epoch 14 | Step 100/154 | Loss: 0.8873 | LR: 1.56e-04
+2026-01-27 12:40:55 | INFO | Train Loss: 0.8650
+2026-01-27 12:40:55 | INFO | Val Loss: 0.7591 | Val Accuracy: 0.7650 | Val Perplexity: 2.14
+2026-01-27 12:40:55 | INFO | Saved best model (val_loss: 0.7591)
+2026-01-27 12:40:55 | INFO | 
+==================================================
+2026-01-27 12:40:55 | INFO | Epoch 15/50
+2026-01-27 12:40:55 | INFO | ==================================================
+2026-01-27 12:40:56 | INFO | Epoch 15 | Step 100/154 | Loss: 0.7889 | LR: 1.67e-04
+2026-01-27 12:40:56 | INFO | Train Loss: 0.7783
+2026-01-27 12:40:56 | INFO | Val Loss: 0.6954 | Val Accuracy: 0.7743 | Val Perplexity: 2.00
+2026-01-27 12:40:56 | INFO | Saved best model (val_loss: 0.6954)
+2026-01-27 12:40:56 | INFO | 
+==================================================
+2026-01-27 12:40:56 | INFO | Epoch 16/50
+2026-01-27 12:40:56 | INFO | ==================================================
+2026-01-27 12:40:57 | INFO | Epoch 16 | Step 100/154 | Loss: 0.7280 | LR: 1.78e-04
+2026-01-27 12:40:57 | INFO | Train Loss: 0.7217
+2026-01-27 12:40:57 | INFO | Val Loss: 0.6560 | Val Accuracy: 0.7782 | Val Perplexity: 1.93
+2026-01-27 12:40:57 | INFO | Saved best model (val_loss: 0.6560)
+2026-01-27 12:40:57 | INFO | 
+==================================================
+2026-01-27 12:40:57 | INFO | Epoch 17/50
+2026-01-27 12:40:57 | INFO | ==================================================
+2026-01-27 12:40:58 | INFO | Epoch 17 | Step 100/154 | Loss: 0.6837 | LR: 1.90e-04
+2026-01-27 12:40:58 | INFO | Train Loss: 0.6768
+2026-01-27 12:40:58 | INFO | Val Loss: 0.6067 | Val Accuracy: 0.7800 | Val Perplexity: 1.83
+2026-01-27 12:40:58 | INFO | Saved best model (val_loss: 0.6067)
+2026-01-27 12:40:58 | INFO | 
+==================================================
+2026-01-27 12:40:58 | INFO | Epoch 18/50
+2026-01-27 12:40:58 | INFO | ==================================================
+2026-01-27 12:40:59 | INFO | Epoch 18 | Step 100/154 | Loss: 0.6418 | LR: 2.01e-04
+2026-01-27 12:40:59 | INFO | Train Loss: 0.6326
+2026-01-27 12:40:59 | INFO | Val Loss: 0.5668 | Val Accuracy: 0.7890 | Val Perplexity: 1.76
+2026-01-27 12:40:59 | INFO | Saved best model (val_loss: 0.5668)
+2026-01-27 12:40:59 | INFO | 
+==================================================
+2026-01-27 12:40:59 | INFO | Epoch 19/50
+2026-01-27 12:40:59 | INFO | ==================================================
+2026-01-27 12:41:00 | INFO | Epoch 19 | Step 100/154 | Loss: 0.6016 | LR: 2.13e-04
+2026-01-27 12:41:00 | INFO | Train Loss: 0.5941
+2026-01-27 12:41:00 | INFO | Val Loss: 0.5209 | Val Accuracy: 0.8073 | Val Perplexity: 1.68
+2026-01-27 12:41:00 | INFO | Saved best model (val_loss: 0.5209)
+2026-01-27 12:41:00 | INFO | 
+==================================================
+2026-01-27 12:41:00 | INFO | Epoch 20/50
+2026-01-27 12:41:00 | INFO | ==================================================
+2026-01-27 12:41:01 | INFO | Epoch 20 | Step 100/154 | Loss: 0.5638 | LR: 2.24e-04
+2026-01-27 12:41:01 | INFO | Train Loss: 0.5550
+2026-01-27 12:41:01 | INFO | Val Loss: 0.4865 | Val Accuracy: 0.8240 | Val Perplexity: 1.63
+2026-01-27 12:41:02 | INFO | Saved best model (val_loss: 0.4865)
+2026-01-27 12:41:02 | INFO | 
+==================================================
+2026-01-27 12:41:02 | INFO | Epoch 21/50
+2026-01-27 12:41:02 | INFO | ==================================================
+2026-01-27 12:41:02 | INFO | Epoch 21 | Step 100/154 | Loss: 0.5263 | LR: 2.35e-04
+2026-01-27 12:41:02 | INFO | Train Loss: 0.5195
+2026-01-27 12:41:03 | INFO | Val Loss: 0.4585 | Val Accuracy: 0.8335 | Val Perplexity: 1.58
+2026-01-27 12:41:03 | INFO | Saved best model (val_loss: 0.4585)
+2026-01-27 12:41:03 | INFO | 
+==================================================
+2026-01-27 12:41:03 | INFO | Epoch 22/50
+2026-01-27 12:41:03 | INFO | ==================================================
+2026-01-27 12:41:03 | INFO | Epoch 22 | Step 100/154 | Loss: 0.4899 | LR: 2.47e-04
+2026-01-27 12:41:04 | INFO | Train Loss: 0.4826
+2026-01-27 12:41:04 | INFO | Val Loss: 0.4195 | Val Accuracy: 0.8455 | Val Perplexity: 1.52
+2026-01-27 12:41:04 | INFO | Saved best model (val_loss: 0.4195)
+2026-01-27 12:41:04 | INFO | 
+==================================================
+2026-01-27 12:41:04 | INFO | Epoch 23/50
+2026-01-27 12:41:04 | INFO | ==================================================
+2026-01-27 12:41:04 | INFO | Epoch 23 | Step 100/154 | Loss: 0.4565 | LR: 2.58e-04
+2026-01-27 12:41:05 | INFO | Train Loss: 0.4507
+2026-01-27 12:41:05 | INFO | Val Loss: 0.3923 | Val Accuracy: 0.8583 | Val Perplexity: 1.48
+2026-01-27 12:41:05 | INFO | Saved best model (val_loss: 0.3923)
+2026-01-27 12:41:05 | INFO | 
+==================================================
+2026-01-27 12:41:05 | INFO | Epoch 24/50
+2026-01-27 12:41:05 | INFO | ==================================================
+2026-01-27 12:41:05 | INFO | Epoch 24 | Step 100/154 | Loss: 0.4269 | LR: 2.70e-04
+2026-01-27 12:41:06 | INFO | Train Loss: 0.4208
+2026-01-27 12:41:06 | INFO | Val Loss: 0.3668 | Val Accuracy: 0.8727 | Val Perplexity: 1.44
+2026-01-27 12:41:06 | INFO | Saved best model (val_loss: 0.3668)
+2026-01-27 12:41:06 | INFO | 
+==================================================
+2026-01-27 12:41:06 | INFO | Epoch 25/50
+2026-01-27 12:41:06 | INFO | ==================================================
+2026-01-27 12:41:07 | INFO | Epoch 25 | Step 100/154 | Loss: 0.4009 | LR: 2.81e-04
+2026-01-27 12:41:07 | INFO | Train Loss: 0.3961
+2026-01-27 12:41:07 | INFO | Val Loss: 0.3425 | Val Accuracy: 0.8872 | Val Perplexity: 1.41
+2026-01-27 12:41:07 | INFO | Saved best model (val_loss: 0.3425)
+2026-01-27 12:41:07 | INFO | 
+==================================================
+2026-01-27 12:41:07 | INFO | Epoch 26/50
+2026-01-27 12:41:07 | INFO | ==================================================
+2026-01-27 12:41:08 | INFO | Epoch 26 | Step 100/154 | Loss: 0.3760 | LR: 2.92e-04
+2026-01-27 12:41:08 | INFO | Train Loss: 0.3719
+2026-01-27 12:41:08 | INFO | Val Loss: 0.3244 | Val Accuracy: 0.8923 | Val Perplexity: 1.38
+2026-01-27 12:41:08 | INFO | Saved best model (val_loss: 0.3244)
+2026-01-27 12:41:08 | INFO | 
+==================================================
+2026-01-27 12:41:08 | INFO | Epoch 27/50
+2026-01-27 12:41:08 | INFO | ==================================================
+2026-01-27 12:41:09 | INFO | Epoch 27 | Step 100/154 | Loss: 0.3543 | LR: 3.00e-04
+2026-01-27 12:41:09 | INFO | Train Loss: 0.3511
+2026-01-27 12:41:09 | INFO | Val Loss: 0.3097 | Val Accuracy: 0.8925 | Val Perplexity: 1.36
+2026-01-27 12:41:09 | INFO | Saved best model (val_loss: 0.3097)
+2026-01-27 12:41:09 | INFO | 
+==================================================
+2026-01-27 12:41:09 | INFO | Epoch 28/50
+2026-01-27 12:41:09 | INFO | ==================================================
+2026-01-27 12:41:10 | INFO | Epoch 28 | Step 100/154 | Loss: 0.3367 | LR: 2.98e-04
+2026-01-27 12:41:10 | INFO | Train Loss: 0.3340
+2026-01-27 12:41:10 | INFO | Val Loss: 0.2938 | Val Accuracy: 0.8964 | Val Perplexity: 1.34
+2026-01-27 12:41:10 | INFO | Saved best model (val_loss: 0.2938)
+2026-01-27 12:41:10 | INFO | 
+==================================================
+2026-01-27 12:41:10 | INFO | Epoch 29/50
+2026-01-27 12:41:10 | INFO | ==================================================
+2026-01-27 12:41:11 | INFO | Epoch 29 | Step 100/154 | Loss: 0.3213 | LR: 2.94e-04
+2026-01-27 12:41:11 | INFO | Train Loss: 0.3180
+2026-01-27 12:41:12 | INFO | Val Loss: 0.2828 | Val Accuracy: 0.8976 | Val Perplexity: 1.33
+2026-01-27 12:41:12 | INFO | Saved best model (val_loss: 0.2828)
+2026-01-27 12:41:12 | INFO | 
+==================================================
+2026-01-27 12:41:12 | INFO | Epoch 30/50
+2026-01-27 12:41:12 | INFO | ==================================================
+2026-01-27 12:41:12 | INFO | Epoch 30 | Step 100/154 | Loss: 0.3090 | LR: 2.88e-04
+2026-01-27 12:41:12 | INFO | Train Loss: 0.3060
+2026-01-27 12:41:13 | INFO | Val Loss: 0.2719 | Val Accuracy: 0.9021 | Val Perplexity: 1.31
+2026-01-27 12:41:13 | INFO | Saved best model (val_loss: 0.2719)
+2026-01-27 12:41:13 | INFO | 
+==================================================
+2026-01-27 12:41:13 | INFO | Epoch 31/50
+2026-01-27 12:41:13 | INFO | ==================================================
+2026-01-27 12:41:13 | INFO | Epoch 31 | Step 100/154 | Loss: 0.2975 | LR: 2.79e-04
+2026-01-27 12:41:14 | INFO | Train Loss: 0.2947
+2026-01-27 12:41:14 | INFO | Val Loss: 0.2637 | Val Accuracy: 0.9029 | Val Perplexity: 1.30
+2026-01-27 12:41:14 | INFO | Saved best model (val_loss: 0.2637)
+2026-01-27 12:41:14 | INFO | 
+==================================================
+2026-01-27 12:41:14 | INFO | Epoch 32/50
+2026-01-27 12:41:14 | INFO | ==================================================
+2026-01-27 12:41:14 | INFO | Epoch 32 | Step 100/154 | Loss: 0.2882 | LR: 2.69e-04
+2026-01-27 12:41:15 | INFO | Train Loss: 0.2875
+2026-01-27 12:41:15 | INFO | Val Loss: 0.2586 | Val Accuracy: 0.9041 | Val Perplexity: 1.30
+2026-01-27 12:41:15 | INFO | Saved best model (val_loss: 0.2586)
+2026-01-27 12:41:15 | INFO | 
+==================================================
+2026-01-27 12:41:15 | INFO | Epoch 33/50
+2026-01-27 12:41:15 | INFO | ==================================================
+2026-01-27 12:41:15 | INFO | Epoch 33 | Step 100/154 | Loss: 0.2815 | LR: 2.57e-04
+2026-01-27 12:41:16 | INFO | Train Loss: 0.2804
+2026-01-27 12:41:16 | INFO | Val Loss: 0.2543 | Val Accuracy: 0.9055 | Val Perplexity: 1.29
+2026-01-27 12:41:16 | INFO | Saved best model (val_loss: 0.2543)
+2026-01-27 12:41:16 | INFO | 
+==================================================
+2026-01-27 12:41:16 | INFO | Epoch 34/50
+2026-01-27 12:41:16 | INFO | ==================================================
+2026-01-27 12:41:17 | INFO | Epoch 34 | Step 100/154 | Loss: 0.2759 | LR: 2.44e-04
+2026-01-27 12:41:17 | INFO | Train Loss: 0.2762
+2026-01-27 12:41:17 | INFO | Val Loss: 0.2571 | Val Accuracy: 0.9011 | Val Perplexity: 1.29
+2026-01-27 12:41:17 | INFO | 
+==================================================
+2026-01-27 12:41:17 | INFO | Epoch 35/50
+2026-01-27 12:41:17 | INFO | ==================================================
+2026-01-27 12:41:18 | INFO | Epoch 35 | Step 100/154 | Loss: 0.2720 | LR: 2.29e-04
+2026-01-27 12:41:18 | INFO | Train Loss: 0.2717
+2026-01-27 12:41:18 | INFO | Val Loss: 0.2495 | Val Accuracy: 0.9070 | Val Perplexity: 1.28
+2026-01-27 12:41:18 | INFO | Saved best model (val_loss: 0.2495)
+2026-01-27 12:41:18 | INFO | 
+==================================================
+2026-01-27 12:41:18 | INFO | Epoch 36/50
+2026-01-27 12:41:18 | INFO | ==================================================
+2026-01-27 12:41:19 | INFO | Epoch 36 | Step 100/154 | Loss: 0.2687 | LR: 2.13e-04
+2026-01-27 12:41:19 | INFO | Train Loss: 0.2682
+2026-01-27 12:41:19 | INFO | Val Loss: 0.2470 | Val Accuracy: 0.9065 | Val Perplexity: 1.28
+2026-01-27 12:41:19 | INFO | Saved best model (val_loss: 0.2470)
+2026-01-27 12:41:19 | INFO | 
+==================================================
+2026-01-27 12:41:19 | INFO | Epoch 37/50
+2026-01-27 12:41:19 | INFO | ==================================================
+2026-01-27 12:41:20 | INFO | Epoch 37 | Step 100/154 | Loss: 0.2654 | LR: 1.97e-04
+2026-01-27 12:41:20 | INFO | Train Loss: 0.2658
+2026-01-27 12:41:20 | INFO | Val Loss: 0.2450 | Val Accuracy: 0.9065 | Val Perplexity: 1.28
+2026-01-27 12:41:20 | INFO | Saved best model (val_loss: 0.2450)
+2026-01-27 12:41:20 | INFO | 
+==================================================
+2026-01-27 12:41:20 | INFO | Epoch 38/50
+2026-01-27 12:41:20 | INFO | ==================================================
+2026-01-27 12:41:21 | INFO | Epoch 38 | Step 100/154 | Loss: 0.2635 | LR: 1.79e-04
+2026-01-27 12:41:21 | INFO | Train Loss: 0.2630
+2026-01-27 12:41:21 | INFO | Val Loss: 0.2455 | Val Accuracy: 0.9067 | Val Perplexity: 1.28
+2026-01-27 12:41:21 | INFO | 
+==================================================
+2026-01-27 12:41:21 | INFO | Epoch 39/50
+2026-01-27 12:41:21 | INFO | ==================================================
+2026-01-27 12:41:22 | INFO | Epoch 39 | Step 100/154 | Loss: 0.2619 | LR: 1.62e-04
+2026-01-27 12:41:22 | INFO | Train Loss: 0.2616
+2026-01-27 12:41:22 | INFO | Val Loss: 0.2434 | Val Accuracy: 0.9074 | Val Perplexity: 1.28
+2026-01-27 12:41:23 | INFO | Saved best model (val_loss: 0.2434)
+2026-01-27 12:41:23 | INFO | 
+==================================================
+2026-01-27 12:41:23 | INFO | Epoch 40/50
+2026-01-27 12:41:23 | INFO | ==================================================
+2026-01-27 12:41:23 | INFO | Epoch 40 | Step 100/154 | Loss: 0.2594 | LR: 1.45e-04
+2026-01-27 12:41:23 | INFO | Train Loss: 0.2592
+2026-01-27 12:41:24 | INFO | Val Loss: 0.2426 | Val Accuracy: 0.9075 | Val Perplexity: 1.27
+2026-01-27 12:41:24 | INFO | Saved best model (val_loss: 0.2426)
+2026-01-27 12:41:24 | INFO | 
+==================================================
+2026-01-27 12:41:24 | INFO | Epoch 41/50
+2026-01-27 12:41:24 | INFO | ==================================================
+2026-01-27 12:41:24 | INFO | Epoch 41 | Step 100/154 | Loss: 0.2574 | LR: 1.28e-04
+2026-01-27 12:41:25 | INFO | Train Loss: 0.2575
+2026-01-27 12:41:25 | INFO | Val Loss: 0.2409 | Val Accuracy: 0.9072 | Val Perplexity: 1.27
+2026-01-27 12:41:25 | INFO | Saved best model (val_loss: 0.2409)
+2026-01-27 12:41:25 | INFO | 
+==================================================
+2026-01-27 12:41:25 | INFO | Epoch 42/50
+2026-01-27 12:41:25 | INFO | ==================================================
+2026-01-27 12:41:25 | INFO | Epoch 42 | Step 100/154 | Loss: 0.2571 | LR: 1.11e-04
+2026-01-27 12:41:26 | INFO | Train Loss: 0.2563
+2026-01-27 12:41:26 | INFO | Val Loss: 0.2413 | Val Accuracy: 0.9076 | Val Perplexity: 1.27
+2026-01-27 12:41:26 | INFO | 
+==================================================
+2026-01-27 12:41:26 | INFO | Epoch 43/50
+2026-01-27 12:41:26 | INFO | ==================================================
+2026-01-27 12:41:26 | INFO | Epoch 43 | Step 100/154 | Loss: 0.2558 | LR: 9.58e-05
+2026-01-27 12:41:27 | INFO | Train Loss: 0.2557
+2026-01-27 12:41:27 | INFO | Val Loss: 0.2401 | Val Accuracy: 0.9075 | Val Perplexity: 1.27
+2026-01-27 12:41:27 | INFO | Saved best model (val_loss: 0.2401)
+2026-01-27 12:41:27 | INFO | 
+==================================================
+2026-01-27 12:41:27 | INFO | Epoch 44/50
+2026-01-27 12:41:27 | INFO | ==================================================
+2026-01-27 12:41:27 | INFO | Epoch 44 | Step 100/154 | Loss: 0.2542 | LR: 8.14e-05
+2026-01-27 12:41:28 | INFO | Train Loss: 0.2543
+2026-01-27 12:41:28 | INFO | Val Loss: 0.2402 | Val Accuracy: 0.9073 | Val Perplexity: 1.27
+2026-01-27 12:41:28 | INFO | 
+==================================================
+2026-01-27 12:41:28 | INFO | Epoch 45/50
+2026-01-27 12:41:28 | INFO | ==================================================
+2026-01-27 12:41:29 | INFO | Epoch 45 | Step 100/154 | Loss: 0.2531 | LR: 6.85e-05
+2026-01-27 12:41:29 | INFO | Train Loss: 0.2534
+2026-01-27 12:41:29 | INFO | Val Loss: 0.2398 | Val Accuracy: 0.9071 | Val Perplexity: 1.27
+2026-01-27 12:41:29 | INFO | Saved best model (val_loss: 0.2398)
+2026-01-27 12:41:29 | INFO | 
+==================================================
+2026-01-27 12:41:29 | INFO | Epoch 46/50
+2026-01-27 12:41:29 | INFO | ==================================================
+2026-01-27 12:41:30 | INFO | Epoch 46 | Step 100/154 | Loss: 0.2528 | LR: 5.71e-05
+2026-01-27 12:41:30 | INFO | Train Loss: 0.2532
+2026-01-27 12:41:30 | INFO | Val Loss: 0.2392 | Val Accuracy: 0.9078 | Val Perplexity: 1.27
+2026-01-27 12:41:30 | INFO | Saved best model (val_loss: 0.2392)
+2026-01-27 12:41:30 | INFO | 
+==================================================
+2026-01-27 12:41:30 | INFO | Epoch 47/50
+2026-01-27 12:41:30 | INFO | ==================================================
+2026-01-27 12:41:31 | INFO | Epoch 47 | Step 100/154 | Loss: 0.2522 | LR: 4.76e-05
+2026-01-27 12:41:31 | INFO | Train Loss: 0.2521
+2026-01-27 12:41:31 | INFO | Val Loss: 0.2395 | Val Accuracy: 0.9074 | Val Perplexity: 1.27
+2026-01-27 12:41:31 | INFO | 
+==================================================
+2026-01-27 12:41:31 | INFO | Epoch 48/50
+2026-01-27 12:41:31 | INFO | ==================================================
+2026-01-27 12:41:32 | INFO | Epoch 48 | Step 100/154 | Loss: 0.2526 | LR: 4.00e-05
+2026-01-27 12:41:32 | INFO | Train Loss: 0.2521
+2026-01-27 12:41:32 | INFO | Val Loss: 0.2391 | Val Accuracy: 0.9071 | Val Perplexity: 1.27
+2026-01-27 12:41:32 | INFO | Saved best model (val_loss: 0.2391)
+2026-01-27 12:41:32 | INFO | 
+==================================================
+2026-01-27 12:41:32 | INFO | Epoch 49/50
+2026-01-27 12:41:32 | INFO | ==================================================
+2026-01-27 12:41:33 | INFO | Epoch 49 | Step 100/154 | Loss: 0.2516 | LR: 3.45e-05
+2026-01-27 12:41:33 | INFO | Train Loss: 0.2513
+2026-01-27 12:41:33 | INFO | Val Loss: 0.2388 | Val Accuracy: 0.9077 | Val Perplexity: 1.27
+2026-01-27 12:41:33 | INFO | Saved best model (val_loss: 0.2388)
+2026-01-27 12:41:33 | INFO | 
+==================================================
+2026-01-27 12:41:33 | INFO | Epoch 50/50
+2026-01-27 12:41:33 | INFO | ==================================================
+2026-01-27 12:41:34 | INFO | Epoch 50 | Step 100/154 | Loss: 0.2506 | LR: 3.11e-05
+2026-01-27 12:41:34 | INFO | Train Loss: 0.2505
+2026-01-27 12:41:34 | INFO | Val Loss: 0.2386 | Val Accuracy: 0.9073 | Val Perplexity: 1.27
+2026-01-27 12:41:34 | INFO | Saved best model (val_loss: 0.2386)
+2026-01-27 12:41:34 | INFO | 
+============================================================
+2026-01-27 12:41:34 | INFO | Training Complete!
+2026-01-27 12:41:34 | INFO | ============================================================
+2026-01-27 12:41:34 | INFO | Final train loss: 0.2505
+2026-01-27 12:41:34 | INFO | Best val loss: 0.2386
+2026-01-27 12:41:34 | INFO | Best val accuracy: 0.9078
+2026-01-27 12:41:34 | INFO | Checkpoints saved to: checkpoints
+2026-01-27 12:44:24 | INFO | ============================================================
+2026-01-27 12:44:24 | INFO | MathTransformer Training
+2026-01-27 12:44:24 | INFO | ============================================================
+2026-01-27 12:44:24 | INFO | Arguments: {'train_data': 'data/train_add_2digit_50k.jsonl', 'val_data': 'data/val_add_2digit_5k.jsonl', 'config': 'tiny', 'max_seq_len': 256, 'epochs': 100, 'batch_size': 32, 'lr': 0.0003, 'weight_decay': 0.1, 'warmup_steps': 500, 'grad_accum_steps': 4, 'max_grad_norm': 1.0, 'device': 'cuda', 'no_amp': False, 'num_workers': 4, 'checkpoint_dir': 'checkpoints', 'log_interval': 100, 'wandb': False, 'wandb_project': 'math-transformer', 'debug': False, 'resume': None}
+2026-01-27 12:44:26 | INFO | GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+2026-01-27 12:44:26 | INFO | GPU Memory: 8.2 GB
+2026-01-27 12:44:26 | INFO | 
+Model Configuration:
+2026-01-27 12:44:26 | INFO |   d_model: 128
+2026-01-27 12:44:26 | INFO |   n_heads: 4
+2026-01-27 12:44:26 | INFO |   n_layers: 4
+2026-01-27 12:44:26 | INFO |   d_ff: 512
+2026-01-27 12:44:26 | INFO |   max_seq_len: 256
+2026-01-27 12:44:26 | INFO | 
+Model Parameters: 840,448
+2026-01-27 12:44:26 | INFO | 
+Loading data...
+2026-01-27 12:44:26 | ERROR | Training data not found: data/train_add_2digit_50k.jsonl
+2026-01-27 12:44:26 | INFO | Please run data_generator.py first to create training data
+2026-01-27 12:44:26 | INFO | Example: python data_generator.py --output_dir data --num_train 100000
+2026-01-27 12:45:38 | INFO | ============================================================
+2026-01-27 12:45:38 | INFO | MathTransformer Training
+2026-01-27 12:45:38 | INFO | ============================================================
+2026-01-27 12:45:38 | INFO | Arguments: {'train_data': 'data/train_add_2digit_50k.jsonl', 'val_data': 'data/val_add_2digit_5k.jsonl', 'config': 'tiny', 'max_seq_len': 256, 'epochs': 100, 'batch_size': 32, 'lr': 0.0003, 'weight_decay': 0.1, 'warmup_steps': 500, 'grad_accum_steps': 4, 'max_grad_norm': 1.0, 'device': 'cuda', 'no_amp': False, 'num_workers': 4, 'checkpoint_dir': 'checkpoints', 'log_interval': 100, 'wandb': False, 'wandb_project': 'math-transformer', 'debug': False, 'resume': None}
+2026-01-27 12:45:40 | INFO | GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+2026-01-27 12:45:40 | INFO | GPU Memory: 8.2 GB
+2026-01-27 12:45:40 | INFO | 
+Model Configuration:
+2026-01-27 12:45:40 | INFO |   d_model: 128
+2026-01-27 12:45:40 | INFO |   n_heads: 4
+2026-01-27 12:45:40 | INFO |   n_layers: 4
+2026-01-27 12:45:40 | INFO |   d_ff: 512
+2026-01-27 12:45:40 | INFO |   max_seq_len: 256
+2026-01-27 12:45:40 | INFO | 
+Model Parameters: 840,448
+2026-01-27 12:45:40 | INFO | 
+Loading data...
+2026-01-27 12:45:41 | INFO |   Training examples: 50,000
+2026-01-27 12:45:41 | INFO |   Validation examples: 5,000
+2026-01-27 12:45:41 | INFO | 
+Training Configuration:
+2026-01-27 12:45:41 | INFO |   Batch size: 32
+2026-01-27 12:45:41 | INFO |   Gradient accumulation: 4
+2026-01-27 12:45:41 | INFO |   Effective batch size: 128
+2026-01-27 12:45:41 | INFO |   Learning rate: 0.0003
+2026-01-27 12:45:41 | INFO |   Mixed precision: True
+2026-01-27 12:45:41 | INFO |   Epochs: 100
+2026-01-27 12:45:41 | INFO | Training on device: cuda
+2026-01-27 12:45:41 | INFO | Model parameters: 840,448
+2026-01-27 12:45:41 | INFO | 
+==================================================
+2026-01-27 12:45:41 | INFO | Epoch 1/100
+2026-01-27 12:45:41 | INFO | ==================================================
+2026-01-27 12:45:42 | INFO | Epoch 1 | Step 100/1563 | Loss: 4.6948 | LR: 1.50e-05
+2026-01-27 12:45:43 | INFO | Epoch 1 | Step 200/1563 | Loss: 4.5926 | LR: 3.00e-05
+2026-01-27 12:45:43 | INFO | Epoch 1 | Step 300/1563 | Loss: 4.4177 | LR: 4.50e-05
+2026-01-27 12:45:44 | INFO | Epoch 1 | Step 400/1563 | Loss: 4.2287 | LR: 6.00e-05
+2026-01-27 12:45:44 | INFO | Epoch 1 | Step 500/1563 | Loss: 4.0492 | LR: 7.50e-05
+2026-01-27 12:45:45 | INFO | Epoch 1 | Step 600/1563 | Loss: 3.8745 | LR: 9.00e-05
+2026-01-27 12:45:46 | INFO | Epoch 1 | Step 700/1563 | Loss: 3.7051 | LR: 1.05e-04
+2026-01-27 12:45:46 | INFO | Epoch 1 | Step 800/1563 | Loss: 3.5435 | LR: 1.20e-04
+2026-01-27 12:45:47 | INFO | Epoch 1 | Step 900/1563 | Loss: 3.3857 | LR: 1.35e-04
+2026-01-27 12:45:47 | INFO | Epoch 1 | Step 1000/1563 | Loss: 3.2303 | LR: 1.50e-04
+2026-01-27 12:45:48 | INFO | Epoch 1 | Step 1100/1563 | Loss: 3.0801 | LR: 1.65e-04
+2026-01-27 12:45:48 | INFO | Epoch 1 | Step 1200/1563 | Loss: 2.9343 | LR: 1.80e-04
+2026-01-27 12:45:49 | INFO | Epoch 1 | Step 1300/1563 | Loss: 2.7957 | LR: 1.95e-04
+2026-01-27 12:45:49 | INFO | Epoch 1 | Step 1400/1563 | Loss: 2.6649 | LR: 2.10e-04
+2026-01-27 12:45:50 | INFO | Epoch 1 | Step 1500/1563 | Loss: 2.5439 | LR: 2.25e-04
+2026-01-27 12:45:50 | INFO | Train Loss: 2.4725
+2026-01-27 12:45:51 | INFO | Val Loss: 0.7137 | Val Accuracy: 0.7713 | Val Perplexity: 2.04
+2026-01-27 12:45:51 | INFO | Saved best model (val_loss: 0.7137)
+2026-01-27 12:45:51 | INFO | 
+==================================================
+2026-01-27 12:45:51 | INFO | Epoch 2/100
+2026-01-27 12:45:51 | INFO | ==================================================
+2026-01-27 12:45:51 | INFO | Epoch 2 | Step 100/1563 | Loss: 0.7266 | LR: 2.49e-04
+2026-01-27 12:45:52 | INFO | Epoch 2 | Step 200/1563 | Loss: 0.7043 | LR: 2.64e-04
+2026-01-27 12:45:53 | INFO | Epoch 2 | Step 300/1563 | Loss: 0.6864 | LR: 2.79e-04
+2026-01-27 12:45:53 | INFO | Epoch 2 | Step 400/1563 | Loss: 0.6703 | LR: 2.94e-04
+2026-01-27 12:45:54 | INFO | Epoch 2 | Step 500/1563 | Loss: 0.6515 | LR: 3.00e-04
+2026-01-27 12:45:54 | INFO | Epoch 2 | Step 600/1563 | Loss: 0.6326 | LR: 3.00e-04
+2026-01-27 12:45:55 | INFO | Epoch 2 | Step 700/1563 | Loss: 0.6146 | LR: 3.00e-04
+2026-01-27 12:45:55 | INFO | Epoch 2 | Step 800/1563 | Loss: 0.5973 | LR: 3.00e-04
+2026-01-27 12:45:56 | INFO | Epoch 2 | Step 900/1563 | Loss: 0.5808 | LR: 3.00e-04
+2026-01-27 12:45:56 | INFO | Epoch 2 | Step 1000/1563 | Loss: 0.5657 | LR: 3.00e-04
+2026-01-27 12:45:57 | INFO | Epoch 2 | Step 1100/1563 | Loss: 0.5513 | LR: 3.00e-04
+2026-01-27 12:45:58 | INFO | Epoch 2 | Step 1200/1563 | Loss: 0.5378 | LR: 3.00e-04
+2026-01-27 12:45:58 | INFO | Epoch 2 | Step 1300/1563 | Loss: 0.5252 | LR: 3.00e-04
+2026-01-27 12:45:59 | INFO | Epoch 2 | Step 1400/1563 | Loss: 0.5135 | LR: 3.00e-04
+2026-01-27 12:45:59 | INFO | Epoch 2 | Step 1500/1563 | Loss: 0.5024 | LR: 3.00e-04
+2026-01-27 12:46:00 | INFO | Train Loss: 0.4958
+2026-01-27 12:46:00 | INFO | Val Loss: 0.3006 | Val Accuracy: 0.8979 | Val Perplexity: 1.35
+2026-01-27 12:46:00 | INFO | Saved best model (val_loss: 0.3006)
+2026-01-27 12:46:00 | INFO | 
+==================================================
+2026-01-27 12:46:00 | INFO | Epoch 3/100
+2026-01-27 12:46:00 | INFO | ==================================================
+2026-01-27 12:46:01 | INFO | Epoch 3 | Step 100/1563 | Loss: 0.3294 | LR: 3.00e-04
+2026-01-27 12:46:01 | INFO | Epoch 3 | Step 200/1563 | Loss: 0.3246 | LR: 3.00e-04
+2026-01-27 12:46:02 | INFO | Epoch 3 | Step 300/1563 | Loss: 0.3196 | LR: 3.00e-04
+2026-01-27 12:46:03 | INFO | Epoch 3 | Step 400/1563 | Loss: 0.3158 | LR: 3.00e-04
+2026-01-27 12:46:03 | INFO | Epoch 3 | Step 500/1563 | Loss: 0.3120 | LR: 3.00e-04
+2026-01-27 12:46:04 | INFO | Epoch 3 | Step 600/1563 | Loss: 0.3084 | LR: 3.00e-04
+2026-01-27 12:46:04 | INFO | Epoch 3 | Step 700/1563 | Loss: 0.3051 | LR: 3.00e-04
+2026-01-27 12:46:05 | INFO | Epoch 3 | Step 800/1563 | Loss: 0.3025 | LR: 3.00e-04
+2026-01-27 12:46:05 | INFO | Epoch 3 | Step 900/1563 | Loss: 0.2997 | LR: 3.00e-04
+2026-01-27 12:46:06 | INFO | Epoch 3 | Step 1000/1563 | Loss: 0.2971 | LR: 3.00e-04
+2026-01-27 12:46:06 | INFO | Epoch 3 | Step 1100/1563 | Loss: 0.2947 | LR: 3.00e-04
+2026-01-27 12:46:07 | INFO | Epoch 3 | Step 1200/1563 | Loss: 0.2925 | LR: 3.00e-04
+2026-01-27 12:46:08 | INFO | Epoch 3 | Step 1300/1563 | Loss: 0.2907 | LR: 3.00e-04
+2026-01-27 12:46:08 | INFO | Epoch 3 | Step 1400/1563 | Loss: 0.2888 | LR: 3.00e-04
+2026-01-27 12:46:09 | INFO | Epoch 3 | Step 1500/1563 | Loss: 0.2871 | LR: 3.00e-04
+2026-01-27 12:46:09 | INFO | Train Loss: 0.2861
+2026-01-27 12:46:09 | INFO | Val Loss: 0.2440 | Val Accuracy: 0.9062 | Val Perplexity: 1.28
+2026-01-27 12:46:09 | INFO | Saved best model (val_loss: 0.2440)
+2026-01-27 12:46:09 | INFO | 
+==================================================
+2026-01-27 12:46:09 | INFO | Epoch 4/100
+2026-01-27 12:46:09 | INFO | ==================================================
+2026-01-27 12:46:10 | INFO | Epoch 4 | Step 100/1563 | Loss: 0.2603 | LR: 3.00e-04
+2026-01-27 12:46:11 | INFO | Epoch 4 | Step 200/1563 | Loss: 0.2580 | LR: 3.00e-04
+2026-01-27 12:46:11 | INFO | Epoch 4 | Step 300/1563 | Loss: 0.2573 | LR: 3.00e-04
+2026-01-27 12:46:12 | INFO | Epoch 4 | Step 400/1563 | Loss: 0.2571 | LR: 3.00e-04
+2026-01-27 12:46:12 | INFO | Epoch 4 | Step 500/1563 | Loss: 0.2564 | LR: 3.00e-04
+2026-01-27 12:46:13 | INFO | Epoch 4 | Step 600/1563 | Loss: 0.2557 | LR: 3.00e-04
+2026-01-27 12:46:13 | INFO | Epoch 4 | Step 700/1563 | Loss: 0.2552 | LR: 3.00e-04
+2026-01-27 12:46:14 | INFO | Epoch 4 | Step 800/1563 | Loss: 0.2546 | LR: 3.00e-04
+2026-01-27 12:46:15 | INFO | Epoch 4 | Step 900/1563 | Loss: 0.2542 | LR: 3.00e-04
+2026-01-27 12:46:15 | INFO | Epoch 4 | Step 1000/1563 | Loss: 0.2538 | LR: 3.00e-04
+2026-01-27 12:46:16 | INFO | Epoch 4 | Step 1100/1563 | Loss: 0.2534 | LR: 3.00e-04
+2026-01-27 12:46:16 | INFO | Epoch 4 | Step 1200/1563 | Loss: 0.2530 | LR: 3.00e-04
+2026-01-27 12:46:17 | INFO | Epoch 4 | Step 1300/1563 | Loss: 0.2526 | LR: 3.00e-04
+2026-01-27 12:46:17 | INFO | Epoch 4 | Step 1400/1563 | Loss: 0.2522 | LR: 3.00e-04
+2026-01-27 12:46:18 | INFO | Epoch 4 | Step 1500/1563 | Loss: 0.2518 | LR: 3.00e-04
+2026-01-27 12:46:18 | INFO | Train Loss: 0.2516
+2026-01-27 12:46:19 | INFO | Val Loss: 0.2351 | Val Accuracy: 0.9073 | Val Perplexity: 1.27
+2026-01-27 12:46:19 | INFO | Saved best model (val_loss: 0.2351)
+2026-01-27 12:46:19 | INFO | 
+==================================================
+2026-01-27 12:46:19 | INFO | Epoch 5/100
+2026-01-27 12:46:19 | INFO | ==================================================
+2026-01-27 12:46:19 | INFO | Epoch 5 | Step 100/1563 | Loss: 0.2431 | LR: 2.99e-04
+2026-01-27 12:46:20 | INFO | Epoch 5 | Step 200/1563 | Loss: 0.2444 | LR: 2.99e-04
+2026-01-27 12:46:20 | INFO | Epoch 5 | Step 300/1563 | Loss: 0.2445 | LR: 2.99e-04
+2026-01-27 12:46:21 | INFO | Epoch 5 | Step 400/1563 | Loss: 0.2447 | LR: 2.99e-04
+2026-01-27 12:46:22 | INFO | Epoch 5 | Step 500/1563 | Loss: 0.2448 | LR: 2.99e-04
+2026-01-27 12:46:22 | INFO | Epoch 5 | Step 600/1563 | Loss: 0.2447 | LR: 2.99e-04
+2026-01-27 12:46:23 | INFO | Epoch 5 | Step 700/1563 | Loss: 0.2445 | LR: 2.99e-04
+2026-01-27 12:46:23 | INFO | Epoch 5 | Step 800/1563 | Loss: 0.2444 | LR: 2.99e-04
+2026-01-27 12:46:24 | INFO | Epoch 5 | Step 900/1563 | Loss: 0.2441 | LR: 2.99e-04
+2026-01-27 12:46:24 | INFO | Epoch 5 | Step 1000/1563 | Loss: 0.2438 | LR: 2.99e-04
+2026-01-27 12:46:25 | INFO | Epoch 5 | Step 1100/1563 | Loss: 0.2437 | LR: 2.99e-04
+2026-01-27 12:46:25 | INFO | Epoch 5 | Step 1200/1563 | Loss: 0.2435 | LR: 2.99e-04
+2026-01-27 12:46:26 | INFO | Epoch 5 | Step 1300/1563 | Loss: 0.2431 | LR: 2.99e-04
+2026-01-27 12:46:27 | INFO | Epoch 5 | Step 1400/1563 | Loss: 0.2430 | LR: 2.99e-04
+2026-01-27 12:46:27 | INFO | Epoch 5 | Step 1500/1563 | Loss: 0.2428 | LR: 2.99e-04
+2026-01-27 12:46:28 | INFO | Train Loss: 0.2427
+2026-01-27 12:46:28 | INFO | Val Loss: 0.2335 | Val Accuracy: 0.9078 | Val Perplexity: 1.26
+2026-01-27 12:46:28 | INFO | Saved best model (val_loss: 0.2335)
+2026-01-27 12:46:28 | INFO | 
+==================================================
+2026-01-27 12:46:28 | INFO | Epoch 6/100
+2026-01-27 12:46:28 | INFO | ==================================================
+2026-01-27 12:46:29 | INFO | Epoch 6 | Step 100/1563 | Loss: 0.2401 | LR: 2.99e-04
+2026-01-27 12:46:29 | INFO | Epoch 6 | Step 200/1563 | Loss: 0.2403 | LR: 2.99e-04
+2026-01-27 12:46:30 | INFO | Epoch 6 | Step 300/1563 | Loss: 0.2395 | LR: 2.99e-04
+2026-01-27 12:46:30 | INFO | Epoch 6 | Step 400/1563 | Loss: 0.2396 | LR: 2.99e-04
+2026-01-27 12:46:31 | INFO | Epoch 6 | Step 500/1563 | Loss: 0.2400 | LR: 2.99e-04
+2026-01-27 12:46:31 | INFO | Epoch 6 | Step 600/1563 | Loss: 0.2399 | LR: 2.99e-04
+2026-01-27 12:46:32 | INFO | Epoch 6 | Step 700/1563 | Loss: 0.2397 | LR: 2.99e-04
+2026-01-27 12:46:33 | INFO | Epoch 6 | Step 800/1563 | Loss: 0.2397 | LR: 2.99e-04
+2026-01-27 12:46:33 | INFO | Epoch 6 | Step 900/1563 | Loss: 0.2395 | LR: 2.99e-04
+2026-01-27 12:46:34 | INFO | Epoch 6 | Step 1000/1563 | Loss: 0.2395 | LR: 2.99e-04
+2026-01-27 12:46:34 | INFO | Epoch 6 | Step 1100/1563 | Loss: 0.2394 | LR: 2.99e-04
+2026-01-27 12:46:35 | INFO | Epoch 6 | Step 1200/1563 | Loss: 0.2395 | LR: 2.99e-04
+2026-01-27 12:46:35 | INFO | Epoch 6 | Step 1300/1563 | Loss: 0.2395 | LR: 2.99e-04
+2026-01-27 12:46:36 | INFO | Epoch 6 | Step 1400/1563 | Loss: 0.2394 | LR: 2.99e-04
+2026-01-27 12:46:36 | INFO | Epoch 6 | Step 1500/1563 | Loss: 0.2394 | LR: 2.99e-04
+2026-01-27 12:46:37 | INFO | Train Loss: 0.2394
+2026-01-27 12:46:37 | INFO | Val Loss: 0.2334 | Val Accuracy: 0.9074 | Val Perplexity: 1.26
+2026-01-27 12:46:37 | INFO | Saved best model (val_loss: 0.2334)
+2026-01-27 12:46:37 | INFO | 
+==================================================
+2026-01-27 12:46:37 | INFO | Epoch 7/100
+2026-01-27 12:46:37 | INFO | ==================================================
+2026-01-27 12:46:38 | INFO | Epoch 7 | Step 100/1563 | Loss: 0.2376 | LR: 2.98e-04
+2026-01-27 12:46:39 | INFO | Epoch 7 | Step 200/1563 | Loss: 0.2374 | LR: 2.98e-04
+2026-01-27 12:46:39 | INFO | Epoch 7 | Step 300/1563 | Loss: 0.2379 | LR: 2.98e-04
+2026-01-27 12:46:40 | INFO | Epoch 7 | Step 400/1563 | Loss: 0.2387 | LR: 2.98e-04
+2026-01-27 12:46:40 | INFO | Epoch 7 | Step 500/1563 | Loss: 0.2386 | LR: 2.98e-04
+2026-01-27 12:46:41 | INFO | Epoch 7 | Step 600/1563 | Loss: 0.2387 | LR: 2.98e-04
+2026-01-27 12:46:41 | INFO | Epoch 7 | Step 700/1563 | Loss: 0.2384 | LR: 2.98e-04
+2026-01-27 12:46:42 | INFO | Epoch 7 | Step 800/1563 | Loss: 0.2383 | LR: 2.98e-04
+2026-01-27 12:46:42 | INFO | Epoch 7 | Step 900/1563 | Loss: 0.2381 | LR: 2.98e-04
+2026-01-27 12:46:43 | INFO | Epoch 7 | Step 1000/1563 | Loss: 0.2381 | LR: 2.98e-04
+2026-01-27 12:46:44 | INFO | Epoch 7 | Step 1100/1563 | Loss: 0.2382 | LR: 2.98e-04
+2026-01-27 12:46:44 | INFO | Epoch 7 | Step 1200/1563 | Loss: 0.2382 | LR: 2.98e-04
+2026-01-27 12:46:45 | INFO | Epoch 7 | Step 1300/1563 | Loss: 0.2381 | LR: 2.98e-04
+2026-01-27 12:46:45 | INFO | Epoch 7 | Step 1400/1563 | Loss: 0.2381 | LR: 2.98e-04
+2026-01-27 12:46:46 | INFO | Epoch 7 | Step 1500/1563 | Loss: 0.2380 | LR: 2.98e-04
+2026-01-27 12:46:46 | INFO | Train Loss: 0.2380
+2026-01-27 12:46:47 | INFO | Val Loss: 0.2339 | Val Accuracy: 0.9077 | Val Perplexity: 1.26
+2026-01-27 12:46:47 | INFO | 
+==================================================
+2026-01-27 12:46:47 | INFO | Epoch 8/100
+2026-01-27 12:46:47 | INFO | ==================================================
+2026-01-27 12:46:47 | INFO | Epoch 8 | Step 100/1563 | Loss: 0.2379 | LR: 2.98e-04
+2026-01-27 12:46:48 | INFO | Epoch 8 | Step 200/1563 | Loss: 0.2379 | LR: 2.98e-04
+2026-01-27 12:46:48 | INFO | Epoch 8 | Step 300/1563 | Loss: 0.2378 | LR: 2.98e-04
+2026-01-27 12:46:49 | INFO | Epoch 8 | Step 400/1563 | Loss: 0.2379 | LR: 2.98e-04
+2026-01-27 12:46:50 | INFO | Epoch 8 | Step 500/1563 | Loss: 0.2375 | LR: 2.98e-04
+2026-01-27 12:46:50 | INFO | Epoch 8 | Step 600/1563 | Loss: 0.2374 | LR: 2.97e-04
+2026-01-27 12:46:51 | INFO | Epoch 8 | Step 700/1563 | Loss: 0.2373 | LR: 2.97e-04
+2026-01-27 12:46:51 | INFO | Epoch 8 | Step 800/1563 | Loss: 0.2373 | LR: 2.97e-04
+2026-01-27 12:46:52 | INFO | Epoch 8 | Step 900/1563 | Loss: 0.2373 | LR: 2.97e-04
+2026-01-27 12:46:52 | INFO | Epoch 8 | Step 1000/1563 | Loss: 0.2373 | LR: 2.97e-04
+2026-01-27 12:46:53 | INFO | Epoch 8 | Step 1100/1563 | Loss: 0.2372 | LR: 2.97e-04
+2026-01-27 12:46:54 | INFO | Epoch 8 | Step 1200/1563 | Loss: 0.2371 | LR: 2.97e-04
+2026-01-27 12:46:54 | INFO | Epoch 8 | Step 1300/1563 | Loss: 0.2370 | LR: 2.97e-04
+2026-01-27 12:46:55 | INFO | Epoch 8 | Step 1400/1563 | Loss: 0.2371 | LR: 2.97e-04
+2026-01-27 12:46:55 | INFO | Epoch 8 | Step 1500/1563 | Loss: 0.2371 | LR: 2.97e-04
+2026-01-27 12:46:56 | INFO | Train Loss: 0.2370
+2026-01-27 12:46:56 | INFO | Val Loss: 0.2333 | Val Accuracy: 0.9074 | Val Perplexity: 1.26
+2026-01-27 12:46:56 | INFO | Saved best model (val_loss: 0.2333)
+2026-01-27 12:46:56 | INFO | 
+==================================================
+2026-01-27 12:46:56 | INFO | Epoch 9/100
+2026-01-27 12:46:56 | INFO | ==================================================
+2026-01-27 12:46:57 | INFO | Epoch 9 | Step 100/1563 | Loss: 0.2367 | LR: 2.97e-04
+2026-01-27 12:46:57 | INFO | Epoch 9 | Step 200/1563 | Loss: 0.2376 | LR: 2.97e-04
+2026-01-27 12:46:58 | INFO | Epoch 9 | Step 300/1563 | Loss: 0.2372 | LR: 2.97e-04
+2026-01-27 12:46:58 | INFO | Epoch 9 | Step 400/1563 | Loss: 0.2371 | LR: 2.97e-04
+2026-01-27 12:46:59 | INFO | Epoch 9 | Step 500/1563 | Loss: 0.2368 | LR: 2.97e-04
+2026-01-27 12:47:00 | INFO | Epoch 9 | Step 600/1563 | Loss: 0.2367 | LR: 2.97e-04
+2026-01-27 12:47:00 | INFO | Epoch 9 | Step 700/1563 | Loss: 0.2369 | LR: 2.97e-04
+2026-01-27 12:47:01 | INFO | Epoch 9 | Step 800/1563 | Loss: 0.2368 | LR: 2.96e-04
+2026-01-27 12:47:01 | INFO | Epoch 9 | Step 900/1563 | Loss: 0.2368 | LR: 2.96e-04
+2026-01-27 12:47:02 | INFO | Epoch 9 | Step 1000/1563 | Loss: 0.2368 | LR: 2.96e-04
+2026-01-27 12:47:02 | INFO | Epoch 9 | Step 1100/1563 | Loss: 0.2367 | LR: 2.96e-04
+2026-01-27 12:47:03 | INFO | Epoch 9 | Step 1200/1563 | Loss: 0.2367 | LR: 2.96e-04
+2026-01-27 12:47:03 | INFO | Epoch 9 | Step 1300/1563 | Loss: 0.2367 | LR: 2.96e-04
+2026-01-27 12:47:04 | INFO | Epoch 9 | Step 1400/1563 | Loss: 0.2367 | LR: 2.96e-04
+2026-01-27 12:47:05 | INFO | Epoch 9 | Step 1500/1563 | Loss: 0.2366 | LR: 2.96e-04
+2026-01-27 12:47:05 | INFO | Train Loss: 0.2365
+2026-01-27 12:47:05 | INFO | Val Loss: 0.2331 | Val Accuracy: 0.9077 | Val Perplexity: 1.26
+2026-01-27 12:47:05 | INFO | Saved best model (val_loss: 0.2331)
+2026-01-27 12:47:05 | INFO | 
+==================================================
+2026-01-27 12:47:05 | INFO | Epoch 10/100
+2026-01-27 12:47:05 | INFO | ==================================================
+2026-01-27 12:47:06 | INFO | Epoch 10 | Step 100/1563 | Loss: 0.2353 | LR: 2.96e-04
+2026-01-27 12:47:07 | INFO | Epoch 10 | Step 200/1563 | Loss: 0.2357 | LR: 2.96e-04
+2026-01-27 12:47:07 | INFO | Epoch 10 | Step 300/1563 | Loss: 0.2360 | LR: 2.96e-04
+2026-01-27 12:47:08 | INFO | Epoch 10 | Step 400/1563 | Loss: 0.2362 | LR: 2.96e-04
+2026-01-27 12:47:08 | INFO | Epoch 10 | Step 500/1563 | Loss: 0.2363 | LR: 2.96e-04
+2026-01-27 12:47:09 | INFO | Epoch 10 | Step 600/1563 | Loss: 0.2362 | LR: 2.96e-04
+2026-01-27 12:47:09 | INFO | Epoch 10 | Step 700/1563 | Loss: 0.2366 | LR: 2.95e-04
+2026-01-27 12:47:10 | INFO | Epoch 10 | Step 800/1563 | Loss: 0.2365 | LR: 2.95e-04
+2026-01-27 12:47:11 | INFO | Epoch 10 | Step 900/1563 | Loss: 0.2365 | LR: 2.95e-04
+2026-01-27 12:47:11 | INFO | Epoch 10 | Step 1000/1563 | Loss: 0.2364 | LR: 2.95e-04
+2026-01-27 12:47:12 | INFO | Epoch 10 | Step 1100/1563 | Loss: 0.2363 | LR: 2.95e-04
+2026-01-27 12:47:12 | INFO | Epoch 10 | Step 1200/1563 | Loss: 0.2363 | LR: 2.95e-04
+2026-01-27 12:47:13 | INFO | Epoch 10 | Step 1300/1563 | Loss: 0.2363 | LR: 2.95e-04
+2026-01-27 12:47:14 | INFO | Epoch 10 | Step 1400/1563 | Loss: 0.2363 | LR: 2.95e-04
+2026-01-27 12:47:14 | INFO | Epoch 10 | Step 1500/1563 | Loss: 0.2362 | LR: 2.95e-04
+2026-01-27 12:47:15 | INFO | Train Loss: 0.2362
+2026-01-27 12:47:15 | INFO | Val Loss: 0.2336 | Val Accuracy: 0.9077 | Val Perplexity: 1.26
+2026-01-27 12:47:15 | INFO | 
+==================================================
+2026-01-27 12:47:15 | INFO | Epoch 11/100
+2026-01-27 12:47:15 | INFO | ==================================================
+2026-01-27 12:47:16 | INFO | Epoch 11 | Step 100/1563 | Loss: 0.2357 | LR: 2.95e-04
+2026-01-27 12:47:16 | INFO | Epoch 11 | Step 200/1563 | Loss: 0.2354 | LR: 2.95e-04
+2026-01-27 12:47:17 | INFO | Epoch 11 | Step 300/1563 | Loss: 0.2360 | LR: 2.95e-04
+2026-01-27 12:47:18 | INFO | Epoch 11 | Step 400/1563 | Loss: 0.2360 | LR: 2.95e-04
+2026-01-27 12:47:18 | INFO | Epoch 11 | Step 500/1563 | Loss: 0.2358 | LR: 2.94e-04
+2026-01-27 12:47:19 | INFO | Epoch 11 | Step 600/1563 | Loss: 0.2357 | LR: 2.94e-04
+2026-01-27 12:47:20 | INFO | Epoch 11 | Step 700/1563 | Loss: 0.2358 | LR: 2.94e-04
+2026-01-27 12:47:20 | INFO | Epoch 11 | Step 800/1563 | Loss: 0.2358 | LR: 2.94e-04
+2026-01-27 12:47:21 | INFO | Epoch 11 | Step 900/1563 | Loss: 0.2359 | LR: 2.94e-04
+2026-01-27 12:47:22 | INFO | Epoch 11 | Step 1000/1563 | Loss: 0.2360 | LR: 2.94e-04
+2026-01-27 12:47:22 | INFO | Epoch 11 | Step 1100/1563 | Loss: 0.2359 | LR: 2.94e-04
+2026-01-27 12:47:23 | INFO | Epoch 11 | Step 1200/1563 | Loss: 0.2359 | LR: 2.94e-04
+2026-01-27 12:47:24 | INFO | Epoch 11 | Step 1300/1563 | Loss: 0.2360 | LR: 2.94e-04
+2026-01-27 12:47:24 | INFO | Epoch 11 | Step 1400/1563 | Loss: 0.2359 | LR: 2.94e-04
+2026-01-27 12:47:25 | INFO | Epoch 11 | Step 1500/1563 | Loss: 0.2359 | LR: 2.94e-04
+2026-01-27 12:47:25 | INFO | Train Loss: 0.2359
+2026-01-27 12:47:26 | INFO | Val Loss: 0.2331 | Val Accuracy: 0.9076 | Val Perplexity: 1.26
+2026-01-27 12:47:26 | INFO | Saved best model (val_loss: 0.2331)
+2026-01-27 12:47:26 | INFO | 
+==================================================
+2026-01-27 12:47:26 | INFO | Epoch 12/100
+2026-01-27 12:47:26 | INFO | ==================================================
+2026-01-27 12:47:26 | INFO | Epoch 12 | Step 100/1563 | Loss: 0.2354 | LR: 2.94e-04
+2026-01-27 12:47:27 | INFO | Epoch 12 | Step 200/1563 | Loss: 0.2367 | LR: 2.93e-04
+2026-01-27 12:47:27 | INFO | Epoch 12 | Step 300/1563 | Loss: 0.2362 | LR: 2.93e-04
+2026-01-27 12:47:28 | INFO | Epoch 12 | Step 400/1563 | Loss: 0.2358 | LR: 2.93e-04
+2026-01-27 12:47:29 | INFO | Epoch 12 | Step 500/1563 | Loss: 0.2361 | LR: 2.93e-04
+2026-01-27 12:47:29 | INFO | Epoch 12 | Step 600/1563 | Loss: 0.2361 | LR: 2.93e-04
+2026-01-27 12:47:30 | INFO | Epoch 12 | Step 700/1563 | Loss: 0.2358 | LR: 2.93e-04
+2026-01-27 12:47:30 | INFO | Epoch 12 | Step 800/1563 | Loss: 0.2359 | LR: 2.93e-04
+2026-01-27 12:47:31 | INFO | Epoch 12 | Step 900/1563 | Loss: 0.2358 | LR: 2.93e-04
+2026-01-27 12:47:32 | INFO | Epoch 12 | Step 1000/1563 | Loss: 0.2360 | LR: 2.93e-04
+2026-01-27 12:47:32 | INFO | Epoch 12 | Step 1100/1563 | Loss: 0.2359 | LR: 2.93e-04
+2026-01-27 12:47:33 | INFO | Epoch 12 | Step 1200/1563 | Loss: 0.2358 | LR: 2.93e-04
+2026-01-27 12:47:33 | INFO | Epoch 12 | Step 1300/1563 | Loss: 0.2358 | LR: 2.92e-04
+2026-01-27 12:47:34 | INFO | Epoch 12 | Step 1400/1563 | Loss: 0.2358 | LR: 2.92e-04
+2026-01-27 12:47:35 | INFO | Epoch 12 | Step 1500/1563 | Loss: 0.2357 | LR: 2.92e-04
+2026-01-27 12:47:35 | INFO | Train Loss: 0.2357
+2026-01-27 12:47:35 | INFO | Val Loss: 0.2330 | Val Accuracy: 0.9075 | Val Perplexity: 1.26
+2026-01-27 12:47:35 | INFO | Saved best model (val_loss: 0.2330)
+2026-01-27 12:47:35 | INFO | 
+==================================================
+2026-01-27 12:47:35 | INFO | Epoch 13/100
+2026-01-27 12:47:35 | INFO | ==================================================
+2026-01-27 12:47:36 | INFO | Epoch 13 | Step 100/1563 | Loss: 0.2345 | LR: 2.92e-04
+2026-01-27 12:47:37 | INFO | Epoch 13 | Step 200/1563 | Loss: 0.2352 | LR: 2.92e-04
+2026-01-27 12:47:37 | INFO | Epoch 13 | Step 300/1563 | Loss: 0.2354 | LR: 2.92e-04
+2026-01-27 12:47:38 | INFO | Epoch 13 | Step 400/1563 | Loss: 0.2352 | LR: 2.92e-04
+2026-01-27 12:47:39 | INFO | Epoch 13 | Step 500/1563 | Loss: 0.2357 | LR: 2.92e-04
+2026-01-27 12:47:39 | INFO | Epoch 13 | Step 600/1563 | Loss: 0.2356 | LR: 2.92e-04
+2026-01-27 12:47:40 | INFO | Epoch 13 | Step 700/1563 | Loss: 0.2356 | LR: 2.92e-04
+2026-01-27 12:47:40 | INFO | Epoch 13 | Step 800/1563 | Loss: 0.2356 | LR: 2.92e-04
+2026-01-27 12:47:41 | INFO | Epoch 13 | Step 900/1563 | Loss: 0.2358 | LR: 2.91e-04
+2026-01-27 12:47:41 | INFO | Epoch 13 | Step 1000/1563 | Loss: 0.2357 | LR: 2.91e-04
+2026-01-27 12:47:42 | INFO | Epoch 13 | Step 1100/1563 | Loss: 0.2357 | LR: 2.91e-04
+2026-01-27 12:47:43 | INFO | Epoch 13 | Step 1200/1563 | Loss: 0.2357 | LR: 2.91e-04
+2026-01-27 12:47:43 | INFO | Epoch 13 | Step 1300/1563 | Loss: 0.2357 | LR: 2.91e-04
+2026-01-27 12:47:44 | INFO | Epoch 13 | Step 1400/1563 | Loss: 0.2356 | LR: 2.91e-04
+2026-01-27 12:47:44 | INFO | Epoch 13 | Step 1500/1563 | Loss: 0.2355 | LR: 2.91e-04
+2026-01-27 12:47:45 | INFO | Train Loss: 0.2355
+2026-01-27 12:47:45 | INFO | Val Loss: 0.2332 | Val Accuracy: 0.9073 | Val Perplexity: 1.26
+2026-01-27 12:47:45 | INFO | 
+==================================================
+2026-01-27 12:47:45 | INFO | Epoch 14/100
+2026-01-27 12:47:45 | INFO | ==================================================
+2026-01-27 12:47:46 | INFO | Epoch 14 | Step 100/1563 | Loss: 0.2354 | LR: 2.91e-04
+2026-01-27 12:47:46 | INFO | Epoch 14 | Step 200/1563 | Loss: 0.2353 | LR: 2.91e-04
+2026-01-27 12:47:47 | INFO | Epoch 14 | Step 300/1563 | Loss: 0.2349 | LR: 2.90e-04
+2026-01-27 12:47:47 | INFO | Epoch 14 | Step 400/1563 | Loss: 0.2349 | LR: 2.90e-04
+2026-01-27 12:47:48 | INFO | Epoch 14 | Step 500/1563 | Loss: 0.2350 | LR: 2.90e-04
+2026-01-27 12:47:49 | INFO | Epoch 14 | Step 600/1563 | Loss: 0.2354 | LR: 2.90e-04
+2026-01-27 12:47:49 | INFO | Epoch 14 | Step 700/1563 | Loss: 0.2355 | LR: 2.90e-04
+2026-01-27 12:47:50 | INFO | Epoch 14 | Step 800/1563 | Loss: 0.2353 | LR: 2.90e-04
+2026-01-27 12:47:50 | INFO | Epoch 14 | Step 900/1563 | Loss: 0.2354 | LR: 2.90e-04
+2026-01-27 12:47:51 | INFO | Epoch 14 | Step 1000/1563 | Loss: 0.2354 | LR: 2.90e-04
+2026-01-27 12:47:51 | INFO | Epoch 14 | Step 1100/1563 | Loss: 0.2354 | LR: 2.90e-04
+2026-01-27 12:47:52 | INFO | Epoch 14 | Step 1200/1563 | Loss: 0.2355 | LR: 2.90e-04
+2026-01-27 12:47:53 | INFO | Epoch 14 | Step 1300/1563 | Loss: 0.2354 | LR: 2.89e-04
+2026-01-27 12:47:53 | INFO | Epoch 14 | Step 1400/1563 | Loss: 0.2354 | LR: 2.89e-04
+2026-01-27 12:47:54 | INFO | Epoch 14 | Step 1500/1563 | Loss: 0.2355 | LR: 2.89e-04
+2026-01-27 12:47:54 | INFO | Train Loss: 0.2354
+2026-01-27 12:47:54 | INFO | Val Loss: 0.2330 | Val Accuracy: 0.9078 | Val Perplexity: 1.26
+2026-01-27 12:47:54 | INFO | 
+==================================================
+2026-01-27 12:47:54 | INFO | Epoch 15/100
+2026-01-27 12:47:54 | INFO | ==================================================
+2026-01-27 12:47:55 | INFO | Epoch 15 | Step 100/1563 | Loss: 0.2370 | LR: 2.89e-04
+2026-01-27 12:47:56 | INFO | Epoch 15 | Step 200/1563 | Loss: 0.2365 | LR: 2.89e-04
+2026-01-27 12:47:56 | INFO | Epoch 15 | Step 300/1563 | Loss: 0.2355 | LR: 2.89e-04
+2026-01-27 12:47:57 | INFO | Epoch 15 | Step 400/1563 | Loss: 0.2355 | LR: 2.89e-04
+2026-01-27 12:47:57 | INFO | Epoch 15 | Step 500/1563 | Loss: 0.2354 | LR: 2.89e-04
+2026-01-27 12:47:58 | INFO | Epoch 15 | Step 600/1563 | Loss: 0.2352 | LR: 2.88e-04
+2026-01-27 12:47:59 | INFO | Epoch 15 | Step 700/1563 | Loss: 0.2351 | LR: 2.88e-04
+2026-01-27 12:47:59 | INFO | Epoch 15 | Step 800/1563 | Loss: 0.2352 | LR: 2.88e-04
+2026-01-27 12:48:00 | INFO | Epoch 15 | Step 900/1563 | Loss: 0.2354 | LR: 2.88e-04
+2026-01-27 12:48:00 | INFO | Epoch 15 | Step 1000/1563 | Loss: 0.2353 | LR: 2.88e-04
+2026-01-27 12:48:01 | INFO | Epoch 15 | Step 1100/1563 | Loss: 0.2354 | LR: 2.88e-04
+2026-01-27 12:48:01 | INFO | Epoch 15 | Step 1200/1563 | Loss: 0.2355 | LR: 2.88e-04
+2026-01-27 12:48:02 | INFO | Epoch 15 | Step 1300/1563 | Loss: 0.2354 | LR: 2.88e-04
+2026-01-27 12:48:03 | INFO | Epoch 15 | Step 1400/1563 | Loss: 0.2353 | LR: 2.88e-04
+2026-01-27 12:48:03 | INFO | Epoch 15 | Step 1500/1563 | Loss: 0.2352 | LR: 2.87e-04
+2026-01-27 12:48:03 | INFO | Train Loss: 0.2353
+2026-01-27 12:48:04 | INFO | Val Loss: 0.2329 | Val Accuracy: 0.9075 | Val Perplexity: 1.26
+2026-01-27 12:48:04 | INFO | Saved best model (val_loss: 0.2329)
+2026-01-27 12:48:04 | INFO | 
+==================================================
+2026-01-27 12:48:04 | INFO | Epoch 16/100
+2026-01-27 12:48:04 | INFO | ==================================================
+2026-01-27 12:48:05 | INFO | Epoch 16 | Step 100/1563 | Loss: 0.2356 | LR: 2.87e-04
+2026-01-27 12:48:05 | INFO | Epoch 16 | Step 200/1563 | Loss: 0.2357 | LR: 2.87e-04
+2026-01-27 12:48:06 | INFO | Epoch 16 | Step 300/1563 | Loss: 0.2352 | LR: 2.87e-04
+2026-01-27 12:48:06 | INFO | Epoch 16 | Step 400/1563 | Loss: 0.2356 | LR: 2.87e-04
+2026-01-27 12:48:07 | INFO | Epoch 16 | Step 500/1563 | Loss: 0.2358 | LR: 2.87e-04
+2026-01-27 12:48:07 | INFO | Epoch 16 | Step 600/1563 | Loss: 0.2356 | LR: 2.87e-04
+2026-01-27 12:48:08 | INFO | Epoch 16 | Step 700/1563 | Loss: 0.2355 | LR: 2.87e-04
+2026-01-27 12:48:09 | INFO | Epoch 16 | Step 800/1563 | Loss: 0.2355 | LR: 2.86e-04
+2026-01-27 12:48:09 | INFO | Epoch 16 | Step 900/1563 | Loss: 0.2352 | LR: 2.86e-04
+2026-01-27 12:48:10 | INFO | Epoch 16 | Step 1000/1563 | Loss: 0.2352 | LR: 2.86e-04
+2026-01-27 12:48:10 | INFO | Epoch 16 | Step 1100/1563 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 12:48:11 | INFO | Epoch 16 | Step 1200/1563 | Loss: 0.2352 | LR: 2.86e-04
+2026-01-27 12:48:11 | INFO | Epoch 16 | Step 1300/1563 | Loss: 0.2352 | LR: 2.86e-04
+2026-01-27 12:48:12 | INFO | Epoch 16 | Step 1400/1563 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 12:48:12 | INFO | Epoch 16 | Step 1500/1563 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 12:48:13 | INFO | Train Loss: 0.2352
+2026-01-27 12:48:13 | INFO | Val Loss: 0.2330 | Val Accuracy: 0.9077 | Val Perplexity: 1.26
+2026-01-27 12:48:13 | INFO | 
+==================================================
+2026-01-27 12:48:13 | INFO | Epoch 17/100
+2026-01-27 12:48:13 | INFO | ==================================================
+2026-01-27 12:48:14 | INFO | Epoch 17 | Step 100/1563 | Loss: 0.2362 | LR: 2.85e-04
+2026-01-27 12:48:15 | INFO | Epoch 17 | Step 200/1563 | Loss: 0.2356 | LR: 2.85e-04
+2026-01-27 12:48:15 | INFO | Epoch 17 | Step 300/1563 | Loss: 0.2354 | LR: 2.85e-04
+2026-01-27 12:48:16 | INFO | Epoch 17 | Step 400/1563 | Loss: 0.2357 | LR: 2.85e-04
+2026-01-27 12:48:16 | INFO | Epoch 17 | Step 500/1563 | Loss: 0.2358 | LR: 2.85e-04
+2026-01-27 12:48:17 | INFO | Epoch 17 | Step 600/1563 | Loss: 0.2356 | LR: 2.85e-04
+2026-01-27 12:48:17 | INFO | Epoch 17 | Step 700/1563 | Loss: 0.2356 | LR: 2.85e-04
+2026-01-27 12:48:18 | INFO | Epoch 17 | Step 800/1563 | Loss: 0.2354 | LR: 2.85e-04
+2026-01-27 12:48:19 | INFO | Epoch 17 | Step 900/1563 | Loss: 0.2353 | LR: 2.84e-04
+2026-01-27 12:48:19 | INFO | Epoch 17 | Step 1000/1563 | Loss: 0.2353 | LR: 2.84e-04
+2026-01-27 12:48:20 | INFO | Epoch 17 | Step 1100/1563 | Loss: 0.2353 | LR: 2.84e-04
+2026-01-27 12:48:20 | INFO | Epoch 17 | Step 1200/1563 | Loss: 0.2354 | LR: 2.84e-04
+2026-01-27 12:48:21 | INFO | Epoch 17 | Step 1300/1563 | Loss: 0.2352 | LR: 2.84e-04
+2026-01-27 12:48:21 | INFO | Epoch 17 | Step 1400/1563 | Loss: 0.2352 | LR: 2.84e-04
+2026-01-27 12:48:22 | INFO | Epoch 17 | Step 1500/1563 | Loss: 0.2351 | LR: 2.84e-04
+2026-01-27 12:48:22 | INFO | Train Loss: 0.2351
+2026-01-27 12:48:23 | INFO | Val Loss: 0.2331 | Val Accuracy: 0.9076 | Val Perplexity: 1.26
+2026-01-27 12:48:23 | INFO | 
+==================================================
+2026-01-27 12:48:23 | INFO | Epoch 18/100
+2026-01-27 12:48:23 | INFO | ==================================================
+2026-01-27 12:48:23 | INFO | Epoch 18 | Step 100/1563 | Loss: 0.2357 | LR: 2.83e-04
+2026-01-27 12:48:24 | INFO | Epoch 18 | Step 200/1563 | Loss: 0.2361 | LR: 2.83e-04
+2026-01-27 12:48:24 | INFO | Epoch 18 | Step 300/1563 | Loss: 0.2360 | LR: 2.83e-04
+2026-01-27 12:48:25 | INFO | Epoch 18 | Step 400/1563 | Loss: 0.2357 | LR: 2.83e-04
+2026-01-27 12:48:26 | INFO | Epoch 18 | Step 500/1563 | Loss: 0.2357 | LR: 2.83e-04
+2026-01-27 12:48:26 | INFO | Epoch 18 | Step 600/1563 | Loss: 0.2357 | LR: 2.83e-04
+2026-01-27 12:48:27 | INFO | Epoch 18 | Step 700/1563 | Loss: 0.2356 | LR: 2.83e-04
+2026-01-27 12:48:27 | INFO | Epoch 18 | Step 800/1563 | Loss: 0.2357 | LR: 2.82e-04
+2026-01-27 12:48:28 | INFO | Epoch 18 | Step 900/1563 | Loss: 0.2355 | LR: 2.82e-04
+2026-01-27 12:48:29 | INFO | Epoch 18 | Step 1000/1563 | Loss: 0.2355 | LR: 2.82e-04
+2026-01-27 12:48:29 | INFO | Epoch 18 | Step 1100/1563 | Loss: 0.2354 | LR: 2.82e-04
+2026-01-27 12:48:30 | INFO | Epoch 18 | Step 1200/1563 | Loss: 0.2352 | LR: 2.82e-04
+2026-01-27 12:48:30 | INFO | Epoch 18 | Step 1300/1563 | Loss: 0.2351 | LR: 2.82e-04
+2026-01-27 12:48:31 | INFO | Epoch 18 | Step 1400/1563 | Loss: 0.2351 | LR: 2.82e-04
+2026-01-27 12:48:31 | INFO | Epoch 18 | Step 1500/1563 | Loss: 0.2351 | LR: 2.81e-04
+2026-01-27 12:48:32 | INFO | Train Loss: 0.2351
+2026-01-27 12:48:32 | INFO | Val Loss: 0.2330 | Val Accuracy: 0.9078 | Val Perplexity: 1.26
+2026-01-27 12:48:32 | INFO | 
+==================================================
+2026-01-27 12:48:32 | INFO | Epoch 19/100
+2026-01-27 12:48:32 | INFO | ==================================================
+2026-01-27 12:48:33 | INFO | Epoch 19 | Step 100/1563 | Loss: 0.2359 | LR: 2.81e-04
+2026-01-27 12:48:33 | INFO | Epoch 19 | Step 200/1563 | Loss: 0.2355 | LR: 2.81e-04
+2026-01-27 12:48:34 | INFO | Epoch 19 | Step 300/1563 | Loss: 0.2355 | LR: 2.81e-04
+2026-01-27 12:48:35 | INFO | Epoch 19 | Step 400/1563 | Loss: 0.2349 | LR: 2.81e-04
+2026-01-27 12:48:35 | INFO | Epoch 19 | Step 500/1563 | Loss: 0.2351 | LR: 2.81e-04
+2026-01-27 12:48:36 | INFO | Epoch 19 | Step 600/1563 | Loss: 0.2351 | LR: 2.81e-04
+2026-01-27 12:48:36 | INFO | Epoch 19 | Step 700/1563 | Loss: 0.2351 | LR: 2.80e-04
+2026-01-27 12:48:37 | INFO | Epoch 19 | Step 800/1563 | Loss: 0.2352 | LR: 2.80e-04
+2026-01-27 12:48:38 | INFO | Epoch 19 | Step 900/1563 | Loss: 0.2352 | LR: 2.80e-04
+2026-01-27 12:48:38 | INFO | Epoch 19 | Step 1000/1563 | Loss: 0.2352 | LR: 2.80e-04
+2026-01-27 12:48:39 | INFO | Epoch 19 | Step 1100/1563 | Loss: 0.2354 | LR: 2.80e-04
+2026-01-27 12:48:39 | INFO | Epoch 19 | Step 1200/1563 | Loss: 0.2354 | LR: 2.80e-04
+2026-01-27 12:48:40 | INFO | Epoch 19 | Step 1300/1563 | Loss: 0.2351 | LR: 2.80e-04
+2026-01-27 12:48:41 | INFO | Epoch 19 | Step 1400/1563 | Loss: 0.2351 | LR: 2.79e-04
+2026-01-27 12:48:41 | INFO | Epoch 19 | Step 1500/1563 | Loss: 0.2351 | LR: 2.79e-04
+2026-01-27 12:48:42 | INFO | Train Loss: 0.2350
+2026-01-27 12:48:42 | INFO | Val Loss: 0.2330 | Val Accuracy: 0.9077 | Val Perplexity: 1.26
+2026-01-27 12:48:42 | INFO | 
+==================================================
+2026-01-27 12:48:42 | INFO | Epoch 20/100
+2026-01-27 12:48:42 | INFO | ==================================================
+2026-01-27 12:48:43 | INFO | Epoch 20 | Step 100/1563 | Loss: 0.2338 | LR: 2.79e-04
+2026-01-27 12:48:44 | INFO | Epoch 20 | Step 200/1563 | Loss: 0.2352 | LR: 2.79e-04
+2026-01-27 12:48:44 | INFO | Epoch 20 | Step 300/1563 | Loss: 0.2350 | LR: 2.79e-04
+2026-01-27 12:48:45 | INFO | Epoch 20 | Step 400/1563 | Loss: 0.2350 | LR: 2.79e-04
+2026-01-27 12:48:46 | INFO | Epoch 20 | Step 500/1563 | Loss: 0.2350 | LR: 2.78e-04
+2026-01-27 12:48:46 | INFO | Epoch 20 | Step 600/1563 | Loss: 0.2349 | LR: 2.78e-04
+2026-01-27 12:48:47 | INFO | Epoch 20 | Step 700/1563 | Loss: 0.2348 | LR: 2.78e-04
+2026-01-27 12:48:48 | INFO | Epoch 20 | Step 800/1563 | Loss: 0.2348 | LR: 2.78e-04
+2026-01-27 12:48:48 | INFO | Epoch 20 | Step 900/1563 | Loss: 0.2348 | LR: 2.78e-04
+2026-01-27 12:48:49 | INFO | Epoch 20 | Step 1000/1563 | Loss: 0.2348 | LR: 2.78e-04
+2026-01-27 12:48:50 | INFO | Epoch 20 | Step 1100/1563 | Loss: 0.2349 | LR: 2.78e-04
+2026-01-27 12:48:50 | INFO | Epoch 20 | Step 1200/1563 | Loss: 0.2349 | LR: 2.77e-04
+2026-01-27 12:48:51 | INFO | Epoch 20 | Step 1300/1563 | Loss: 0.2349 | LR: 2.77e-04
+2026-01-27 12:48:51 | INFO | Epoch 20 | Step 1400/1563 | Loss: 0.2349 | LR: 2.77e-04
+2026-01-27 12:48:52 | INFO | Epoch 20 | Step 1500/1563 | Loss: 0.2349 | LR: 2.77e-04
+2026-01-27 12:48:52 | INFO | Train Loss: 0.2349
+2026-01-27 12:48:53 | INFO | Val Loss: 0.2330 | Val Accuracy: 0.9074 | Val Perplexity: 1.26
+2026-01-27 12:48:53 | INFO | 
+==================================================
+2026-01-27 12:48:53 | INFO | Epoch 21/100
+2026-01-27 12:48:53 | INFO | ==================================================
+2026-01-27 12:48:53 | INFO | Epoch 21 | Step 100/1563 | Loss: 0.2356 | LR: 2.77e-04
+2026-01-27 12:48:54 | INFO | Epoch 21 | Step 200/1563 | Loss: 0.2352 | LR: 2.77e-04
+2026-01-27 12:48:55 | INFO | Epoch 21 | Step 300/1563 | Loss: 0.2351 | LR: 2.76e-04
+2026-01-27 12:48:55 | INFO | Epoch 21 | Step 400/1563 | Loss: 0.2350 | LR: 2.76e-04
+2026-01-27 12:48:56 | INFO | Epoch 21 | Step 500/1563 | Loss: 0.2352 | LR: 2.76e-04
+2026-01-27 12:48:56 | INFO | Epoch 21 | Step 600/1563 | Loss: 0.2353 | LR: 2.76e-04
+2026-01-27 12:48:57 | INFO | Epoch 21 | Step 700/1563 | Loss: 0.2354 | LR: 2.76e-04
+2026-01-27 12:48:57 | INFO | Epoch 21 | Step 800/1563 | Loss: 0.2352 | LR: 2.76e-04
+2026-01-27 12:48:58 | INFO | Epoch 21 | Step 900/1563 | Loss: 0.2352 | LR: 2.75e-04
+2026-01-27 12:48:58 | INFO | Epoch 21 | Step 1000/1563 | Loss: 0.2350 | LR: 2.75e-04
+2026-01-27 12:48:59 | INFO | Epoch 21 | Step 1100/1563 | Loss: 0.2349 | LR: 2.75e-04
+2026-01-27 12:49:00 | INFO | Epoch 21 | Step 1200/1563 | Loss: 0.2348 | LR: 2.75e-04
+2026-01-27 12:49:00 | INFO | Epoch 21 | Step 1300/1563 | Loss: 0.2348 | LR: 2.75e-04
+2026-01-27 12:49:01 | INFO | Epoch 21 | Step 1400/1563 | Loss: 0.2347 | LR: 2.75e-04
+2026-01-27 12:49:01 | INFO | Epoch 21 | Step 1500/1563 | Loss: 0.2348 | LR: 2.74e-04
+2026-01-27 12:49:02 | INFO | Train Loss: 0.2349
+2026-01-27 12:49:02 | INFO | Val Loss: 0.2329 | Val Accuracy: 0.9078 | Val Perplexity: 1.26
+2026-01-27 12:49:02 | INFO | 
+==================================================
+2026-01-27 12:49:02 | INFO | Epoch 22/100
+2026-01-27 12:49:02 | INFO | ==================================================
+2026-01-27 12:49:03 | INFO | Epoch 22 | Step 100/1563 | Loss: 0.2364 | LR: 2.74e-04
+2026-01-27 12:49:03 | INFO | Epoch 22 | Step 200/1563 | Loss: 0.2347 | LR: 2.74e-04
+2026-01-27 12:49:04 | INFO | Epoch 22 | Step 300/1563 | Loss: 0.2347 | LR: 2.74e-04
+2026-01-27 12:49:04 | INFO | Epoch 22 | Step 400/1563 | Loss: 0.2349 | LR: 2.74e-04
+2026-01-27 12:49:05 | INFO | Epoch 22 | Step 500/1563 | Loss: 0.2347 | LR: 2.74e-04
+2026-01-27 12:49:06 | INFO | Epoch 22 | Step 600/1563 | Loss: 0.2347 | LR: 2.73e-04
+2026-01-27 12:49:06 | INFO | Epoch 22 | Step 700/1563 | Loss: 0.2347 | LR: 2.73e-04
+2026-01-27 12:49:07 | INFO | Epoch 22 | Step 800/1563 | Loss: 0.2346 | LR: 2.73e-04
+2026-01-27 12:49:07 | INFO | Epoch 22 | Step 900/1563 | Loss: 0.2347 | LR: 2.73e-04
+2026-01-27 12:49:08 | INFO | Epoch 22 | Step 1000/1563 | Loss: 0.2347 | LR: 2.73e-04
+2026-01-27 12:49:09 | INFO | Epoch 22 | Step 1100/1563 | Loss: 0.2347 | LR: 2.73e-04
+2026-01-27 12:49:09 | INFO | Epoch 22 | Step 1200/1563 | Loss: 0.2348 | LR: 2.72e-04
+2026-01-27 12:49:10 | INFO | Epoch 22 | Step 1300/1563 | Loss: 0.2348 | LR: 2.72e-04
+2026-01-27 12:49:10 | INFO | Epoch 22 | Step 1400/1563 | Loss: 0.2347 | LR: 2.72e-04
+2026-01-27 12:49:11 | INFO | Epoch 22 | Step 1500/1563 | Loss: 0.2348 | LR: 2.72e-04
+2026-01-27 12:49:11 | INFO | Train Loss: 0.2348
+2026-01-27 12:49:12 | INFO | Val Loss: 0.2329 | Val Accuracy: 0.9073 | Val Perplexity: 1.26
+2026-01-27 12:49:12 | INFO | 
+==================================================
+2026-01-27 12:49:12 | INFO | Epoch 23/100
+2026-01-27 12:49:12 | INFO | ==================================================
+2026-01-27 12:49:12 | INFO | Epoch 23 | Step 100/1563 | Loss: 0.2345 | LR: 2.72e-04
+2026-01-27 12:49:13 | INFO | Epoch 23 | Step 200/1563 | Loss: 0.2353 | LR: 2.71e-04
+2026-01-27 12:49:14 | INFO | Epoch 23 | Step 300/1563 | Loss: 0.2350 | LR: 2.71e-04
+2026-01-27 12:49:14 | INFO | Epoch 23 | Step 400/1563 | Loss: 0.2348 | LR: 2.71e-04
+2026-01-27 12:49:15 | INFO | Epoch 23 | Step 500/1563 | Loss: 0.2350 | LR: 2.71e-04
+2026-01-27 12:49:15 | INFO | Epoch 23 | Step 600/1563 | Loss: 0.2349 | LR: 2.71e-04
+2026-01-27 12:49:16 | INFO | Epoch 23 | Step 700/1563 | Loss: 0.2349 | LR: 2.71e-04
+2026-01-27 12:49:16 | INFO | Epoch 23 | Step 800/1563 | Loss: 0.2351 | LR: 2.70e-04
+2026-01-27 12:49:17 | INFO | Epoch 23 | Step 900/1563 | Loss: 0.2352 | LR: 2.70e-04
+2026-01-27 12:49:18 | INFO | Epoch 23 | Step 1000/1563 | Loss: 0.2350 | LR: 2.70e-04
+2026-01-27 12:49:18 | INFO | Epoch 23 | Step 1100/1563 | Loss: 0.2349 | LR: 2.70e-04
+2026-01-27 12:49:19 | INFO | Epoch 23 | Step 1200/1563 | Loss: 0.2350 | LR: 2.70e-04
+2026-01-27 12:49:19 | INFO | Epoch 23 | Step 1300/1563 | Loss: 0.2350 | LR: 2.70e-04
+2026-01-27 12:49:20 | INFO | Epoch 23 | Step 1400/1563 | Loss: 0.2349 | LR: 2.69e-04
+2026-01-27 12:49:21 | INFO | Epoch 23 | Step 1500/1563 | Loss: 0.2348 | LR: 2.69e-04
+2026-01-27 12:49:21 | INFO | Train Loss: 0.2348
+2026-01-27 12:49:21 | INFO | Val Loss: 0.2331 | Val Accuracy: 0.9073 | Val Perplexity: 1.26
+2026-01-27 12:49:21 | INFO | 
+==================================================
+2026-01-27 12:49:21 | INFO | Epoch 24/100
+2026-01-27 12:49:21 | INFO | ==================================================
+2026-01-27 12:49:22 | INFO | Epoch 24 | Step 100/1563 | Loss: 0.2359 | LR: 2.69e-04
+2026-01-27 12:49:23 | INFO | Epoch 24 | Step 200/1563 | Loss: 0.2356 | LR: 2.69e-04
+2026-01-27 12:49:23 | INFO | Epoch 24 | Step 300/1563 | Loss: 0.2357 | LR: 2.69e-04
+2026-01-27 12:49:24 | INFO | Epoch 24 | Step 400/1563 | Loss: 0.2354 | LR: 2.68e-04
+2026-01-27 12:49:24 | INFO | Epoch 24 | Step 500/1563 | Loss: 0.2356 | LR: 2.68e-04
+2026-01-27 12:49:25 | INFO | Epoch 24 | Step 600/1563 | Loss: 0.2355 | LR: 2.68e-04
+2026-01-27 12:49:25 | INFO | Epoch 24 | Step 700/1563 | Loss: 0.2352 | LR: 2.68e-04
+2026-01-27 12:49:26 | INFO | Epoch 24 | Step 800/1563 | Loss: 0.2350 | LR: 2.68e-04
+2026-01-27 12:49:27 | INFO | Epoch 24 | Step 900/1563 | Loss: 0.2349 | LR: 2.68e-04
+2026-01-27 12:49:27 | INFO | Epoch 24 | Step 1000/1563 | Loss: 0.2349 | LR: 2.67e-04
+2026-01-27 12:49:28 | INFO | Epoch 24 | Step 1100/1563 | Loss: 0.2348 | LR: 2.67e-04
+2026-01-27 12:49:28 | INFO | Epoch 24 | Step 1200/1563 | Loss: 0.2348 | LR: 2.67e-04
+2026-01-27 12:49:29 | INFO | Epoch 24 | Step 1300/1563 | Loss: 0.2349 | LR: 2.67e-04
+2026-01-27 12:49:30 | INFO | Epoch 24 | Step 1400/1563 | Loss: 0.2349 | LR: 2.67e-04
+2026-01-27 12:49:30 | INFO | Epoch 24 | Step 1500/1563 | Loss: 0.2348 | LR: 2.66e-04
+2026-01-27 12:49:31 | INFO | Train Loss: 0.2347
+2026-01-27 12:49:31 | INFO | Val Loss: 0.2328 | Val Accuracy: 0.9078 | Val Perplexity: 1.26
+2026-01-27 12:49:31 | INFO | Saved best model (val_loss: 0.2328)
+2026-01-27 12:49:31 | INFO | 
+==================================================
+2026-01-27 12:49:31 | INFO | Epoch 25/100
+2026-01-27 12:49:31 | INFO | ==================================================
+2026-01-27 12:49:32 | INFO | Epoch 25 | Step 100/1563 | Loss: 0.2361 | LR: 2.66e-04
+2026-01-27 12:49:32 | INFO | Epoch 25 | Step 200/1563 | Loss: 0.2350 | LR: 2.66e-04
+2026-01-27 12:49:33 | INFO | Epoch 25 | Step 300/1563 | Loss: 0.2342 | LR: 2.66e-04
+2026-01-27 12:49:33 | INFO | Epoch 25 | Step 400/1563 | Loss: 0.2342 | LR: 2.66e-04
+2026-01-27 12:49:34 | INFO | Epoch 25 | Step 500/1563 | Loss: 0.2344 | LR: 2.65e-04
+2026-01-27 12:49:35 | INFO | Epoch 25 | Step 600/1563 | Loss: 0.2347 | LR: 2.65e-04
+2026-01-27 12:49:35 | INFO | Epoch 25 | Step 700/1563 | Loss: 0.2348 | LR: 2.65e-04
+2026-01-27 12:49:36 | INFO | Epoch 25 | Step 800/1563 | Loss: 0.2350 | LR: 2.65e-04
+2026-01-27 12:49:36 | INFO | Epoch 25 | Step 900/1563 | Loss: 0.2349 | LR: 2.65e-04
+2026-01-27 12:49:37 | INFO | Epoch 25 | Step 1000/1563 | Loss: 0.2349 | LR: 2.65e-04
+2026-01-27 12:49:37 | INFO | Epoch 25 | Step 1100/1563 | Loss: 0.2348 | LR: 2.64e-04
+2026-01-27 12:49:38 | INFO | Epoch 25 | Step 1200/1563 | Loss: 0.2348 | LR: 2.64e-04
+2026-01-27 12:49:39 | INFO | Epoch 25 | Step 1300/1563 | Loss: 0.2348 | LR: 2.64e-04
+2026-01-27 12:49:39 | INFO | Epoch 25 | Step 1400/1563 | Loss: 0.2348 | LR: 2.64e-04
+2026-01-27 12:49:40 | INFO | Epoch 25 | Step 1500/1563 | Loss: 0.2347 | LR: 2.64e-04
+2026-01-27 12:49:40 | INFO | Train Loss: 0.2347
+2026-01-27 12:49:41 | INFO | Val Loss: 0.2329 | Val Accuracy: 0.9072 | Val Perplexity: 1.26
+2026-01-27 12:49:41 | INFO | 
+==================================================
+2026-01-27 12:49:41 | INFO | Epoch 26/100
+2026-01-27 12:49:41 | INFO | ==================================================
+2026-01-27 12:49:41 | INFO | Epoch 26 | Step 100/1563 | Loss: 0.2357 | LR: 2.63e-04
+2026-01-27 12:49:42 | INFO | Epoch 26 | Step 200/1563 | Loss: 0.2348 | LR: 2.63e-04
+2026-01-27 12:49:42 | INFO | Epoch 26 | Step 300/1563 | Loss: 0.2347 | LR: 2.63e-04
+2026-01-27 12:49:43 | INFO | Epoch 26 | Step 400/1563 | Loss: 0.2344 | LR: 2.63e-04
+2026-01-27 12:49:44 | INFO | Epoch 26 | Step 500/1563 | Loss: 0.2343 | LR: 2.63e-04
+2026-01-27 12:49:44 | INFO | Epoch 26 | Step 600/1563 | Loss: 0.2343 | LR: 2.62e-04
+2026-01-27 12:49:45 | INFO | Epoch 26 | Step 700/1563 | Loss: 0.2341 | LR: 2.62e-04
+2026-01-27 12:49:45 | INFO | Epoch 26 | Step 800/1563 | Loss: 0.2343 | LR: 2.62e-04
+2026-01-27 12:49:46 | INFO | Epoch 26 | Step 900/1563 | Loss: 0.2344 | LR: 2.62e-04
+2026-01-27 12:49:47 | INFO | Epoch 26 | Step 1000/1563 | Loss: 0.2344 | LR: 2.62e-04
+2026-01-27 12:49:47 | INFO | Epoch 26 | Step 1100/1563 | Loss: 0.2346 | LR: 2.61e-04
+2026-01-27 12:49:48 | INFO | Epoch 26 | Step 1200/1563 | Loss: 0.2346 | LR: 2.61e-04
+2026-01-27 12:49:48 | INFO | Epoch 26 | Step 1300/1563 | Loss: 0.2346 | LR: 2.61e-04
+2026-01-27 12:49:49 | INFO | Epoch 26 | Step 1400/1563 | Loss: 0.2347 | LR: 2.61e-04
+2026-01-27 12:49:50 | INFO | Epoch 26 | Step 1500/1563 | Loss: 0.2346 | LR: 2.61e-04
+2026-01-27 12:49:50 | INFO | Train Loss: 0.2347
+2026-01-27 12:49:51 | INFO | Val Loss: 0.2329 | Val Accuracy: 0.9076 | Val Perplexity: 1.26
+2026-01-27 12:49:51 | INFO | 
+==================================================
+2026-01-27 12:49:51 | INFO | Epoch 27/100
+2026-01-27 12:49:51 | INFO | ==================================================
+2026-01-27 12:49:51 | INFO | Epoch 27 | Step 100/1563 | Loss: 0.2338 | LR: 2.60e-04
+2026-01-27 12:49:52 | INFO | Epoch 27 | Step 200/1563 | Loss: 0.2345 | LR: 2.60e-04
+2026-01-27 12:49:53 | INFO | Epoch 27 | Step 300/1563 | Loss: 0.2342 | LR: 2.60e-04
+2026-01-27 12:49:53 | INFO | Epoch 27 | Step 400/1563 | Loss: 0.2347 | LR: 2.60e-04
+2026-01-27 12:49:54 | INFO | Epoch 27 | Step 500/1563 | Loss: 0.2348 | LR: 2.60e-04
+2026-01-27 12:49:55 | INFO | Epoch 27 | Step 600/1563 | Loss: 0.2348 | LR: 2.59e-04
+2026-01-27 12:49:55 | INFO | Epoch 27 | Step 700/1563 | Loss: 0.2346 | LR: 2.59e-04
+2026-01-27 12:49:56 | INFO | Epoch 27 | Step 800/1563 | Loss: 0.2346 | LR: 2.59e-04
+2026-01-27 12:49:57 | INFO | Epoch 27 | Step 900/1563 | Loss: 0.2346 | LR: 2.59e-04
+2026-01-27 12:49:57 | INFO | Epoch 27 | Step 1000/1563 | Loss: 0.2344 | LR: 2.59e-04
+2026-01-27 12:49:58 | INFO | Epoch 27 | Step 1100/1563 | Loss: 0.2344 | LR: 2.58e-04
+2026-01-27 12:49:59 | INFO | Epoch 27 | Step 1200/1563 | Loss: 0.2345 | LR: 2.58e-04
+2026-01-27 12:49:59 | INFO | Epoch 27 | Step 1300/1563 | Loss: 0.2344 | LR: 2.58e-04
+2026-01-27 12:50:00 | INFO | Epoch 27 | Step 1400/1563 | Loss: 0.2346 | LR: 2.58e-04
+2026-01-27 12:50:00 | INFO | Epoch 27 | Step 1500/1563 | Loss: 0.2347 | LR: 2.58e-04
+2026-01-27 12:50:01 | INFO | Train Loss: 0.2347
+2026-01-27 12:50:01 | INFO | Val Loss: 0.2328 | Val Accuracy: 0.9077 | Val Perplexity: 1.26
+2026-01-27 12:50:01 | INFO | 
+==================================================
+2026-01-27 12:50:01 | INFO | Epoch 28/100
+2026-01-27 12:50:01 | INFO | ==================================================
+2026-01-27 12:50:02 | INFO | Epoch 28 | Step 100/1563 | Loss: 0.2343 | LR: 2.57e-04
+2026-01-27 12:50:03 | INFO | Epoch 28 | Step 200/1563 | Loss: 0.2338 | LR: 2.57e-04
+2026-01-27 12:50:03 | INFO | Epoch 28 | Step 300/1563 | Loss: 0.2337 | LR: 2.57e-04
+2026-01-27 12:50:04 | INFO | Epoch 28 | Step 400/1563 | Loss: 0.2339 | LR: 2.57e-04
+2026-01-27 12:50:05 | INFO | Epoch 28 | Step 500/1563 | Loss: 0.2342 | LR: 2.56e-04
+2026-01-27 12:50:05 | INFO | Epoch 28 | Step 600/1563 | Loss: 0.2344 | LR: 2.56e-04
+2026-01-27 12:50:06 | INFO | Epoch 28 | Step 700/1563 | Loss: 0.2343 | LR: 2.56e-04
+2026-01-27 12:50:06 | INFO | Epoch 28 | Step 800/1563 | Loss: 0.2345 | LR: 2.56e-04
+2026-01-27 12:50:07 | INFO | Epoch 28 | Step 900/1563 | Loss: 0.2346 | LR: 2.56e-04
+2026-01-27 12:50:08 | INFO | Epoch 28 | Step 1000/1563 | Loss: 0.2347 | LR: 2.55e-04
+2026-01-27 12:50:08 | INFO | Epoch 28 | Step 1100/1563 | Loss: 0.2347 | LR: 2.55e-04
+2026-01-27 12:50:09 | INFO | Epoch 28 | Step 1200/1563 | Loss: 0.2345 | LR: 2.55e-04
+2026-01-27 12:50:09 | INFO | Epoch 28 | Step 1300/1563 | Loss: 0.2346 | LR: 2.55e-04
+2026-01-27 12:50:10 | INFO | Epoch 28 | Step 1400/1563 | Loss: 0.2346 | LR: 2.55e-04
+2026-01-27 12:50:11 | INFO | Epoch 28 | Step 1500/1563 | Loss: 0.2347 | LR: 2.54e-04
+2026-01-27 12:50:11 | INFO | Train Loss: 0.2347
+2026-01-27 12:50:11 | INFO | Val Loss: 0.2328 | Val Accuracy: 0.9072 | Val Perplexity: 1.26
+2026-01-27 12:50:11 | INFO | Saved best model (val_loss: 0.2328)
+2026-01-27 12:50:11 | INFO | 
+==================================================
+2026-01-27 12:50:11 | INFO | Epoch 29/100
+2026-01-27 12:50:11 | INFO | ==================================================
+2026-01-27 12:50:12 | INFO | Epoch 29 | Step 100/1563 | Loss: 0.2339 | LR: 2.54e-04
+2026-01-27 12:50:13 | INFO | Epoch 29 | Step 200/1563 | Loss: 0.2341 | LR: 2.54e-04
+2026-01-27 12:50:13 | INFO | Epoch 29 | Step 300/1563 | Loss: 0.2342 | LR: 2.54e-04
+2026-01-27 12:50:14 | INFO | Epoch 29 | Step 400/1563 | Loss: 0.2343 | LR: 2.53e-04
+2026-01-27 12:50:14 | INFO | Epoch 29 | Step 500/1563 | Loss: 0.2341 | LR: 2.53e-04
+2026-01-27 12:50:15 | INFO | Epoch 29 | Step 600/1563 | Loss: 0.2343 | LR: 2.53e-04
+2026-01-27 12:50:16 | INFO | Epoch 29 | Step 700/1563 | Loss: 0.2343 | LR: 2.53e-04
+2026-01-27 12:50:16 | INFO | Epoch 29 | Step 800/1563 | Loss: 0.2344 | LR: 2.53e-04
+2026-01-27 12:50:17 | INFO | Epoch 29 | Step 900/1563 | Loss: 0.2342 | LR: 2.52e-04
+2026-01-27 12:50:17 | INFO | Epoch 29 | Step 1000/1563 | Loss: 0.2343 | LR: 2.52e-04
+2026-01-27 12:50:18 | INFO | Epoch 29 | Step 1100/1563 | Loss: 0.2345 | LR: 2.52e-04
+2026-01-27 12:50:18 | INFO | Epoch 29 | Step 1200/1563 | Loss: 0.2345 | LR: 2.52e-04
+2026-01-27 12:50:19 | INFO | Epoch 29 | Step 1300/1563 | Loss: 0.2346 | LR: 2.52e-04
+2026-01-27 12:50:20 | INFO | Epoch 29 | Step 1400/1563 | Loss: 0.2346 | LR: 2.51e-04
+2026-01-27 12:50:20 | INFO | Epoch 29 | Step 1500/1563 | Loss: 0.2346 | LR: 2.51e-04
+2026-01-27 12:50:21 | INFO | Train Loss: 0.2346
+2026-01-27 12:50:21 | INFO | Val Loss: 0.2329 | Val Accuracy: 0.9070 | Val Perplexity: 1.26
+2026-01-27 12:50:21 | INFO | 
+==================================================
+2026-01-27 12:50:21 | INFO | Epoch 30/100
+2026-01-27 12:50:21 | INFO | ==================================================
+2026-01-27 12:50:22 | INFO | Epoch 30 | Step 100/1563 | Loss: 0.2337 | LR: 2.51e-04
+2026-01-27 12:50:22 | INFO | Epoch 30 | Step 200/1563 | Loss: 0.2341 | LR: 2.51e-04
+2026-01-27 12:50:23 | INFO | Epoch 30 | Step 300/1563 | Loss: 0.2344 | LR: 2.50e-04
+2026-01-27 12:50:23 | INFO | Epoch 30 | Step 400/1563 | Loss: 0.2341 | LR: 2.50e-04
+2026-01-27 12:50:24 | INFO | Epoch 30 | Step 500/1563 | Loss: 0.2342 | LR: 2.50e-04
+2026-01-27 12:50:24 | INFO | Epoch 30 | Step 600/1563 | Loss: 0.2343 | LR: 2.50e-04
+2026-01-27 12:50:25 | INFO | Epoch 30 | Step 700/1563 | Loss: 0.2342 | LR: 2.49e-04
+2026-01-27 12:50:26 | INFO | Epoch 30 | Step 800/1563 | Loss: 0.2343 | LR: 2.49e-04
+2026-01-27 12:50:26 | INFO | Epoch 30 | Step 900/1563 | Loss: 0.2344 | LR: 2.49e-04
+2026-01-27 12:50:27 | INFO | Epoch 30 | Step 1000/1563 | Loss: 0.2345 | LR: 2.49e-04
+2026-01-27 12:50:27 | INFO | Epoch 30 | Step 1100/1563 | Loss: 0.2345 | LR: 2.49e-04
+2026-01-27 12:53:39 | INFO | ============================================================
+2026-01-27 12:53:39 | INFO | MathTransformer Training
+2026-01-27 12:53:39 | INFO | ============================================================
+2026-01-27 12:53:39 | INFO | Arguments: {'train_data': 'data/train_add_2digit_50k.jsonl', 'val_data': 'data/val_add_2digit_5k.jsonl', 'config': 'small', 'max_seq_len': 256, 'epochs': 100, 'batch_size': 16, 'lr': 0.0003, 'weight_decay': 0.1, 'warmup_steps': 500, 'grad_accum_steps': 8, 'max_grad_norm': 1.0, 'device': 'cuda', 'no_amp': False, 'num_workers': 4, 'checkpoint_dir': 'checkpoints', 'log_interval': 100, 'wandb': False, 'wandb_project': 'math-transformer', 'debug': False, 'resume': None}
+2026-01-27 12:53:39 | INFO | GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+2026-01-27 12:53:39 | INFO | GPU Memory: 8.2 GB
+2026-01-27 12:53:39 | INFO | 
+Model Configuration:
+2026-01-27 12:53:39 | INFO |   d_model: 256
+2026-01-27 12:53:39 | INFO |   n_heads: 8
+2026-01-27 12:53:39 | INFO |   n_layers: 6
+2026-01-27 12:53:39 | INFO |   d_ff: 1024
+2026-01-27 12:53:39 | INFO |   max_seq_len: 256
+2026-01-27 12:53:39 | INFO | 
+Model Parameters: 4,832,256
+2026-01-27 12:53:39 | INFO | 
+Loading data...
+2026-01-27 12:53:40 | INFO |   Training examples: 50,000
+2026-01-27 12:53:40 | INFO |   Validation examples: 5,000
+2026-01-27 12:53:40 | INFO | 
+Training Configuration:
+2026-01-27 12:53:40 | INFO |   Batch size: 16
+2026-01-27 12:53:40 | INFO |   Gradient accumulation: 8
+2026-01-27 12:53:40 | INFO |   Effective batch size: 128
+2026-01-27 12:53:40 | INFO |   Learning rate: 0.0003
+2026-01-27 12:53:40 | INFO |   Mixed precision: True
+2026-01-27 12:53:40 | INFO |   Epochs: 100
+2026-01-27 12:53:40 | INFO | Training on device: cuda
+2026-01-27 12:53:40 | INFO | Model parameters: 4,832,256
+2026-01-27 12:53:40 | INFO | 
+==================================================
+2026-01-27 12:53:40 | INFO | Epoch 1/100
+2026-01-27 12:53:40 | INFO | ==================================================
+2026-01-27 12:53:41 | INFO | Epoch 1 | Step 100/3125 | Loss: 5.2537 | LR: 7.20e-06
+2026-01-27 12:53:42 | INFO | Epoch 1 | Step 200/3125 | Loss: 5.1226 | LR: 1.50e-05
+2026-01-27 12:53:43 | INFO | Epoch 1 | Step 300/3125 | Loss: 4.8905 | LR: 2.22e-05
+2026-01-27 12:53:44 | INFO | Epoch 1 | Step 400/3125 | Loss: 4.6053 | LR: 3.00e-05
+2026-01-27 12:53:44 | INFO | Epoch 1 | Step 500/3125 | Loss: 4.3521 | LR: 3.72e-05
+2026-01-27 12:53:45 | INFO | Epoch 1 | Step 600/3125 | Loss: 4.1306 | LR: 4.50e-05
+2026-01-27 12:53:46 | INFO | Epoch 1 | Step 700/3125 | Loss: 3.9273 | LR: 5.22e-05
+2026-01-27 12:53:46 | INFO | Epoch 1 | Step 800/3125 | Loss: 3.7397 | LR: 6.00e-05
+2026-01-27 12:53:47 | INFO | Epoch 1 | Step 900/3125 | Loss: 3.5681 | LR: 6.72e-05
+2026-01-27 12:53:48 | INFO | Epoch 1 | Step 1000/3125 | Loss: 3.4140 | LR: 7.50e-05
+2026-01-27 12:53:49 | INFO | Epoch 1 | Step 1100/3125 | Loss: 3.2689 | LR: 8.22e-05
+2026-01-27 12:53:50 | INFO | Epoch 1 | Step 1200/3125 | Loss: 3.1271 | LR: 9.00e-05
+2026-01-27 12:53:50 | INFO | Epoch 1 | Step 1300/3125 | Loss: 2.9928 | LR: 9.72e-05
+2026-01-27 12:53:51 | INFO | Epoch 1 | Step 1400/3125 | Loss: 2.8660 | LR: 1.05e-04
+2026-01-27 12:53:52 | INFO | Epoch 1 | Step 1500/3125 | Loss: 2.7475 | LR: 1.12e-04
+2026-01-27 12:53:53 | INFO | Epoch 1 | Step 1600/3125 | Loss: 2.6361 | LR: 1.20e-04
+2026-01-27 12:53:53 | INFO | Epoch 1 | Step 1700/3125 | Loss: 2.5327 | LR: 1.27e-04
+2026-01-27 12:53:54 | INFO | Epoch 1 | Step 1800/3125 | Loss: 2.4364 | LR: 1.35e-04
+2026-01-27 12:53:55 | INFO | Epoch 1 | Step 1900/3125 | Loss: 2.3470 | LR: 1.42e-04
+2026-01-27 12:53:56 | INFO | Epoch 1 | Step 2000/3125 | Loss: 2.2649 | LR: 1.50e-04
+2026-01-27 12:53:56 | INFO | Epoch 1 | Step 2100/3125 | Loss: 2.1890 | LR: 1.57e-04
+2026-01-27 12:53:57 | INFO | Epoch 1 | Step 2200/3125 | Loss: 2.1185 | LR: 1.65e-04
+2026-01-27 12:53:58 | INFO | Epoch 1 | Step 2300/3125 | Loss: 2.0531 | LR: 1.72e-04
+2026-01-27 12:53:59 | INFO | Epoch 1 | Step 2400/3125 | Loss: 1.9917 | LR: 1.80e-04
+2026-01-27 12:53:59 | INFO | Epoch 1 | Step 2500/3125 | Loss: 1.9338 | LR: 1.87e-04
+2026-01-27 12:54:00 | INFO | Epoch 1 | Step 2600/3125 | Loss: 1.8793 | LR: 1.95e-04
+2026-01-27 12:54:01 | INFO | Epoch 1 | Step 2700/3125 | Loss: 1.8278 | LR: 2.02e-04
+2026-01-27 12:54:02 | INFO | Epoch 1 | Step 2800/3125 | Loss: 1.7789 | LR: 2.10e-04
+2026-01-27 12:54:02 | INFO | Epoch 1 | Step 2900/3125 | Loss: 1.7325 | LR: 2.17e-04
+2026-01-27 12:54:03 | INFO | Epoch 1 | Step 3000/3125 | Loss: 1.6883 | LR: 2.25e-04
+2026-01-27 12:54:04 | INFO | Epoch 1 | Step 3100/3125 | Loss: 1.6463 | LR: 2.32e-04
+2026-01-27 12:54:04 | INFO | Train Loss: 1.6362
+2026-01-27 12:54:05 | INFO | Val Loss: 0.3527 | Val Accuracy: 0.8656 | Val Perplexity: 1.42
+2026-01-27 12:54:05 | INFO | Saved best model (val_loss: 0.3527)
+2026-01-27 12:54:05 | INFO | 
+==================================================
+2026-01-27 12:54:05 | INFO | Epoch 2/100
+2026-01-27 12:54:05 | INFO | ==================================================
+2026-01-27 12:54:06 | INFO | Epoch 2 | Step 100/3125 | Loss: 0.3693 | LR: 2.41e-04
+2026-01-27 12:54:07 | INFO | Epoch 2 | Step 200/3125 | Loss: 0.3602 | LR: 2.49e-04
+2026-01-27 12:54:07 | INFO | Epoch 2 | Step 300/3125 | Loss: 0.3532 | LR: 2.56e-04
+2026-01-27 12:54:08 | INFO | Epoch 2 | Step 400/3125 | Loss: 0.3445 | LR: 2.64e-04
+2026-01-27 12:54:09 | INFO | Epoch 2 | Step 500/3125 | Loss: 0.3384 | LR: 2.71e-04
+2026-01-27 12:54:09 | INFO | Epoch 2 | Step 600/3125 | Loss: 0.3327 | LR: 2.79e-04
+2026-01-27 12:54:10 | INFO | Epoch 2 | Step 700/3125 | Loss: 0.3277 | LR: 2.86e-04
+2026-01-27 12:54:11 | INFO | Epoch 2 | Step 800/3125 | Loss: 0.3236 | LR: 2.94e-04
+2026-01-27 12:54:12 | INFO | Epoch 2 | Step 900/3125 | Loss: 0.3200 | LR: 3.00e-04
+2026-01-27 12:54:12 | INFO | Epoch 2 | Step 1000/3125 | Loss: 0.3169 | LR: 3.00e-04
+2026-01-27 12:54:13 | INFO | Epoch 2 | Step 1100/3125 | Loss: 0.3136 | LR: 3.00e-04
+2026-01-27 12:54:14 | INFO | Epoch 2 | Step 1200/3125 | Loss: 0.3105 | LR: 3.00e-04
+2026-01-27 12:54:15 | INFO | Epoch 2 | Step 1300/3125 | Loss: 0.3075 | LR: 3.00e-04
+2026-01-27 12:54:15 | INFO | Epoch 2 | Step 1400/3125 | Loss: 0.3047 | LR: 3.00e-04
+2026-01-27 12:54:16 | INFO | Epoch 2 | Step 1500/3125 | Loss: 0.3023 | LR: 3.00e-04
+2026-01-27 12:54:17 | INFO | Epoch 2 | Step 1600/3125 | Loss: 0.2998 | LR: 3.00e-04
+2026-01-27 12:54:18 | INFO | Epoch 2 | Step 1700/3125 | Loss: 0.2977 | LR: 3.00e-04
+2026-01-27 12:54:19 | INFO | Epoch 2 | Step 1800/3125 | Loss: 0.2958 | LR: 3.00e-04
+2026-01-27 12:54:19 | INFO | Epoch 2 | Step 1900/3125 | Loss: 0.2939 | LR: 3.00e-04
+2026-01-27 12:54:20 | INFO | Epoch 2 | Step 2000/3125 | Loss: 0.2919 | LR: 3.00e-04
+2026-01-27 12:54:21 | INFO | Epoch 2 | Step 2100/3125 | Loss: 0.2900 | LR: 3.00e-04
+2026-01-27 12:54:22 | INFO | Epoch 2 | Step 2200/3125 | Loss: 0.2884 | LR: 3.00e-04
+2026-01-27 12:54:23 | INFO | Epoch 2 | Step 2300/3125 | Loss: 0.2869 | LR: 3.00e-04
+2026-01-27 12:54:23 | INFO | Epoch 2 | Step 2400/3125 | Loss: 0.2853 | LR: 3.00e-04
+2026-01-27 12:54:24 | INFO | Epoch 2 | Step 2500/3125 | Loss: 0.2839 | LR: 3.00e-04
+2026-01-27 12:54:25 | INFO | Epoch 2 | Step 2600/3125 | Loss: 0.2825 | LR: 3.00e-04
+2026-01-27 12:54:26 | INFO | Epoch 2 | Step 2700/3125 | Loss: 0.2813 | LR: 3.00e-04
+2026-01-27 12:54:26 | INFO | Epoch 2 | Step 2800/3125 | Loss: 0.2801 | LR: 3.00e-04
+2026-01-27 12:54:27 | INFO | Epoch 2 | Step 2900/3125 | Loss: 0.2790 | LR: 3.00e-04
+2026-01-27 12:54:28 | INFO | Epoch 2 | Step 3000/3125 | Loss: 0.2781 | LR: 3.00e-04
+2026-01-27 12:54:28 | INFO | Epoch 2 | Step 3100/3125 | Loss: 0.2772 | LR: 3.00e-04
+2026-01-27 12:54:29 | INFO | Train Loss: 0.2769
+2026-01-27 12:54:30 | INFO | Val Loss: 0.2368 | Val Accuracy: 0.9074 | Val Perplexity: 1.27
+2026-01-27 12:54:30 | INFO | Saved best model (val_loss: 0.2368)
+2026-01-27 12:54:30 | INFO | 
+==================================================
+2026-01-27 12:54:30 | INFO | Epoch 3/100
+2026-01-27 12:54:30 | INFO | ==================================================
+2026-01-27 12:54:30 | INFO | Epoch 3 | Step 100/3125 | Loss: 0.2472 | LR: 3.00e-04
+2026-01-27 12:54:31 | INFO | Epoch 3 | Step 200/3125 | Loss: 0.2467 | LR: 3.00e-04
+2026-01-27 12:54:32 | INFO | Epoch 3 | Step 300/3125 | Loss: 0.2471 | LR: 3.00e-04
+2026-01-27 12:54:33 | INFO | Epoch 3 | Step 400/3125 | Loss: 0.2460 | LR: 3.00e-04
+2026-01-27 12:54:33 | INFO | Epoch 3 | Step 500/3125 | Loss: 0.2456 | LR: 3.00e-04
+2026-01-27 12:54:34 | INFO | Epoch 3 | Step 600/3125 | Loss: 0.2450 | LR: 3.00e-04
+2026-01-27 12:54:35 | INFO | Epoch 3 | Step 700/3125 | Loss: 0.2450 | LR: 3.00e-04
+2026-01-27 12:54:36 | INFO | Epoch 3 | Step 800/3125 | Loss: 0.2456 | LR: 3.00e-04
+2026-01-27 12:54:36 | INFO | Epoch 3 | Step 900/3125 | Loss: 0.2457 | LR: 3.00e-04
+2026-01-27 12:54:37 | INFO | Epoch 3 | Step 1000/3125 | Loss: 0.2455 | LR: 3.00e-04
+2026-01-27 12:54:38 | INFO | Epoch 3 | Step 1100/3125 | Loss: 0.2453 | LR: 3.00e-04
+2026-01-27 12:54:39 | INFO | Epoch 3 | Step 1200/3125 | Loss: 0.2449 | LR: 3.00e-04
+2026-01-27 12:54:39 | INFO | Epoch 3 | Step 1300/3125 | Loss: 0.2448 | LR: 3.00e-04
+2026-01-27 12:54:40 | INFO | Epoch 3 | Step 1400/3125 | Loss: 0.2446 | LR: 3.00e-04
+2026-01-27 12:54:41 | INFO | Epoch 3 | Step 1500/3125 | Loss: 0.2443 | LR: 3.00e-04
+2026-01-27 12:54:42 | INFO | Epoch 3 | Step 1600/3125 | Loss: 0.2440 | LR: 3.00e-04
+2026-01-27 12:54:43 | INFO | Epoch 3 | Step 1700/3125 | Loss: 0.2439 | LR: 3.00e-04
+2026-01-27 12:54:43 | INFO | Epoch 3 | Step 1800/3125 | Loss: 0.2437 | LR: 3.00e-04
+2026-01-27 12:54:44 | INFO | Epoch 3 | Step 1900/3125 | Loss: 0.2435 | LR: 3.00e-04
+2026-01-27 12:54:45 | INFO | Epoch 3 | Step 2000/3125 | Loss: 0.2434 | LR: 3.00e-04
+2026-01-27 12:54:46 | INFO | Epoch 3 | Step 2100/3125 | Loss: 0.2433 | LR: 3.00e-04
+2026-01-27 12:54:46 | INFO | Epoch 3 | Step 2200/3125 | Loss: 0.2433 | LR: 3.00e-04
+2026-01-27 12:54:47 | INFO | Epoch 3 | Step 2300/3125 | Loss: 0.2433 | LR: 3.00e-04
+2026-01-27 12:54:48 | INFO | Epoch 3 | Step 2400/3125 | Loss: 0.2432 | LR: 3.00e-04
+2026-01-27 12:54:49 | INFO | Epoch 3 | Step 2500/3125 | Loss: 0.2431 | LR: 3.00e-04
+2026-01-27 12:54:49 | INFO | Epoch 3 | Step 2600/3125 | Loss: 0.2430 | LR: 3.00e-04
+2026-01-27 12:54:50 | INFO | Epoch 3 | Step 2700/3125 | Loss: 0.2428 | LR: 3.00e-04
+2026-01-27 12:54:51 | INFO | Epoch 3 | Step 2800/3125 | Loss: 0.2428 | LR: 3.00e-04
+2026-01-27 12:54:52 | INFO | Epoch 3 | Step 2900/3125 | Loss: 0.2427 | LR: 3.00e-04
+2026-01-27 12:54:53 | INFO | Epoch 3 | Step 3000/3125 | Loss: 0.2427 | LR: 3.00e-04
+2026-01-27 12:54:53 | INFO | Epoch 3 | Step 3100/3125 | Loss: 0.2426 | LR: 3.00e-04
+2026-01-27 12:54:54 | INFO | Train Loss: 0.2426
+2026-01-27 12:54:54 | INFO | Val Loss: 0.2346 | Val Accuracy: 0.9077 | Val Perplexity: 1.26
+2026-01-27 12:54:55 | INFO | Saved best model (val_loss: 0.2346)
+2026-01-27 12:54:55 | INFO | 
+==================================================
+2026-01-27 12:54:55 | INFO | Epoch 4/100
+2026-01-27 12:54:55 | INFO | ==================================================
+2026-01-27 12:54:55 | INFO | Epoch 4 | Step 100/3125 | Loss: 0.2391 | LR: 3.00e-04
+2026-01-27 12:54:56 | INFO | Epoch 4 | Step 200/3125 | Loss: 0.2386 | LR: 3.00e-04
+2026-01-27 12:54:57 | INFO | Epoch 4 | Step 300/3125 | Loss: 0.2388 | LR: 3.00e-04
+2026-01-27 12:54:58 | INFO | Epoch 4 | Step 400/3125 | Loss: 0.2389 | LR: 3.00e-04
+2026-01-27 12:54:58 | INFO | Epoch 4 | Step 500/3125 | Loss: 0.2393 | LR: 3.00e-04
+2026-01-27 12:54:59 | INFO | Epoch 4 | Step 600/3125 | Loss: 0.2392 | LR: 3.00e-04
+2026-01-27 12:55:00 | INFO | Epoch 4 | Step 700/3125 | Loss: 0.2394 | LR: 3.00e-04
+2026-01-27 12:55:01 | INFO | Epoch 4 | Step 800/3125 | Loss: 0.2395 | LR: 3.00e-04
+2026-01-27 12:55:02 | INFO | Epoch 4 | Step 900/3125 | Loss: 0.2394 | LR: 3.00e-04
+2026-01-27 12:55:02 | INFO | Epoch 4 | Step 1000/3125 | Loss: 0.2394 | LR: 3.00e-04
+2026-01-27 12:55:03 | INFO | Epoch 4 | Step 1100/3125 | Loss: 0.2394 | LR: 3.00e-04
+2026-01-27 12:55:04 | INFO | Epoch 4 | Step 1200/3125 | Loss: 0.2393 | LR: 3.00e-04
+2026-01-27 12:55:05 | INFO | Epoch 4 | Step 1300/3125 | Loss: 0.2393 | LR: 3.00e-04
+2026-01-27 12:55:05 | INFO | Epoch 4 | Step 1400/3125 | Loss: 0.2395 | LR: 3.00e-04
+2026-01-27 12:55:06 | INFO | Epoch 4 | Step 1500/3125 | Loss: 0.2396 | LR: 3.00e-04
+2026-01-27 12:55:07 | INFO | Epoch 4 | Step 1600/3125 | Loss: 0.2395 | LR: 3.00e-04
+2026-01-27 12:55:08 | INFO | Epoch 4 | Step 1700/3125 | Loss: 0.2395 | LR: 3.00e-04
+2026-01-27 12:55:08 | INFO | Epoch 4 | Step 1800/3125 | Loss: 0.2394 | LR: 3.00e-04
+2026-01-27 12:55:09 | INFO | Epoch 4 | Step 1900/3125 | Loss: 0.2392 | LR: 3.00e-04
+2026-01-27 12:55:10 | INFO | Epoch 4 | Step 2000/3125 | Loss: 0.2391 | LR: 3.00e-04
+2026-01-27 12:55:11 | INFO | Epoch 4 | Step 2100/3125 | Loss: 0.2391 | LR: 3.00e-04
+2026-01-27 12:55:12 | INFO | Epoch 4 | Step 2200/3125 | Loss: 0.2390 | LR: 3.00e-04
+2026-01-27 12:55:12 | INFO | Epoch 4 | Step 2300/3125 | Loss: 0.2391 | LR: 3.00e-04
+2026-01-27 12:55:13 | INFO | Epoch 4 | Step 2400/3125 | Loss: 0.2390 | LR: 3.00e-04
+2026-01-27 12:55:14 | INFO | Epoch 4 | Step 2500/3125 | Loss: 0.2389 | LR: 3.00e-04
+2026-01-27 12:55:15 | INFO | Epoch 4 | Step 2600/3125 | Loss: 0.2389 | LR: 3.00e-04
+2026-01-27 12:55:15 | INFO | Epoch 4 | Step 2700/3125 | Loss: 0.2389 | LR: 3.00e-04
+2026-01-27 12:55:16 | INFO | Epoch 4 | Step 2800/3125 | Loss: 0.2389 | LR: 3.00e-04
+2026-01-27 12:55:17 | INFO | Epoch 4 | Step 2900/3125 | Loss: 0.2389 | LR: 3.00e-04
+2026-01-27 12:55:18 | INFO | Epoch 4 | Step 3000/3125 | Loss: 0.2388 | LR: 3.00e-04
+2026-01-27 12:55:18 | INFO | Epoch 4 | Step 3100/3125 | Loss: 0.2388 | LR: 2.99e-04
+2026-01-27 12:55:19 | INFO | Train Loss: 0.2388
+2026-01-27 12:55:20 | INFO | Val Loss: 0.2347 | Val Accuracy: 0.9077 | Val Perplexity: 1.26
+2026-01-27 12:55:20 | INFO | 
+==================================================
+2026-01-27 12:55:20 | INFO | Epoch 5/100
+2026-01-27 12:55:20 | INFO | ==================================================
+2026-01-27 12:55:20 | INFO | Epoch 5 | Step 100/3125 | Loss: 0.2378 | LR: 2.99e-04
+2026-01-27 12:55:21 | INFO | Epoch 5 | Step 200/3125 | Loss: 0.2387 | LR: 2.99e-04
+2026-01-27 12:55:22 | INFO | Epoch 5 | Step 300/3125 | Loss: 0.2379 | LR: 2.99e-04
+2026-01-27 12:55:23 | INFO | Epoch 5 | Step 400/3125 | Loss: 0.2376 | LR: 2.99e-04
+2026-01-27 12:55:23 | INFO | Epoch 5 | Step 500/3125 | Loss: 0.2381 | LR: 2.99e-04
+2026-01-27 12:55:24 | INFO | Epoch 5 | Step 600/3125 | Loss: 0.2385 | LR: 2.99e-04
+2026-01-27 12:55:25 | INFO | Epoch 5 | Step 700/3125 | Loss: 0.2382 | LR: 2.99e-04
+2026-01-27 12:55:26 | INFO | Epoch 5 | Step 800/3125 | Loss: 0.2385 | LR: 2.99e-04
+2026-01-27 12:55:27 | INFO | Epoch 5 | Step 900/3125 | Loss: 0.2383 | LR: 2.99e-04
+2026-01-27 12:55:27 | INFO | Epoch 5 | Step 1000/3125 | Loss: 0.2382 | LR: 2.99e-04
+2026-01-27 12:55:28 | INFO | Epoch 5 | Step 1100/3125 | Loss: 0.2382 | LR: 2.99e-04
+2026-01-27 12:55:29 | INFO | Epoch 5 | Step 1200/3125 | Loss: 0.2382 | LR: 2.99e-04
+2026-01-27 12:55:30 | INFO | Epoch 5 | Step 1300/3125 | Loss: 0.2382 | LR: 2.99e-04
+2026-01-27 12:55:31 | INFO | Epoch 5 | Step 1400/3125 | Loss: 0.2379 | LR: 2.99e-04
+2026-01-27 12:55:32 | INFO | Epoch 5 | Step 1500/3125 | Loss: 0.2378 | LR: 2.99e-04
+2026-01-27 12:55:33 | INFO | Epoch 5 | Step 1600/3125 | Loss: 0.2377 | LR: 2.99e-04
+2026-01-27 12:55:34 | INFO | Epoch 5 | Step 1700/3125 | Loss: 0.2378 | LR: 2.99e-04
+2026-01-27 12:55:35 | INFO | Epoch 5 | Step 1800/3125 | Loss: 0.2377 | LR: 2.99e-04
+2026-01-27 12:55:36 | INFO | Epoch 5 | Step 1900/3125 | Loss: 0.2377 | LR: 2.99e-04
+2026-01-27 12:55:37 | INFO | Epoch 5 | Step 2000/3125 | Loss: 0.2376 | LR: 2.99e-04
+2026-01-27 12:55:37 | INFO | Epoch 5 | Step 2100/3125 | Loss: 0.2376 | LR: 2.99e-04
+2026-01-27 12:55:38 | INFO | Epoch 5 | Step 2200/3125 | Loss: 0.2376 | LR: 2.99e-04
+2026-01-27 12:55:39 | INFO | Epoch 5 | Step 2300/3125 | Loss: 0.2376 | LR: 2.99e-04
+2026-01-27 12:55:40 | INFO | Epoch 5 | Step 2400/3125 | Loss: 0.2375 | LR: 2.99e-04
+2026-01-27 12:55:41 | INFO | Epoch 5 | Step 2500/3125 | Loss: 0.2376 | LR: 2.99e-04
+2026-01-27 12:55:42 | INFO | Epoch 5 | Step 2600/3125 | Loss: 0.2375 | LR: 2.99e-04
+2026-01-27 12:55:42 | INFO | Epoch 5 | Step 2700/3125 | Loss: 0.2375 | LR: 2.99e-04
+2026-01-27 12:55:43 | INFO | Epoch 5 | Step 2800/3125 | Loss: 0.2376 | LR: 2.99e-04
+2026-01-27 12:55:44 | INFO | Epoch 5 | Step 2900/3125 | Loss: 0.2377 | LR: 2.99e-04
+2026-01-27 12:55:45 | INFO | Epoch 5 | Step 3000/3125 | Loss: 0.2377 | LR: 2.99e-04
+2026-01-27 12:55:45 | INFO | Epoch 5 | Step 3100/3125 | Loss: 0.2376 | LR: 2.99e-04
+2026-01-27 12:55:46 | INFO | Train Loss: 0.2376
+2026-01-27 12:55:47 | INFO | Val Loss: 0.2339 | Val Accuracy: 0.9078 | Val Perplexity: 1.26
+2026-01-27 12:55:47 | INFO | Saved best model (val_loss: 0.2339)
+2026-01-27 12:55:47 | INFO | 
+==================================================
+2026-01-27 12:55:47 | INFO | Epoch 6/100
+2026-01-27 12:55:47 | INFO | ==================================================
+2026-01-27 12:55:47 | INFO | Epoch 6 | Step 100/3125 | Loss: 0.2402 | LR: 2.99e-04
+2026-01-27 12:55:48 | INFO | Epoch 6 | Step 200/3125 | Loss: 0.2395 | LR: 2.99e-04
+2026-01-27 12:55:49 | INFO | Epoch 6 | Step 300/3125 | Loss: 0.2394 | LR: 2.99e-04
+2026-01-27 12:55:50 | INFO | Epoch 6 | Step 400/3125 | Loss: 0.2392 | LR: 2.99e-04
+2026-01-27 12:55:51 | INFO | Epoch 6 | Step 500/3125 | Loss: 0.2382 | LR: 2.99e-04
+2026-01-27 12:55:51 | INFO | Epoch 6 | Step 600/3125 | Loss: 0.2382 | LR: 2.99e-04
+2026-01-27 12:55:52 | INFO | Epoch 6 | Step 700/3125 | Loss: 0.2378 | LR: 2.99e-04
+2026-01-27 12:55:53 | INFO | Epoch 6 | Step 800/3125 | Loss: 0.2376 | LR: 2.99e-04
+2026-01-27 12:55:54 | INFO | Epoch 6 | Step 900/3125 | Loss: 0.2373 | LR: 2.99e-04
+2026-01-27 12:55:54 | INFO | Epoch 6 | Step 1000/3125 | Loss: 0.2373 | LR: 2.99e-04
+2026-01-27 12:55:55 | INFO | Epoch 6 | Step 1100/3125 | Loss: 0.2372 | LR: 2.99e-04
+2026-01-27 12:55:56 | INFO | Epoch 6 | Step 1200/3125 | Loss: 0.2373 | LR: 2.99e-04
+2026-01-27 12:55:57 | INFO | Epoch 6 | Step 1300/3125 | Loss: 0.2372 | LR: 2.99e-04
+2026-01-27 12:55:57 | INFO | Epoch 6 | Step 1400/3125 | Loss: 0.2373 | LR: 2.99e-04
+2026-01-27 12:55:58 | INFO | Epoch 6 | Step 1500/3125 | Loss: 0.2372 | LR: 2.99e-04
+2026-01-27 12:55:59 | INFO | Epoch 6 | Step 1600/3125 | Loss: 0.2371 | LR: 2.99e-04
+2026-01-27 12:56:00 | INFO | Epoch 6 | Step 1700/3125 | Loss: 0.2370 | LR: 2.99e-04
+2026-01-27 12:56:00 | INFO | Epoch 6 | Step 1800/3125 | Loss: 0.2369 | LR: 2.99e-04
+2026-01-27 12:56:01 | INFO | Epoch 6 | Step 1900/3125 | Loss: 0.2368 | LR: 2.99e-04
+2026-01-27 12:56:02 | INFO | Epoch 6 | Step 2000/3125 | Loss: 0.2369 | LR: 2.99e-04
+2026-01-27 12:56:03 | INFO | Epoch 6 | Step 2100/3125 | Loss: 0.2369 | LR: 2.99e-04
+2026-01-27 12:56:03 | INFO | Epoch 6 | Step 2200/3125 | Loss: 0.2369 | LR: 2.99e-04
+2026-01-27 12:56:04 | INFO | Epoch 6 | Step 2300/3125 | Loss: 0.2369 | LR: 2.99e-04
+2026-01-27 12:56:05 | INFO | Epoch 6 | Step 2400/3125 | Loss: 0.2370 | LR: 2.99e-04
+2026-01-27 12:56:06 | INFO | Epoch 6 | Step 2500/3125 | Loss: 0.2370 | LR: 2.99e-04
+2026-01-27 12:56:06 | INFO | Epoch 6 | Step 2600/3125 | Loss: 0.2370 | LR: 2.99e-04
+2026-01-27 12:56:07 | INFO | Epoch 6 | Step 2700/3125 | Loss: 0.2370 | LR: 2.99e-04
+2026-01-27 12:56:08 | INFO | Epoch 6 | Step 2800/3125 | Loss: 0.2370 | LR: 2.99e-04
+2026-01-27 12:56:09 | INFO | Epoch 6 | Step 2900/3125 | Loss: 0.2370 | LR: 2.99e-04
+2026-01-27 12:56:10 | INFO | Epoch 6 | Step 3000/3125 | Loss: 0.2370 | LR: 2.99e-04
+2026-01-27 12:56:10 | INFO | Epoch 6 | Step 3100/3125 | Loss: 0.2369 | LR: 2.98e-04
+2026-01-27 12:56:10 | INFO | Train Loss: 0.2369
+2026-01-27 12:56:11 | INFO | Val Loss: 0.2342 | Val Accuracy: 0.9072 | Val Perplexity: 1.26
+2026-01-27 12:56:11 | INFO | 
+==================================================
+2026-01-27 12:56:11 | INFO | Epoch 7/100
+2026-01-27 12:56:11 | INFO | ==================================================
+2026-01-27 12:56:12 | INFO | Epoch 7 | Step 100/3125 | Loss: 0.2377 | LR: 2.98e-04
+2026-01-27 12:56:13 | INFO | Epoch 7 | Step 200/3125 | Loss: 0.2373 | LR: 2.98e-04
+2026-01-27 12:56:14 | INFO | Epoch 7 | Step 300/3125 | Loss: 0.2368 | LR: 2.98e-04
+2026-01-27 12:56:15 | INFO | Epoch 7 | Step 400/3125 | Loss: 0.2372 | LR: 2.98e-04
+2026-01-27 12:56:15 | INFO | Epoch 7 | Step 500/3125 | Loss: 0.2374 | LR: 2.98e-04
+2026-01-27 12:56:16 | INFO | Epoch 7 | Step 600/3125 | Loss: 0.2370 | LR: 2.98e-04
+2026-01-27 12:56:17 | INFO | Epoch 7 | Step 700/3125 | Loss: 0.2371 | LR: 2.98e-04
+2026-01-27 12:56:18 | INFO | Epoch 7 | Step 800/3125 | Loss: 0.2369 | LR: 2.98e-04
+2026-01-27 12:56:18 | INFO | Epoch 7 | Step 900/3125 | Loss: 0.2370 | LR: 2.98e-04
+2026-01-27 12:56:19 | INFO | Epoch 7 | Step 1000/3125 | Loss: 0.2371 | LR: 2.98e-04
+2026-01-27 12:56:20 | INFO | Epoch 7 | Step 1100/3125 | Loss: 0.2371 | LR: 2.98e-04
+2026-01-27 12:56:21 | INFO | Epoch 7 | Step 1200/3125 | Loss: 0.2371 | LR: 2.98e-04
+2026-01-27 12:56:21 | INFO | Epoch 7 | Step 1300/3125 | Loss: 0.2371 | LR: 2.98e-04
+2026-01-27 12:56:22 | INFO | Epoch 7 | Step 1400/3125 | Loss: 0.2370 | LR: 2.98e-04
+2026-01-27 12:56:23 | INFO | Epoch 7 | Step 1500/3125 | Loss: 0.2370 | LR: 2.98e-04
+2026-01-27 12:56:24 | INFO | Epoch 7 | Step 1600/3125 | Loss: 0.2370 | LR: 2.98e-04
+2026-01-27 12:56:24 | INFO | Epoch 7 | Step 1700/3125 | Loss: 0.2369 | LR: 2.98e-04
+2026-01-27 12:56:25 | INFO | Epoch 7 | Step 1800/3125 | Loss: 0.2369 | LR: 2.98e-04
+2026-01-27 12:56:26 | INFO | Epoch 7 | Step 1900/3125 | Loss: 0.2366 | LR: 2.98e-04
+2026-01-27 12:56:27 | INFO | Epoch 7 | Step 2000/3125 | Loss: 0.2367 | LR: 2.98e-04
+2026-01-27 12:56:28 | INFO | Epoch 7 | Step 2100/3125 | Loss: 0.2365 | LR: 2.98e-04
+2026-01-27 12:56:28 | INFO | Epoch 7 | Step 2200/3125 | Loss: 0.2365 | LR: 2.98e-04
+2026-01-27 12:56:29 | INFO | Epoch 7 | Step 2300/3125 | Loss: 0.2364 | LR: 2.98e-04
+2026-01-27 12:56:30 | INFO | Epoch 7 | Step 2400/3125 | Loss: 0.2365 | LR: 2.98e-04
+2026-01-27 12:56:31 | INFO | Epoch 7 | Step 2500/3125 | Loss: 0.2365 | LR: 2.98e-04
+2026-01-27 12:56:32 | INFO | Epoch 7 | Step 2600/3125 | Loss: 0.2365 | LR: 2.98e-04
+2026-01-27 12:56:33 | INFO | Epoch 7 | Step 2700/3125 | Loss: 0.2365 | LR: 2.98e-04
+2026-01-27 12:56:34 | INFO | Epoch 7 | Step 2800/3125 | Loss: 0.2365 | LR: 2.98e-04
+2026-01-27 12:56:35 | INFO | Epoch 7 | Step 2900/3125 | Loss: 0.2365 | LR: 2.98e-04
+2026-01-27 12:56:36 | INFO | Epoch 7 | Step 3000/3125 | Loss: 0.2365 | LR: 2.98e-04
+2026-01-27 12:56:37 | INFO | Epoch 7 | Step 3100/3125 | Loss: 0.2365 | LR: 2.98e-04
+2026-01-27 12:56:37 | INFO | Train Loss: 0.2365
+2026-01-27 12:56:38 | INFO | Val Loss: 0.2337 | Val Accuracy: 0.9075 | Val Perplexity: 1.26
+2026-01-27 12:56:38 | INFO | Saved best model (val_loss: 0.2337)
+2026-01-27 12:56:38 | INFO | 
+==================================================
+2026-01-27 12:56:38 | INFO | Epoch 8/100
+2026-01-27 12:56:38 | INFO | ==================================================
+2026-01-27 12:56:39 | INFO | Epoch 8 | Step 100/3125 | Loss: 0.2369 | LR: 2.98e-04
+2026-01-27 12:56:40 | INFO | Epoch 8 | Step 200/3125 | Loss: 0.2368 | LR: 2.98e-04
+2026-01-27 12:56:41 | INFO | Epoch 8 | Step 300/3125 | Loss: 0.2367 | LR: 2.98e-04
+2026-01-27 12:56:41 | INFO | Epoch 8 | Step 400/3125 | Loss: 0.2364 | LR: 2.98e-04
+2026-01-27 12:56:42 | INFO | Epoch 8 | Step 500/3125 | Loss: 0.2362 | LR: 2.98e-04
+2026-01-27 12:56:43 | INFO | Epoch 8 | Step 600/3125 | Loss: 0.2362 | LR: 2.98e-04
+2026-01-27 12:56:44 | INFO | Epoch 8 | Step 700/3125 | Loss: 0.2360 | LR: 2.98e-04
+2026-01-27 12:56:45 | INFO | Epoch 8 | Step 800/3125 | Loss: 0.2360 | LR: 2.98e-04
+2026-01-27 12:56:45 | INFO | Epoch 8 | Step 900/3125 | Loss: 0.2360 | LR: 2.98e-04
+2026-01-27 12:56:46 | INFO | Epoch 8 | Step 1000/3125 | Loss: 0.2362 | LR: 2.98e-04
+2026-01-27 12:56:47 | INFO | Epoch 8 | Step 1100/3125 | Loss: 0.2362 | LR: 2.97e-04
+2026-01-27 12:56:48 | INFO | Epoch 8 | Step 1200/3125 | Loss: 0.2362 | LR: 2.97e-04
+2026-01-27 12:56:48 | INFO | Epoch 8 | Step 1300/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:56:49 | INFO | Epoch 8 | Step 1400/3125 | Loss: 0.2360 | LR: 2.97e-04
+2026-01-27 12:56:50 | INFO | Epoch 8 | Step 1500/3125 | Loss: 0.2360 | LR: 2.97e-04
+2026-01-27 12:56:51 | INFO | Epoch 8 | Step 1600/3125 | Loss: 0.2359 | LR: 2.97e-04
+2026-01-27 12:56:51 | INFO | Epoch 8 | Step 1700/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:56:52 | INFO | Epoch 8 | Step 1800/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:56:53 | INFO | Epoch 8 | Step 1900/3125 | Loss: 0.2362 | LR: 2.97e-04
+2026-01-27 12:56:54 | INFO | Epoch 8 | Step 2000/3125 | Loss: 0.2363 | LR: 2.97e-04
+2026-01-27 12:56:55 | INFO | Epoch 8 | Step 2100/3125 | Loss: 0.2362 | LR: 2.97e-04
+2026-01-27 12:56:55 | INFO | Epoch 8 | Step 2200/3125 | Loss: 0.2362 | LR: 2.97e-04
+2026-01-27 12:56:56 | INFO | Epoch 8 | Step 2300/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:56:57 | INFO | Epoch 8 | Step 2400/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:56:58 | INFO | Epoch 8 | Step 2500/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:56:58 | INFO | Epoch 8 | Step 2600/3125 | Loss: 0.2360 | LR: 2.97e-04
+2026-01-27 12:56:59 | INFO | Epoch 8 | Step 2700/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:57:00 | INFO | Epoch 8 | Step 2800/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:57:01 | INFO | Epoch 8 | Step 2900/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:57:01 | INFO | Epoch 8 | Step 3000/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:57:02 | INFO | Epoch 8 | Step 3100/3125 | Loss: 0.2361 | LR: 2.97e-04
+2026-01-27 12:57:02 | INFO | Train Loss: 0.2361
+2026-01-27 12:57:03 | INFO | Val Loss: 0.2344 | Val Accuracy: 0.9073 | Val Perplexity: 1.26
+2026-01-27 12:57:03 | INFO | 
+==================================================
+2026-01-27 12:57:03 | INFO | Epoch 9/100
+2026-01-27 12:57:03 | INFO | ==================================================
+2026-01-27 12:57:04 | INFO | Epoch 9 | Step 100/3125 | Loss: 0.2349 | LR: 2.97e-04
+2026-01-27 12:57:05 | INFO | Epoch 9 | Step 200/3125 | Loss: 0.2357 | LR: 2.97e-04
+2026-01-27 12:57:05 | INFO | Epoch 9 | Step 300/3125 | Loss: 0.2357 | LR: 2.97e-04
+2026-01-27 12:57:06 | INFO | Epoch 9 | Step 400/3125 | Loss: 0.2357 | LR: 2.97e-04
+2026-01-27 12:57:07 | INFO | Epoch 9 | Step 500/3125 | Loss: 0.2355 | LR: 2.97e-04
+2026-01-27 12:57:08 | INFO | Epoch 9 | Step 600/3125 | Loss: 0.2352 | LR: 2.97e-04
+2026-01-27 12:57:09 | INFO | Epoch 9 | Step 700/3125 | Loss: 0.2354 | LR: 2.97e-04
+2026-01-27 12:57:09 | INFO | Epoch 9 | Step 800/3125 | Loss: 0.2355 | LR: 2.97e-04
+2026-01-27 12:57:10 | INFO | Epoch 9 | Step 900/3125 | Loss: 0.2353 | LR: 2.97e-04
+2026-01-27 12:57:11 | INFO | Epoch 9 | Step 1000/3125 | Loss: 0.2353 | LR: 2.97e-04
+2026-01-27 12:57:11 | INFO | Epoch 9 | Step 1100/3125 | Loss: 0.2355 | LR: 2.97e-04
+2026-01-27 12:57:12 | INFO | Epoch 9 | Step 1200/3125 | Loss: 0.2353 | LR: 2.97e-04
+2026-01-27 12:57:13 | INFO | Epoch 9 | Step 1300/3125 | Loss: 0.2354 | LR: 2.97e-04
+2026-01-27 12:57:14 | INFO | Epoch 9 | Step 1400/3125 | Loss: 0.2353 | LR: 2.97e-04
+2026-01-27 12:57:14 | INFO | Epoch 9 | Step 1500/3125 | Loss: 0.2354 | LR: 2.96e-04
+2026-01-27 12:57:15 | INFO | Epoch 9 | Step 1600/3125 | Loss: 0.2354 | LR: 2.96e-04
+2026-01-27 12:57:16 | INFO | Epoch 9 | Step 1700/3125 | Loss: 0.2355 | LR: 2.96e-04
+2026-01-27 12:57:17 | INFO | Epoch 9 | Step 1800/3125 | Loss: 0.2354 | LR: 2.96e-04
+2026-01-27 12:57:17 | INFO | Epoch 9 | Step 1900/3125 | Loss: 0.2355 | LR: 2.96e-04
+2026-01-27 12:57:18 | INFO | Epoch 9 | Step 2000/3125 | Loss: 0.2356 | LR: 2.96e-04
+2026-01-27 12:57:19 | INFO | Epoch 9 | Step 2100/3125 | Loss: 0.2356 | LR: 2.96e-04
+2026-01-27 12:57:20 | INFO | Epoch 9 | Step 2200/3125 | Loss: 0.2356 | LR: 2.96e-04
+2026-01-27 12:57:21 | INFO | Epoch 9 | Step 2300/3125 | Loss: 0.2357 | LR: 2.96e-04
+2026-01-27 12:57:21 | INFO | Epoch 9 | Step 2400/3125 | Loss: 0.2357 | LR: 2.96e-04
+2026-01-27 12:57:22 | INFO | Epoch 9 | Step 2500/3125 | Loss: 0.2357 | LR: 2.96e-04
+2026-01-27 12:57:23 | INFO | Epoch 9 | Step 2600/3125 | Loss: 0.2356 | LR: 2.96e-04
+2026-01-27 12:57:24 | INFO | Epoch 9 | Step 2700/3125 | Loss: 0.2357 | LR: 2.96e-04
+2026-01-27 12:57:24 | INFO | Epoch 9 | Step 2800/3125 | Loss: 0.2357 | LR: 2.96e-04
+2026-01-27 12:57:25 | INFO | Epoch 9 | Step 2900/3125 | Loss: 0.2357 | LR: 2.96e-04
+2026-01-27 12:57:26 | INFO | Epoch 9 | Step 3000/3125 | Loss: 0.2357 | LR: 2.96e-04
+2026-01-27 12:57:27 | INFO | Epoch 9 | Step 3100/3125 | Loss: 0.2359 | LR: 2.96e-04
+2026-01-27 12:57:27 | INFO | Train Loss: 0.2359
+2026-01-27 12:57:28 | INFO | Val Loss: 0.2339 | Val Accuracy: 0.9074 | Val Perplexity: 1.26
+2026-01-27 12:57:28 | INFO | 
+==================================================
+2026-01-27 12:57:28 | INFO | Epoch 10/100
+2026-01-27 12:57:28 | INFO | ==================================================
+2026-01-27 12:57:29 | INFO | Epoch 10 | Step 100/3125 | Loss: 0.2366 | LR: 2.96e-04
+2026-01-27 12:57:30 | INFO | Epoch 10 | Step 200/3125 | Loss: 0.2353 | LR: 2.96e-04
+2026-01-27 12:57:30 | INFO | Epoch 10 | Step 300/3125 | Loss: 0.2362 | LR: 2.96e-04
+2026-01-27 12:57:31 | INFO | Epoch 10 | Step 400/3125 | Loss: 0.2361 | LR: 2.96e-04
+2026-01-27 12:57:32 | INFO | Epoch 10 | Step 500/3125 | Loss: 0.2360 | LR: 2.96e-04
+2026-01-27 12:57:33 | INFO | Epoch 10 | Step 600/3125 | Loss: 0.2356 | LR: 2.96e-04
+2026-01-27 12:57:34 | INFO | Epoch 10 | Step 700/3125 | Loss: 0.2357 | LR: 2.96e-04
+2026-01-27 12:57:34 | INFO | Epoch 10 | Step 800/3125 | Loss: 0.2354 | LR: 2.96e-04
+2026-01-27 12:57:35 | INFO | Epoch 10 | Step 900/3125 | Loss: 0.2357 | LR: 2.96e-04
+2026-01-27 12:57:36 | INFO | Epoch 10 | Step 1000/3125 | Loss: 0.2358 | LR: 2.96e-04
+2026-01-27 12:57:37 | INFO | Epoch 10 | Step 1100/3125 | Loss: 0.2361 | LR: 2.96e-04
+2026-01-27 12:57:37 | INFO | Epoch 10 | Step 1200/3125 | Loss: 0.2361 | LR: 2.96e-04
+2026-01-27 12:57:38 | INFO | Epoch 10 | Step 1300/3125 | Loss: 0.2360 | LR: 2.96e-04
+2026-01-27 12:57:39 | INFO | Epoch 10 | Step 1400/3125 | Loss: 0.2361 | LR: 2.95e-04
+2026-01-27 12:57:40 | INFO | Epoch 10 | Step 1500/3125 | Loss: 0.2361 | LR: 2.95e-04
+2026-01-27 12:57:41 | INFO | Epoch 10 | Step 1600/3125 | Loss: 0.2361 | LR: 2.95e-04
+2026-01-27 12:57:41 | INFO | Epoch 10 | Step 1700/3125 | Loss: 0.2359 | LR: 2.95e-04
+2026-01-27 12:57:42 | INFO | Epoch 10 | Step 1800/3125 | Loss: 0.2359 | LR: 2.95e-04
+2026-01-27 12:57:43 | INFO | Epoch 10 | Step 1900/3125 | Loss: 0.2359 | LR: 2.95e-04
+2026-01-27 12:57:44 | INFO | Epoch 10 | Step 2000/3125 | Loss: 0.2357 | LR: 2.95e-04
+2026-01-27 12:57:44 | INFO | Epoch 10 | Step 2100/3125 | Loss: 0.2357 | LR: 2.95e-04
+2026-01-27 12:57:45 | INFO | Epoch 10 | Step 2200/3125 | Loss: 0.2357 | LR: 2.95e-04
+2026-01-27 12:57:46 | INFO | Epoch 10 | Step 2300/3125 | Loss: 0.2358 | LR: 2.95e-04
+2026-01-27 12:57:47 | INFO | Epoch 10 | Step 2400/3125 | Loss: 0.2357 | LR: 2.95e-04
+2026-01-27 12:57:48 | INFO | Epoch 10 | Step 2500/3125 | Loss: 0.2357 | LR: 2.95e-04
+2026-01-27 12:57:48 | INFO | Epoch 10 | Step 2600/3125 | Loss: 0.2358 | LR: 2.95e-04
+2026-01-27 12:57:49 | INFO | Epoch 10 | Step 2700/3125 | Loss: 0.2358 | LR: 2.95e-04
+2026-01-27 12:57:50 | INFO | Epoch 10 | Step 2800/3125 | Loss: 0.2358 | LR: 2.95e-04
+2026-01-27 12:57:51 | INFO | Epoch 10 | Step 2900/3125 | Loss: 0.2358 | LR: 2.95e-04
+2026-01-27 12:57:51 | INFO | Epoch 10 | Step 3000/3125 | Loss: 0.2358 | LR: 2.95e-04
+2026-01-27 12:57:52 | INFO | Epoch 10 | Step 3100/3125 | Loss: 0.2358 | LR: 2.95e-04
+2026-01-27 12:57:53 | INFO | Train Loss: 0.2358
+2026-01-27 12:57:53 | INFO | Val Loss: 0.2338 | Val Accuracy: 0.9076 | Val Perplexity: 1.26
+2026-01-27 12:57:54 | INFO | 
+==================================================
+2026-01-27 12:57:54 | INFO | Epoch 11/100
+2026-01-27 12:57:54 | INFO | ==================================================
+2026-01-27 12:57:54 | INFO | Epoch 11 | Step 100/3125 | Loss: 0.2354 | LR: 2.95e-04
+2026-01-27 12:57:55 | INFO | Epoch 11 | Step 200/3125 | Loss: 0.2355 | LR: 2.95e-04
+2026-01-27 12:57:56 | INFO | Epoch 11 | Step 300/3125 | Loss: 0.2360 | LR: 2.95e-04
+2026-01-27 12:57:57 | INFO | Epoch 11 | Step 400/3125 | Loss: 0.2353 | LR: 2.95e-04
+2026-01-27 12:57:58 | INFO | Epoch 11 | Step 500/3125 | Loss: 0.2354 | LR: 2.95e-04
+2026-01-27 12:57:59 | INFO | Epoch 11 | Step 600/3125 | Loss: 0.2354 | LR: 2.95e-04
+2026-01-27 12:57:59 | INFO | Epoch 11 | Step 700/3125 | Loss: 0.2357 | LR: 2.95e-04
+2026-01-27 12:58:00 | INFO | Epoch 11 | Step 800/3125 | Loss: 0.2355 | LR: 2.95e-04
+2026-01-27 12:58:01 | INFO | Epoch 11 | Step 900/3125 | Loss: 0.2357 | LR: 2.95e-04
+2026-01-27 12:58:02 | INFO | Epoch 11 | Step 1000/3125 | Loss: 0.2355 | LR: 2.94e-04
+2026-01-27 12:58:03 | INFO | Epoch 11 | Step 1100/3125 | Loss: 0.2357 | LR: 2.94e-04
+2026-01-27 12:58:04 | INFO | Epoch 11 | Step 1200/3125 | Loss: 0.2357 | LR: 2.94e-04
+2026-01-27 12:58:05 | INFO | Epoch 11 | Step 1300/3125 | Loss: 0.2358 | LR: 2.94e-04
+2026-01-27 12:58:05 | INFO | Epoch 11 | Step 1400/3125 | Loss: 0.2357 | LR: 2.94e-04
+2026-01-27 12:58:06 | INFO | Epoch 11 | Step 1500/3125 | Loss: 0.2357 | LR: 2.94e-04
+2026-01-27 12:58:07 | INFO | Epoch 11 | Step 1600/3125 | Loss: 0.2357 | LR: 2.94e-04
+2026-01-27 12:58:08 | INFO | Epoch 11 | Step 1700/3125 | Loss: 0.2356 | LR: 2.94e-04
+2026-01-27 12:58:09 | INFO | Epoch 11 | Step 1800/3125 | Loss: 0.2355 | LR: 2.94e-04
+2026-01-27 12:58:09 | INFO | Epoch 11 | Step 1900/3125 | Loss: 0.2355 | LR: 2.94e-04
+2026-01-27 12:58:10 | INFO | Epoch 11 | Step 2000/3125 | Loss: 0.2356 | LR: 2.94e-04
+2026-01-27 12:58:11 | INFO | Epoch 11 | Step 2100/3125 | Loss: 0.2357 | LR: 2.94e-04
+2026-01-27 12:58:12 | INFO | Epoch 11 | Step 2200/3125 | Loss: 0.2358 | LR: 2.94e-04
+2026-01-27 12:58:13 | INFO | Epoch 11 | Step 2300/3125 | Loss: 0.2358 | LR: 2.94e-04
+2026-01-27 12:58:13 | INFO | Epoch 11 | Step 2400/3125 | Loss: 0.2358 | LR: 2.94e-04
+2026-01-27 12:58:14 | INFO | Epoch 11 | Step 2500/3125 | Loss: 0.2358 | LR: 2.94e-04
+2026-01-27 12:58:15 | INFO | Epoch 11 | Step 2600/3125 | Loss: 0.2357 | LR: 2.94e-04
+2026-01-27 12:58:16 | INFO | Epoch 11 | Step 2700/3125 | Loss: 0.2358 | LR: 2.94e-04
+2026-01-27 12:58:16 | INFO | Epoch 11 | Step 2800/3125 | Loss: 0.2358 | LR: 2.94e-04
+2026-01-27 12:58:17 | INFO | Epoch 11 | Step 2900/3125 | Loss: 0.2357 | LR: 2.94e-04
+2026-01-27 12:58:18 | INFO | Epoch 11 | Step 3000/3125 | Loss: 0.2356 | LR: 2.94e-04
+2026-01-27 12:58:19 | INFO | Epoch 11 | Step 3100/3125 | Loss: 0.2357 | LR: 2.94e-04
+2026-01-27 12:58:19 | INFO | Train Loss: 0.2357
+2026-01-27 12:58:20 | INFO | Val Loss: 0.2336 | Val Accuracy: 0.9076 | Val Perplexity: 1.26
+2026-01-27 12:58:20 | INFO | Saved best model (val_loss: 0.2336)
+2026-01-27 12:58:20 | INFO | 
+==================================================
+2026-01-27 12:58:20 | INFO | Epoch 12/100
+2026-01-27 12:58:20 | INFO | ==================================================
+2026-01-27 12:58:21 | INFO | Epoch 12 | Step 100/3125 | Loss: 0.2355 | LR: 2.94e-04
+2026-01-27 12:58:21 | INFO | Epoch 12 | Step 200/3125 | Loss: 0.2355 | LR: 2.94e-04
+2026-01-27 12:58:22 | INFO | Epoch 12 | Step 300/3125 | Loss: 0.2351 | LR: 2.93e-04
+2026-01-27 12:58:23 | INFO | Epoch 12 | Step 400/3125 | Loss: 0.2355 | LR: 2.93e-04
+2026-01-27 12:58:24 | INFO | Epoch 12 | Step 500/3125 | Loss: 0.2356 | LR: 2.93e-04
+2026-01-27 12:58:24 | INFO | Epoch 12 | Step 600/3125 | Loss: 0.2357 | LR: 2.93e-04
+2026-01-27 12:58:25 | INFO | Epoch 12 | Step 700/3125 | Loss: 0.2360 | LR: 2.93e-04
+2026-01-27 12:58:26 | INFO | Epoch 12 | Step 800/3125 | Loss: 0.2357 | LR: 2.93e-04
+2026-01-27 12:58:27 | INFO | Epoch 12 | Step 900/3125 | Loss: 0.2355 | LR: 2.93e-04
+2026-01-27 12:58:27 | INFO | Epoch 12 | Step 1000/3125 | Loss: 0.2355 | LR: 2.93e-04
+2026-01-27 12:58:28 | INFO | Epoch 12 | Step 1100/3125 | Loss: 0.2356 | LR: 2.93e-04
+2026-01-27 12:58:29 | INFO | Epoch 12 | Step 1200/3125 | Loss: 0.2357 | LR: 2.93e-04
+2026-01-27 12:58:30 | INFO | Epoch 12 | Step 1300/3125 | Loss: 0.2353 | LR: 2.93e-04
+2026-01-27 12:58:30 | INFO | Epoch 12 | Step 1400/3125 | Loss: 0.2353 | LR: 2.93e-04
+2026-01-27 12:58:31 | INFO | Epoch 12 | Step 1500/3125 | Loss: 0.2355 | LR: 2.93e-04
+2026-01-27 12:58:32 | INFO | Epoch 12 | Step 1600/3125 | Loss: 0.2356 | LR: 2.93e-04
+2026-01-27 12:58:33 | INFO | Epoch 12 | Step 1700/3125 | Loss: 0.2355 | LR: 2.93e-04
+2026-01-27 12:58:33 | INFO | Epoch 12 | Step 1800/3125 | Loss: 0.2358 | LR: 2.93e-04
+2026-01-27 12:58:34 | INFO | Epoch 12 | Step 1900/3125 | Loss: 0.2358 | LR: 2.93e-04
+2026-01-27 12:58:35 | INFO | Epoch 12 | Step 2000/3125 | Loss: 0.2357 | LR: 2.93e-04
+2026-01-27 12:58:36 | INFO | Epoch 12 | Step 2100/3125 | Loss: 0.2357 | LR: 2.93e-04
+2026-01-27 12:58:36 | INFO | Epoch 12 | Step 2200/3125 | Loss: 0.2357 | LR: 2.93e-04
+2026-01-27 12:58:37 | INFO | Epoch 12 | Step 2300/3125 | Loss: 0.2356 | LR: 2.93e-04
+2026-01-27 12:58:38 | INFO | Epoch 12 | Step 2400/3125 | Loss: 0.2356 | LR: 2.93e-04
+2026-01-27 12:58:39 | INFO | Epoch 12 | Step 2500/3125 | Loss: 0.2355 | LR: 2.93e-04
+2026-01-27 12:58:39 | INFO | Epoch 12 | Step 2600/3125 | Loss: 0.2356 | LR: 2.92e-04
+2026-01-27 12:58:40 | INFO | Epoch 12 | Step 2700/3125 | Loss: 0.2356 | LR: 2.92e-04
+2026-01-27 12:58:41 | INFO | Epoch 12 | Step 2800/3125 | Loss: 0.2356 | LR: 2.92e-04
+2026-01-27 12:58:42 | INFO | Epoch 12 | Step 2900/3125 | Loss: 0.2355 | LR: 2.92e-04
+2026-01-27 12:58:42 | INFO | Epoch 12 | Step 3000/3125 | Loss: 0.2356 | LR: 2.92e-04
+2026-01-27 12:58:43 | INFO | Epoch 12 | Step 3100/3125 | Loss: 0.2356 | LR: 2.92e-04
+2026-01-27 12:58:43 | INFO | Train Loss: 0.2356
+2026-01-27 12:58:44 | INFO | Val Loss: 0.2334 | Val Accuracy: 0.9082 | Val Perplexity: 1.26
+2026-01-27 12:58:44 | INFO | Saved best model (val_loss: 0.2334)
+2026-01-27 12:58:44 | INFO | 
+==================================================
+2026-01-27 12:58:44 | INFO | Epoch 13/100
+2026-01-27 12:58:44 | INFO | ==================================================
+2026-01-27 12:58:45 | INFO | Epoch 13 | Step 100/3125 | Loss: 0.2345 | LR: 2.92e-04
+2026-01-27 12:58:46 | INFO | Epoch 13 | Step 200/3125 | Loss: 0.2342 | LR: 2.92e-04
+2026-01-27 12:58:47 | INFO | Epoch 13 | Step 300/3125 | Loss: 0.2343 | LR: 2.92e-04
+2026-01-27 12:58:47 | INFO | Epoch 13 | Step 400/3125 | Loss: 0.2345 | LR: 2.92e-04
+2026-01-27 12:58:48 | INFO | Epoch 13 | Step 500/3125 | Loss: 0.2346 | LR: 2.92e-04
+2026-01-27 12:58:49 | INFO | Epoch 13 | Step 600/3125 | Loss: 0.2348 | LR: 2.92e-04
+2026-01-27 12:58:50 | INFO | Epoch 13 | Step 700/3125 | Loss: 0.2347 | LR: 2.92e-04
+2026-01-27 12:58:50 | INFO | Epoch 13 | Step 800/3125 | Loss: 0.2346 | LR: 2.92e-04
+2026-01-27 12:58:51 | INFO | Epoch 13 | Step 900/3125 | Loss: 0.2349 | LR: 2.92e-04
+2026-01-27 12:58:52 | INFO | Epoch 13 | Step 1000/3125 | Loss: 0.2351 | LR: 2.92e-04
+2026-01-27 12:58:53 | INFO | Epoch 13 | Step 1100/3125 | Loss: 0.2350 | LR: 2.92e-04
+2026-01-27 12:58:53 | INFO | Epoch 13 | Step 1200/3125 | Loss: 0.2349 | LR: 2.92e-04
+2026-01-27 12:58:54 | INFO | Epoch 13 | Step 1300/3125 | Loss: 0.2350 | LR: 2.92e-04
+2026-01-27 12:58:55 | INFO | Epoch 13 | Step 1400/3125 | Loss: 0.2351 | LR: 2.92e-04
+2026-01-27 12:58:56 | INFO | Epoch 13 | Step 1500/3125 | Loss: 0.2352 | LR: 2.92e-04
+2026-01-27 12:58:57 | INFO | Epoch 13 | Step 1600/3125 | Loss: 0.2352 | LR: 2.91e-04
+2026-01-27 12:58:57 | INFO | Epoch 13 | Step 1700/3125 | Loss: 0.2351 | LR: 2.91e-04
+2026-01-27 12:58:58 | INFO | Epoch 13 | Step 1800/3125 | Loss: 0.2352 | LR: 2.91e-04
+2026-01-27 12:58:59 | INFO | Epoch 13 | Step 1900/3125 | Loss: 0.2351 | LR: 2.91e-04
+2026-01-27 12:58:59 | INFO | Epoch 13 | Step 2000/3125 | Loss: 0.2352 | LR: 2.91e-04
+2026-01-27 12:59:00 | INFO | Epoch 13 | Step 2100/3125 | Loss: 0.2352 | LR: 2.91e-04
+2026-01-27 12:59:01 | INFO | Epoch 13 | Step 2200/3125 | Loss: 0.2353 | LR: 2.91e-04
+2026-01-27 12:59:02 | INFO | Epoch 13 | Step 2300/3125 | Loss: 0.2353 | LR: 2.91e-04
+2026-01-27 12:59:02 | INFO | Epoch 13 | Step 2400/3125 | Loss: 0.2353 | LR: 2.91e-04
+2026-01-27 12:59:03 | INFO | Epoch 13 | Step 2500/3125 | Loss: 0.2353 | LR: 2.91e-04
+2026-01-27 12:59:04 | INFO | Epoch 13 | Step 2600/3125 | Loss: 0.2353 | LR: 2.91e-04
+2026-01-27 12:59:05 | INFO | Epoch 13 | Step 2700/3125 | Loss: 0.2353 | LR: 2.91e-04
+2026-01-27 12:59:05 | INFO | Epoch 13 | Step 2800/3125 | Loss: 0.2352 | LR: 2.91e-04
+2026-01-27 12:59:06 | INFO | Epoch 13 | Step 2900/3125 | Loss: 0.2353 | LR: 2.91e-04
+2026-01-27 12:59:07 | INFO | Epoch 13 | Step 3000/3125 | Loss: 0.2353 | LR: 2.91e-04
+2026-01-27 12:59:08 | INFO | Epoch 13 | Step 3100/3125 | Loss: 0.2354 | LR: 2.91e-04
+2026-01-27 12:59:08 | INFO | Train Loss: 0.2354
+2026-01-27 12:59:09 | INFO | Val Loss: 0.2336 | Val Accuracy: 0.9076 | Val Perplexity: 1.26
+2026-01-27 12:59:09 | INFO | 
+==================================================
+2026-01-27 12:59:09 | INFO | Epoch 14/100
+2026-01-27 12:59:09 | INFO | ==================================================
+2026-01-27 12:59:09 | INFO | Epoch 14 | Step 100/3125 | Loss: 0.2371 | LR: 2.91e-04
+2026-01-27 12:59:10 | INFO | Epoch 14 | Step 200/3125 | Loss: 0.2353 | LR: 2.91e-04
+2026-01-27 12:59:11 | INFO | Epoch 14 | Step 300/3125 | Loss: 0.2344 | LR: 2.91e-04
+2026-01-27 12:59:12 | INFO | Epoch 14 | Step 400/3125 | Loss: 0.2340 | LR: 2.91e-04
+2026-01-27 12:59:12 | INFO | Epoch 14 | Step 500/3125 | Loss: 0.2345 | LR: 2.91e-04
+2026-01-27 12:59:13 | INFO | Epoch 14 | Step 600/3125 | Loss: 0.2350 | LR: 2.90e-04
+2026-01-27 12:59:14 | INFO | Epoch 14 | Step 700/3125 | Loss: 0.2348 | LR: 2.90e-04
+2026-01-27 12:59:15 | INFO | Epoch 14 | Step 800/3125 | Loss: 0.2347 | LR: 2.90e-04
+2026-01-27 12:59:15 | INFO | Epoch 14 | Step 900/3125 | Loss: 0.2351 | LR: 2.90e-04
+2026-01-27 12:59:16 | INFO | Epoch 14 | Step 1000/3125 | Loss: 0.2350 | LR: 2.90e-04
+2026-01-27 12:59:17 | INFO | Epoch 14 | Step 1100/3125 | Loss: 0.2349 | LR: 2.90e-04
+2026-01-27 12:59:18 | INFO | Epoch 14 | Step 1200/3125 | Loss: 0.2347 | LR: 2.90e-04
+2026-01-27 12:59:19 | INFO | Epoch 14 | Step 1300/3125 | Loss: 0.2346 | LR: 2.90e-04
+2026-01-27 12:59:19 | INFO | Epoch 14 | Step 1400/3125 | Loss: 0.2348 | LR: 2.90e-04
+2026-01-27 12:59:20 | INFO | Epoch 14 | Step 1500/3125 | Loss: 0.2348 | LR: 2.90e-04
+2026-01-27 12:59:21 | INFO | Epoch 14 | Step 1600/3125 | Loss: 0.2348 | LR: 2.90e-04
+2026-01-27 12:59:22 | INFO | Epoch 14 | Step 1700/3125 | Loss: 0.2348 | LR: 2.90e-04
+2026-01-27 12:59:22 | INFO | Epoch 14 | Step 1800/3125 | Loss: 0.2347 | LR: 2.90e-04
+2026-01-27 12:59:23 | INFO | Epoch 14 | Step 1900/3125 | Loss: 0.2348 | LR: 2.90e-04
+2026-01-27 12:59:24 | INFO | Epoch 14 | Step 2000/3125 | Loss: 0.2349 | LR: 2.90e-04
+2026-01-27 12:59:25 | INFO | Epoch 14 | Step 2100/3125 | Loss: 0.2349 | LR: 2.90e-04
+2026-01-27 12:59:25 | INFO | Epoch 14 | Step 2200/3125 | Loss: 0.2350 | LR: 2.90e-04
+2026-01-27 12:59:26 | INFO | Epoch 14 | Step 2300/3125 | Loss: 0.2350 | LR: 2.90e-04
+2026-01-27 12:59:27 | INFO | Epoch 14 | Step 2400/3125 | Loss: 0.2351 | LR: 2.90e-04
+2026-01-27 12:59:28 | INFO | Epoch 14 | Step 2500/3125 | Loss: 0.2351 | LR: 2.89e-04
+2026-01-27 12:59:29 | INFO | Epoch 14 | Step 2600/3125 | Loss: 0.2352 | LR: 2.89e-04
+2026-01-27 12:59:29 | INFO | Epoch 14 | Step 2700/3125 | Loss: 0.2353 | LR: 2.89e-04
+2026-01-27 12:59:30 | INFO | Epoch 14 | Step 2800/3125 | Loss: 0.2353 | LR: 2.89e-04
+2026-01-27 12:59:31 | INFO | Epoch 14 | Step 2900/3125 | Loss: 0.2353 | LR: 2.89e-04
+2026-01-27 12:59:32 | INFO | Epoch 14 | Step 3000/3125 | Loss: 0.2353 | LR: 2.89e-04
+2026-01-27 12:59:33 | INFO | Epoch 14 | Step 3100/3125 | Loss: 0.2354 | LR: 2.89e-04
+2026-01-27 12:59:33 | INFO | Train Loss: 0.2353
+2026-01-27 12:59:34 | INFO | Val Loss: 0.2334 | Val Accuracy: 0.9070 | Val Perplexity: 1.26
+2026-01-27 12:59:34 | INFO | 
+==================================================
+2026-01-27 12:59:34 | INFO | Epoch 15/100
+2026-01-27 12:59:34 | INFO | ==================================================
+2026-01-27 12:59:35 | INFO | Epoch 15 | Step 100/3125 | Loss: 0.2342 | LR: 2.89e-04
+2026-01-27 12:59:35 | INFO | Epoch 15 | Step 200/3125 | Loss: 0.2351 | LR: 2.89e-04
+2026-01-27 12:59:36 | INFO | Epoch 15 | Step 300/3125 | Loss: 0.2352 | LR: 2.89e-04
+2026-01-27 12:59:37 | INFO | Epoch 15 | Step 400/3125 | Loss: 0.2361 | LR: 2.89e-04
+2026-01-27 12:59:38 | INFO | Epoch 15 | Step 500/3125 | Loss: 0.2356 | LR: 2.89e-04
+2026-01-27 12:59:38 | INFO | Epoch 15 | Step 600/3125 | Loss: 0.2361 | LR: 2.89e-04
+2026-01-27 12:59:39 | INFO | Epoch 15 | Step 700/3125 | Loss: 0.2360 | LR: 2.89e-04
+2026-01-27 12:59:40 | INFO | Epoch 15 | Step 800/3125 | Loss: 0.2357 | LR: 2.89e-04
+2026-01-27 12:59:41 | INFO | Epoch 15 | Step 900/3125 | Loss: 0.2357 | LR: 2.89e-04
+2026-01-27 12:59:41 | INFO | Epoch 15 | Step 1000/3125 | Loss: 0.2357 | LR: 2.89e-04
+2026-01-27 12:59:42 | INFO | Epoch 15 | Step 1100/3125 | Loss: 0.2357 | LR: 2.89e-04
+2026-01-27 12:59:43 | INFO | Epoch 15 | Step 1200/3125 | Loss: 0.2356 | LR: 2.88e-04
+2026-01-27 12:59:44 | INFO | Epoch 15 | Step 1300/3125 | Loss: 0.2356 | LR: 2.88e-04
+2026-01-27 12:59:44 | INFO | Epoch 15 | Step 1400/3125 | Loss: 0.2355 | LR: 2.88e-04
+2026-01-27 12:59:45 | INFO | Epoch 15 | Step 1500/3125 | Loss: 0.2356 | LR: 2.88e-04
+2026-01-27 12:59:46 | INFO | Epoch 15 | Step 1600/3125 | Loss: 0.2355 | LR: 2.88e-04
+2026-01-27 12:59:47 | INFO | Epoch 15 | Step 1700/3125 | Loss: 0.2353 | LR: 2.88e-04
+2026-01-27 12:59:48 | INFO | Epoch 15 | Step 1800/3125 | Loss: 0.2353 | LR: 2.88e-04
+2026-01-27 12:59:48 | INFO | Epoch 15 | Step 1900/3125 | Loss: 0.2352 | LR: 2.88e-04
+2026-01-27 12:59:49 | INFO | Epoch 15 | Step 2000/3125 | Loss: 0.2353 | LR: 2.88e-04
+2026-01-27 12:59:50 | INFO | Epoch 15 | Step 2100/3125 | Loss: 0.2353 | LR: 2.88e-04
+2026-01-27 12:59:51 | INFO | Epoch 15 | Step 2200/3125 | Loss: 0.2354 | LR: 2.88e-04
+2026-01-27 12:59:51 | INFO | Epoch 15 | Step 2300/3125 | Loss: 0.2353 | LR: 2.88e-04
+2026-01-27 12:59:52 | INFO | Epoch 15 | Step 2400/3125 | Loss: 0.2354 | LR: 2.88e-04
+2026-01-27 12:59:53 | INFO | Epoch 15 | Step 2500/3125 | Loss: 0.2354 | LR: 2.88e-04
+2026-01-27 12:59:54 | INFO | Epoch 15 | Step 2600/3125 | Loss: 0.2354 | LR: 2.88e-04
+2026-01-27 12:59:54 | INFO | Epoch 15 | Step 2700/3125 | Loss: 0.2354 | LR: 2.88e-04
+2026-01-27 12:59:55 | INFO | Epoch 15 | Step 2800/3125 | Loss: 0.2354 | LR: 2.88e-04
+2026-01-27 12:59:56 | INFO | Epoch 15 | Step 2900/3125 | Loss: 0.2354 | LR: 2.88e-04
+2026-01-27 12:59:57 | INFO | Epoch 15 | Step 3000/3125 | Loss: 0.2354 | LR: 2.87e-04
+2026-01-27 12:59:58 | INFO | Epoch 15 | Step 3100/3125 | Loss: 0.2354 | LR: 2.87e-04
+2026-01-27 12:59:58 | INFO | Train Loss: 0.2354
+2026-01-27 12:59:59 | INFO | Val Loss: 0.2338 | Val Accuracy: 0.9072 | Val Perplexity: 1.26
+2026-01-27 12:59:59 | INFO | 
+==================================================
+2026-01-27 12:59:59 | INFO | Epoch 16/100
+2026-01-27 12:59:59 | INFO | ==================================================
+2026-01-27 12:59:59 | INFO | Epoch 16 | Step 100/3125 | Loss: 0.2351 | LR: 2.87e-04
+2026-01-27 13:00:00 | INFO | Epoch 16 | Step 200/3125 | Loss: 0.2344 | LR: 2.87e-04
+2026-01-27 13:00:01 | INFO | Epoch 16 | Step 300/3125 | Loss: 0.2356 | LR: 2.87e-04
+2026-01-27 13:00:02 | INFO | Epoch 16 | Step 400/3125 | Loss: 0.2356 | LR: 2.87e-04
+2026-01-27 13:00:03 | INFO | Epoch 16 | Step 500/3125 | Loss: 0.2357 | LR: 2.87e-04
+2026-01-27 13:00:03 | INFO | Epoch 16 | Step 600/3125 | Loss: 0.2354 | LR: 2.87e-04
+2026-01-27 13:00:04 | INFO | Epoch 16 | Step 700/3125 | Loss: 0.2352 | LR: 2.87e-04
+2026-01-27 13:00:05 | INFO | Epoch 16 | Step 800/3125 | Loss: 0.2351 | LR: 2.87e-04
+2026-01-27 13:00:06 | INFO | Epoch 16 | Step 900/3125 | Loss: 0.2353 | LR: 2.87e-04
+2026-01-27 13:00:06 | INFO | Epoch 16 | Step 1000/3125 | Loss: 0.2352 | LR: 2.87e-04
+2026-01-27 13:00:07 | INFO | Epoch 16 | Step 1100/3125 | Loss: 0.2352 | LR: 2.87e-04
+2026-01-27 13:00:08 | INFO | Epoch 16 | Step 1200/3125 | Loss: 0.2350 | LR: 2.87e-04
+2026-01-27 13:00:09 | INFO | Epoch 16 | Step 1300/3125 | Loss: 0.2351 | LR: 2.87e-04
+2026-01-27 13:00:10 | INFO | Epoch 16 | Step 1400/3125 | Loss: 0.2351 | LR: 2.87e-04
+2026-01-27 13:00:11 | INFO | Epoch 16 | Step 1500/3125 | Loss: 0.2350 | LR: 2.86e-04
+2026-01-27 13:00:12 | INFO | Epoch 16 | Step 1600/3125 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 13:00:12 | INFO | Epoch 16 | Step 1700/3125 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 13:00:13 | INFO | Epoch 16 | Step 1800/3125 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 13:00:14 | INFO | Epoch 16 | Step 1900/3125 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 13:00:15 | INFO | Epoch 16 | Step 2000/3125 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 13:00:16 | INFO | Epoch 16 | Step 2100/3125 | Loss: 0.2352 | LR: 2.86e-04
+2026-01-27 13:00:17 | INFO | Epoch 16 | Step 2200/3125 | Loss: 0.2352 | LR: 2.86e-04
+2026-01-27 13:00:18 | INFO | Epoch 16 | Step 2300/3125 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 13:00:19 | INFO | Epoch 16 | Step 2400/3125 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 13:00:20 | INFO | Epoch 16 | Step 2500/3125 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 13:00:21 | INFO | Epoch 16 | Step 2600/3125 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 13:00:21 | INFO | Epoch 16 | Step 2700/3125 | Loss: 0.2352 | LR: 2.86e-04
+2026-01-27 13:00:22 | INFO | Epoch 16 | Step 2800/3125 | Loss: 0.2352 | LR: 2.86e-04
+2026-01-27 13:00:23 | INFO | Epoch 16 | Step 2900/3125 | Loss: 0.2351 | LR: 2.86e-04
+2026-01-27 13:00:24 | INFO | Epoch 16 | Step 3000/3125 | Loss: 0.2352 | LR: 2.86e-04
+2026-01-27 13:00:24 | INFO | Epoch 16 | Step 3100/3125 | Loss: 0.2352 | LR: 2.86e-04
+2026-01-27 13:00:25 | INFO | Train Loss: 0.2352
+2026-01-27 13:00:26 | INFO | Val Loss: 0.2333 | Val Accuracy: 0.9076 | Val Perplexity: 1.26
+2026-01-27 13:00:26 | INFO | Saved best model (val_loss: 0.2333)
+2026-01-27 13:00:26 | INFO | 
+==================================================
+2026-01-27 13:00:26 | INFO | Epoch 17/100
+2026-01-27 13:00:26 | INFO | ==================================================
+2026-01-27 13:00:26 | INFO | Epoch 17 | Step 100/3125 | Loss: 0.2369 | LR: 2.85e-04
+2026-01-27 13:00:27 | INFO | Epoch 17 | Step 200/3125 | Loss: 0.2351 | LR: 2.85e-04
+2026-01-27 13:00:28 | INFO | Epoch 17 | Step 300/3125 | Loss: 0.2354 | LR: 2.85e-04
+2026-01-27 13:00:29 | INFO | Epoch 17 | Step 400/3125 | Loss: 0.2359 | LR: 2.85e-04
+2026-01-27 13:00:29 | INFO | Epoch 17 | Step 500/3125 | Loss: 0.2359 | LR: 2.85e-04
+2026-01-27 13:00:30 | INFO | Epoch 17 | Step 600/3125 | Loss: 0.2360 | LR: 2.85e-04
+2026-01-27 13:00:31 | INFO | Epoch 17 | Step 700/3125 | Loss: 0.2359 | LR: 2.85e-04
+2026-01-27 13:00:32 | INFO | Epoch 17 | Step 800/3125 | Loss: 0.2357 | LR: 2.85e-04
+2026-01-27 13:00:32 | INFO | Epoch 17 | Step 900/3125 | Loss: 0.2358 | LR: 2.85e-04
+2026-01-27 13:00:33 | INFO | Epoch 17 | Step 1000/3125 | Loss: 0.2358 | LR: 2.85e-04
+2026-01-27 13:00:34 | INFO | Epoch 17 | Step 1100/3125 | Loss: 0.2357 | LR: 2.85e-04
+2026-01-27 13:00:35 | INFO | Epoch 17 | Step 1200/3125 | Loss: 0.2358 | LR: 2.85e-04
+2026-01-27 13:00:35 | INFO | Epoch 17 | Step 1300/3125 | Loss: 0.2358 | LR: 2.85e-04
+2026-01-27 13:00:36 | INFO | Epoch 17 | Step 1400/3125 | Loss: 0.2357 | LR: 2.85e-04
+2026-01-27 13:00:37 | INFO | Epoch 17 | Step 1500/3125 | Loss: 0.2357 | LR: 2.85e-04
+2026-01-27 13:00:38 | INFO | Epoch 17 | Step 1600/3125 | Loss: 0.2357 | LR: 2.84e-04
+2026-01-27 13:00:38 | INFO | Epoch 17 | Step 1700/3125 | Loss: 0.2356 | LR: 2.84e-04
+2026-01-27 13:00:39 | INFO | Epoch 17 | Step 1800/3125 | Loss: 0.2354 | LR: 2.84e-04
+2026-01-27 13:00:40 | INFO | Epoch 17 | Step 1900/3125 | Loss: 0.2354 | LR: 2.84e-04
+2026-01-27 13:00:41 | INFO | Epoch 17 | Step 2000/3125 | Loss: 0.2353 | LR: 2.84e-04
+2026-01-27 13:00:41 | INFO | Epoch 17 | Step 2100/3125 | Loss: 0.2353 | LR: 2.84e-04
+2026-01-27 13:00:42 | INFO | Epoch 17 | Step 2200/3125 | Loss: 0.2353 | LR: 2.84e-04
+2026-01-27 13:00:43 | INFO | Epoch 17 | Step 2300/3125 | Loss: 0.2353 | LR: 2.84e-04
+2026-01-27 13:00:44 | INFO | Epoch 17 | Step 2400/3125 | Loss: 0.2353 | LR: 2.84e-04
+2026-01-27 13:00:44 | INFO | Epoch 17 | Step 2500/3125 | Loss: 0.2353 | LR: 2.84e-04
+2026-01-27 13:00:45 | INFO | Epoch 17 | Step 2600/3125 | Loss: 0.2352 | LR: 2.84e-04
+2026-01-27 13:00:46 | INFO | Epoch 17 | Step 2700/3125 | Loss: 0.2353 | LR: 2.84e-04
+2026-01-27 13:00:47 | INFO | Epoch 17 | Step 2800/3125 | Loss: 0.2352 | LR: 2.84e-04
+2026-01-27 13:00:47 | INFO | Epoch 17 | Step 2900/3125 | Loss: 0.2352 | LR: 2.84e-04
+2026-01-27 13:00:48 | INFO | Epoch 17 | Step 3000/3125 | Loss: 0.2352 | LR: 2.84e-04
+2026-01-27 13:00:49 | INFO | Epoch 17 | Step 3100/3125 | Loss: 0.2352 | LR: 2.84e-04
+2026-01-27 13:00:49 | INFO | Train Loss: 0.2352
+2026-01-27 13:00:50 | INFO | Val Loss: 0.2336 | Val Accuracy: 0.9077 | Val Perplexity: 1.26
+2026-01-27 13:00:50 | INFO | 
+==================================================
+2026-01-27 13:00:50 | INFO | Epoch 18/100
+2026-01-27 13:00:50 | INFO | ==================================================
+2026-01-27 13:00:51 | INFO | Epoch 18 | Step 100/3125 | Loss: 0.2337 | LR: 2.83e-04
+2026-01-27 13:00:51 | INFO | Epoch 18 | Step 200/3125 | Loss: 0.2338 | LR: 2.83e-04
+2026-01-27 13:00:52 | INFO | Epoch 18 | Step 300/3125 | Loss: 0.2345 | LR: 2.83e-04
+2026-01-27 13:00:53 | INFO | Epoch 18 | Step 400/3125 | Loss: 0.2345 | LR: 2.83e-04
+2026-01-27 13:00:54 | INFO | Epoch 18 | Step 500/3125 | Loss: 0.2350 | LR: 2.83e-04
+2026-01-27 13:00:54 | INFO | Epoch 18 | Step 600/3125 | Loss: 0.2351 | LR: 2.83e-04
+2026-01-27 13:00:55 | INFO | Epoch 18 | Step 700/3125 | Loss: 0.2352 | LR: 2.83e-04
+2026-01-27 13:00:56 | INFO | Epoch 18 | Step 800/3125 | Loss: 0.2353 | LR: 2.83e-04
+2026-01-27 13:00:57 | INFO | Epoch 18 | Step 900/3125 | Loss: 0.2354 | LR: 2.83e-04
+2026-01-27 13:00:58 | INFO | Epoch 18 | Step 1000/3125 | Loss: 0.2354 | LR: 2.83e-04
+2026-01-27 13:00:59 | INFO | Epoch 18 | Step 1100/3125 | Loss: 0.2353 | LR: 2.83e-04
+2026-01-27 13:01:00 | INFO | Epoch 18 | Step 1200/3125 | Loss: 0.2353 | LR: 2.83e-04
+2026-01-27 13:01:01 | INFO | Epoch 18 | Step 1300/3125 | Loss: 0.2352 | LR: 2.83e-04
+2026-01-27 13:01:01 | INFO | Epoch 18 | Step 1400/3125 | Loss: 0.2352 | LR: 2.83e-04
+2026-01-27 13:01:02 | INFO | Epoch 18 | Step 1500/3125 | Loss: 0.2352 | LR: 2.83e-04
+2026-01-27 13:01:03 | INFO | Epoch 18 | Step 1600/3125 | Loss: 0.2352 | LR: 2.82e-04
+2026-01-27 13:01:03 | INFO | Epoch 18 | Step 1700/3125 | Loss: 0.2353 | LR: 2.82e-04
+2026-01-27 13:01:04 | INFO | Epoch 18 | Step 1800/3125 | Loss: 0.2353 | LR: 2.82e-04
+2026-01-27 13:01:05 | INFO | Epoch 18 | Step 1900/3125 | Loss: 0.2353 | LR: 2.82e-04
+2026-01-27 13:01:06 | INFO | Epoch 18 | Step 2000/3125 | Loss: 0.2354 | LR: 2.82e-04
+2026-01-27 13:01:06 | INFO | Epoch 18 | Step 2100/3125 | Loss: 0.2353 | LR: 2.82e-04
+2026-01-27 13:01:07 | INFO | Epoch 18 | Step 2200/3125 | Loss: 0.2352 | LR: 2.82e-04
+2026-01-27 13:01:08 | INFO | Epoch 18 | Step 2300/3125 | Loss: 0.2352 | LR: 2.82e-04
+2026-01-27 13:01:09 | INFO | Epoch 18 | Step 2400/3125 | Loss: 0.2352 | LR: 2.82e-04
+2026-01-27 13:01:09 | INFO | Epoch 18 | Step 2500/3125 | Loss: 0.2352 | LR: 2.82e-04
+2026-01-27 13:01:10 | INFO | Epoch 18 | Step 2600/3125 | Loss: 0.2352 | LR: 2.82e-04
+2026-01-27 13:01:11 | INFO | Epoch 18 | Step 2700/3125 | Loss: 0.2352 | LR: 2.82e-04
+2026-01-27 13:01:12 | INFO | Epoch 18 | Step 2800/3125 | Loss: 0.2351 | LR: 2.82e-04
+2026-01-27 13:01:12 | INFO | Epoch 18 | Step 2900/3125 | Loss: 0.2351 | LR: 2.82e-04
+2026-01-27 13:01:13 | INFO | Epoch 18 | Step 3000/3125 | Loss: 0.2351 | LR: 2.81e-04
+2026-01-27 13:01:14 | INFO | Epoch 18 | Step 3100/3125 | Loss: 0.2352 | LR: 2.81e-04
+2026-01-27 13:01:14 | INFO | Train Loss: 0.2352
+2026-01-27 13:01:15 | INFO | Val Loss: 0.2334 | Val Accuracy: 0.9079 | Val Perplexity: 1.26
+2026-01-27 13:01:15 | INFO | 
+==================================================
+2026-01-27 13:01:15 | INFO | Epoch 19/100
+2026-01-27 13:01:15 | INFO | ==================================================
+2026-01-27 13:01:16 | INFO | Epoch 19 | Step 100/3125 | Loss: 0.2361 | LR: 2.81e-04
+2026-01-27 13:01:17 | INFO | Epoch 19 | Step 200/3125 | Loss: 0.2357 | LR: 2.81e-04
+2026-01-27 13:01:17 | INFO | Epoch 19 | Step 300/3125 | Loss: 0.2350 | LR: 2.81e-04
+2026-01-27 13:01:18 | INFO | Epoch 19 | Step 400/3125 | Loss: 0.2352 | LR: 2.81e-04
+2026-01-27 13:01:19 | INFO | Epoch 19 | Step 500/3125 | Loss: 0.2350 | LR: 2.81e-04
+2026-01-27 13:01:20 | INFO | Epoch 19 | Step 600/3125 | Loss: 0.2349 | LR: 2.81e-04
+2026-01-27 13:01:21 | INFO | Epoch 19 | Step 700/3125 | Loss: 0.2348 | LR: 2.81e-04
+2026-01-27 13:01:22 | INFO | Epoch 19 | Step 800/3125 | Loss: 0.2348 | LR: 2.81e-04
+2026-01-27 13:01:22 | INFO | Epoch 19 | Step 900/3125 | Loss: 0.2351 | LR: 2.81e-04
+2026-01-27 13:01:23 | INFO | Epoch 19 | Step 1000/3125 | Loss: 0.2352 | LR: 2.81e-04
+2026-01-27 13:01:25 | INFO | Epoch 19 | Step 1100/3125 | Loss: 0.2353 | LR: 2.81e-04
+2026-01-27 13:01:26 | INFO | Epoch 19 | Step 1200/3125 | Loss: 0.2352 | LR: 2.81e-04
+2026-01-27 13:01:27 | INFO | Epoch 19 | Step 1300/3125 | Loss: 0.2351 | LR: 2.80e-04
+2026-01-27 13:01:28 | INFO | Epoch 19 | Step 1400/3125 | Loss: 0.2353 | LR: 2.80e-04
+2026-01-27 13:01:28 | INFO | Epoch 19 | Step 1500/3125 | Loss: 0.2353 | LR: 2.80e-04
+2026-01-27 13:01:29 | INFO | Epoch 19 | Step 1600/3125 | Loss: 0.2355 | LR: 2.80e-04
+2026-01-27 13:01:30 | INFO | Epoch 19 | Step 1700/3125 | Loss: 0.2353 | LR: 2.80e-04
+2026-01-27 13:01:31 | INFO | Epoch 19 | Step 1800/3125 | Loss: 0.2353 | LR: 2.80e-04
+2026-01-27 13:01:32 | INFO | Epoch 19 | Step 1900/3125 | Loss: 0.2352 | LR: 2.80e-04
+2026-01-27 13:01:33 | INFO | Epoch 19 | Step 2000/3125 | Loss: 0.2352 | LR: 2.80e-04
+2026-01-27 13:01:34 | INFO | Epoch 19 | Step 2100/3125 | Loss: 0.2352 | LR: 2.80e-04
+2026-01-27 13:01:34 | INFO | Epoch 19 | Step 2200/3125 | Loss: 0.2352 | LR: 2.80e-04
+2026-01-27 13:01:35 | INFO | Epoch 19 | Step 2300/3125 | Loss: 0.2351 | LR: 2.80e-04
+2026-01-27 13:01:36 | INFO | Epoch 19 | Step 2400/3125 | Loss: 0.2351 | LR: 2.80e-04
+2026-01-27 13:01:37 | INFO | Epoch 19 | Step 2500/3125 | Loss: 0.2351 | LR: 2.80e-04
+2026-01-27 13:01:37 | INFO | Epoch 19 | Step 2600/3125 | Loss: 0.2351 | LR: 2.80e-04
+2026-01-27 13:01:38 | INFO | Epoch 19 | Step 2700/3125 | Loss: 0.2351 | LR: 2.79e-04
+2026-01-27 13:01:39 | INFO | Epoch 19 | Step 2800/3125 | Loss: 0.2351 | LR: 2.79e-04
+2026-01-27 13:01:40 | INFO | Epoch 19 | Step 2900/3125 | Loss: 0.2351 | LR: 2.79e-04
+2026-01-27 13:01:41 | INFO | Epoch 19 | Step 3000/3125 | Loss: 0.2351 | LR: 2.79e-04
+2026-01-27 13:01:42 | INFO | Epoch 19 | Step 3100/3125 | Loss: 0.2351 | LR: 2.79e-04
+2026-01-27 13:01:42 | INFO | Train Loss: 0.2351
+2026-01-27 13:01:43 | INFO | Val Loss: 0.2336 | Val Accuracy: 0.9075 | Val Perplexity: 1.26
+2026-01-27 13:01:43 | INFO | 
+==================================================
+2026-01-27 13:01:43 | INFO | Epoch 20/100
+2026-01-27 13:01:43 | INFO | ==================================================
