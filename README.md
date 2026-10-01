@@ -34,8 +34,8 @@ Output: [STEP][POS]0[RIGHT]7+6=13[CARRY]1[WRITE]3[STEP][POS]1[LEFT]4+8+1=13[CARR
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/math-transformer.git
-cd math-transformer
+git clone https://github.com/adembtr/mathai.git
+cd mathai
 
 # Install dependencies
 pip install torch tqdm wandb  # wandb is optional
@@ -169,11 +169,30 @@ Output: [STEP][POS]0[RIGHT]9+1=10[CARRY]1[WRITE]0
 - [Teaching Arithmetic to Small Transformers](https://arxiv.org/abs/2307.03381) - Position coupling for digit alignment
 - [Show Your Work: Scratchpads for Intermediate Computation](https://arxiv.org/abs/2112.00114) - Scratchpad reasoning approach
 
+## Status & results
+
+Experimental research project (trained on an RTX 4060, 8 GB).
+
+- 2-digit addition with scratchpad + position coupling: **token-level validation accuracy ≈ 0.91, validation perplexity 1.26**
+  (plateau after ~20 epochs, see `checkpoints/training.log`).
+- Exact-match accuracy on full answers has not been reported yet — that is the next evaluation step.
+
+## Pretrained checkpoints
+
+Checkpoints are published as release assets instead of being stored in git:
+[v0.1-checkpoints](https://github.com/adembtr/mathai/releases/tag/v0.1-checkpoints) — `final_model.pt` (~0.84M parameters) and `best_model.pt`.
+
+```bash
+mkdir -p checkpoints
+gh release download v0.1-checkpoints -R adembtr/mathai -D checkpoints
+```
+
+The large generated datasets (`*_50k.jsonl`, `*_5k.jsonl`) are not tracked; re-create them with `python data_generator.py`.
+
 ## License
 
-MIT License
+[MIT](LICENSE)
 
-## Contributing
+---
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-# mathai
+Built by [Adem Batur](https://github.com/adembtr) · Computer Engineering, Sakarya University

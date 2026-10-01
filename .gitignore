@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+wandb/
+# checkpoints are published as GitHub Release assets
+checkpoints/*.pt
+# large generated datasets (re-create with data_generator.py)
+data/*_50k.jsonl
+data/*_5k.jsonl
+data/train_add_2digit.jsonl
